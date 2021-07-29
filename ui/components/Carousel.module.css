@@ -1,0 +1,37 @@
+.carousel {
+  --card-size: 343px;
+  --scroll-bar-offset: 2rem;
+  /* --padding-x: 1rem; */
+  --content-area: 60rem;
+  --gutter: calc((100% - var(--content-area) ) / 2);
+
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* padding-left: var(--padding-x); */
+  /* padding-right: var(--padding-x); */
+
+  /* Set padding, and then reverse it with negataive margin to remove clipped space */
+  padding-bottom: var(--scroll-bar-offset);
+  margin-bottom: calc(-1 * var(--scroll-bar-offset));
+
+  /* Clip the scrollbar so it's not visible */
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--scroll-bar-offset)), 0% calc(100% - var(--scroll-bar-offset)));
+}
+
+@media (max-width: 62rem) {
+  .carousel {
+    --gutter: 1rem
+  }
+}
+
+.carousel .content {
+  display: grid;
+  grid-auto-flow: column;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  width: fit-content;
+  gap: 1rem;
+  grid-auto-columns: minmax(var(--card-size), 1fr);
+  overflow-y:hidden;
+}

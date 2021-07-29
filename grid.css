@@ -1,0 +1,22 @@
+.card-grid {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.menu-grid {
+  grid-template-columns: auto 1fr;
+  align-items:center;
+  /* justify-items: end; */
+}
+
+.grid-cards {
+  grid-auto-columns: minmax(343px, 720px);
+  grid-auto-flow: column;
+}
+
+.grid-overflow {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 60rem) 1fr;
+  background-color: green;
+  overflow:hidden;
+}
