@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-black text-white w-screen">
+      <div className="bg-black text-white w-screen px-4">
 
       <header className="max-w-[60rem] mx-auto flex justify-between items-center">
         <span className="font-bold text-lg">Say Yeah</span>
@@ -36,9 +36,12 @@ export default function Home() {
       </header>
       </div>
 
+
       <main className="flex flex-col items-center justify-center w-full flex-1">
-        <div className="flex justify-center bg-black text-white min-h-[60vh] w-screen px-4">
-          <section className="grid gap-6 grid-cols-2 max-w-[60rem] content-center " aria-label="Masthead">
+        <View className="min-h-[60vh]" theme="black">
+
+        {/* <div className="flex justify-center bg-black text-white min-h-[60vh] w-screen px-4"> */}
+          <View.Content className="grid gap-6 grid-cols-1 md:grid-cols-2 max-w-[60rem] content-center" aria-label="Masthead">
             <div className="flex flex-col items-start space-y-6">
             <h1 className="text-40 text-yeah-yellow font-bold">Deliver products and services that win diverse markets</h1>
             <p className="text-24">As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.</p>
@@ -47,8 +50,9 @@ export default function Home() {
               <li><a href="#">The role of technolgy in building market leaders →</a></li>
             </ul>
             </div>
-          </section>
-        </div>
+          </View.Content>
+        {/* </div> */}
+        </View>
 
         <View theme="yellow" className="">
           <View.Content className="space-y-8">
