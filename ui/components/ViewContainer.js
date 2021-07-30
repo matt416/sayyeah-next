@@ -5,6 +5,9 @@ const TRAITS = traits({
   gutter: {
     default: 'py-16',
   },
+  divide: {
+    true: "border-b border-black border-opacity-5"
+  },
   theme: {
     default: 'bg-yeah-yellow text-black',
     yellow: 'bg-yeah-yellow text-black',
@@ -13,10 +16,10 @@ const TRAITS = traits({
   }
 })
 
-export default function ViewContainer({ children, theme, className, ...props }){
+export default function ViewContainer({ children, divide, theme, className, ...props }){
 
   return (
-    <div className={ TRAITS.apply({ theme }, className) } { ...props }>
+    <div className={ TRAITS.apply({ theme, divide }, className) } { ...props }>
       { children }
     </div>
   )
