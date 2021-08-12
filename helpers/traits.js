@@ -44,7 +44,6 @@ _Traits.prototype = {
       return this.traitsList[key][prop]
     }).filter(item=>item)
 
-
     return clsx(result, additionalClasses)
   }
 }

@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { traits } from "helpers/traits";
 
 const TRAIT = traits({
-  default: "rounded-lg overflow-hidden",
+  default: "rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring",
   bg: {
     default: "bg-white"
   }
