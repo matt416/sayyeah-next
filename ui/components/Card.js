@@ -4,13 +4,13 @@ import { traits } from "helpers/traits";
 const TRAIT = traits({
   default: "rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring",
   bg: {
-    default: "bg-white"
+    default: "bg-white",
   }
 })
 
-function Card({ children, className }){
+function Card({ bg, children, className }){
   return (
-    <div className={ TRAIT.apply({}, className )}>
+    <div className={ TRAIT.apply({ bg }, className )}>
       { children }
     </div>
   )

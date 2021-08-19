@@ -1,9 +1,11 @@
+import pluck from 'helpers/pluck'
+import clients from '../collections/clients'
+
 export default {
   PageHeading: {
-    component: "PageHeading",
     title: "Deliver products and services that win diverse markets",
     catchline: "As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
-    actions:[
+    actions: [
       {
         label: "Why designing for the average person hurts your bottom line",
         ariaLabel: false,
@@ -16,7 +18,6 @@ export default {
     ]
   },
   DecisionCards: {
-    component: "DecisionCards",
     title: "Bring clarity to decision-making",
     cards: [
       {
@@ -29,8 +30,7 @@ export default {
             href: "#"
           }
         ]
-      },
-      {
+      },{
         icon: "" ,
         blurb: "**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
         actions: [
@@ -44,7 +44,6 @@ export default {
     ]
   },
   OutcomeCards: {
-    component: "OutcomeCards",
     title: "Achieve exceptional outcomes",
     cards: [
       {
@@ -78,9 +77,7 @@ export default {
       }
     ]
   },
-
   ImpactfulChallenges: {
-    component: "ImpactfulChallenges",
     title: "Solve your most impactful organizational challenges",
     items: [
       {
@@ -129,15 +126,22 @@ export default {
     ]
   },
   ClientRoster: {
-    component: "ClientRoster",
     title: "Client roster",
-    clients: [
-      { name: "Toronto Public Library" }
-    ]
+    clients: pluck(clients, ['TorontoPublicLibrary', 'Boon'])
   },
   FeaturedTestimonial: {
-    component: "FeaturedTestimonial",
     cite: "Aran Hamilton, CEO, Vantage Analytics",
     blurb: "Working with Say Yeah is a major step towards not wasting hundreds of thousands of dollars building the wrong thing because of poor planning."
+  },
+  Video: {
+    url: "https://sayyeah.com/wp-content/uploads/2020/02/mark_testimonial.mp4",
+    poster: "https://sayyeah.com/wp-content/uploads/2020/02/mark_testimonial-1.jpg",
+    tracks:[{
+      kind: 'subtitles',
+      label: "English",
+      src: '/captions/markdowds_testimonial.vtt',
+      srcLang: 'en',
+      default: true
+    }]
   }
 }
