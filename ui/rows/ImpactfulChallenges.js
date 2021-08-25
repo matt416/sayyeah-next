@@ -2,7 +2,7 @@ import View from "ui/components/View"
 import Action from "ui/components/Action"
 
 export default function ImpactfulChallenges({ data }) {
-  return <View theme="cola">
+  return <View bgColor="cola" textColor="white">
     <View.Content className="grid grid-cols-1 sm:grid-cols-2 gap-12">
 
       <h2 className="text-32 font-bold text-yeah-yellow col-span-full">

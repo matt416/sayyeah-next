@@ -15,7 +15,7 @@ export default function Home({ data }) {
 
       <Header></Header>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1">
+      <main className="flex flex-col items-center justify-center flex-1">
         <RowResolver data={ data } />
       </main>
     </>
@@ -23,9 +23,12 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps({ params }) {
+
+  const slug = params.slug || 'homepage'
+
   return {
     props: {
-      data: await useGetStaticProps({ type: "pages", slug: params.slug })
+      data: await useGetStaticProps({ type: "pages", slug })
     },
     revalidate: 1,
   }
@@ -34,6 +37,6 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths(){
   return {
     paths: await useGetStaticPaths({ type: "pages" }),
-    fallback: false
+    fallback: true
   }
 }

@@ -22,7 +22,7 @@ Navigation.Item = ({ children, href = "#" }) => (
 )
 
 export default function Header(){
-  return <div className="bg-black text-white w-screen px-4">
+  return <div className="bg-black text-white w-full px-4">
     <header className="max-w-[60rem] mx-auto flex justify-between items-center">
       <span className="font-bold text-lg">Say Yeah</span>
       <Navigation name="Primary"/>

@@ -2,7 +2,7 @@ import View from "ui/components/View"
 import Action from "ui/components/Action"
 
 export default function ClientRoster({ data }){
-  return <View divide={ true }>
+  return <View divide={ true } bgColor="yellow" textColor="black">
     <View.Content className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       { data.title && <h2 className="text-28 font-bold col-span-full">{ data.title }</h2> }
 

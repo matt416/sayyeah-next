@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown"
 
 export default function OutcomeCards({ data }) {
   return (
-    <View theme="cola" className="flex flex-col">
+    <View bgColor="cola" textColor="white" className="flex flex-col">
       <View.Content className="pb-4">
         <h2 className="text-32 font-bold text-yeah-yellow col-span-full">
           { data.title }

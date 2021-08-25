@@ -1,7 +1,7 @@
 import { traits } from 'helpers/traits'
 
 const TRAITS = traits({
-  default : "w-screen flex justify-center px-4",
+  default : "w-full flex justify-center px-4",
   gutter: {
     default: 'py-16',
   },
@@ -11,7 +11,7 @@ const TRAITS = traits({
   bgColor: {
     yellow: 'bg-yeah-yellow',
     black: "bg-black",
-    cola: "bg-cola",
+    cola: "bg-yeah-cola",
     white: "bg-white",
   },
   textColor: {

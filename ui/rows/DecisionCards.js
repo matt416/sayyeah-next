@@ -4,7 +4,7 @@ import Button from "ui/components/Button"
 import ReactMarkdown from "react-markdown"
 
 export default function DecisionCards({ data }) {
-  return <View theme="yellow" className="">
+  return <View bgColor="yellow" textColor="black" className="">
   <View.Content className="space-y-8">
     <h2 className="text-32 font-bold">{ data.title }</h2>
 
