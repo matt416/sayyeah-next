@@ -8,18 +8,25 @@ const TRAITS = traits({
   divide: {
     true: "border-b border-black border-opacity-5"
   },
-  theme: {
-    default: 'bg-yeah-yellow text-black',
-    yellow: 'bg-yeah-yellow text-black',
-    black: 'bg-black text-white',
-    cola: 'bg-yeah-cola text-white'
+  bgColor: {
+    yellow: 'bg-yeah-yellow',
+    black: "bg-black",
+    cola: "bg-cola",
+    white: "bg-white",
+  },
+  textColor: {
+    black: "text-black",
+    white: "text-white"
+    // default: 'bg-yeah-yellow text-black',
+    // black: 'bg-black text-white',
+    // cola: 'bg-yeah-cola text-white'
   }
 })
 
-export default function ViewContainer({ children, divide, theme, className, ...props }){
+export default function ViewContainer({ children, divide, theme, bgColor, textColor, className, ...props }){
 
   return (
-    <div className={ TRAITS.apply({ theme, divide }, className) } { ...props }>
+    <div className={ TRAITS.apply({ theme, divide, bgColor, textColor }, className) } { ...props }>
       { children }
     </div>
   )
