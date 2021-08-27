@@ -35,7 +35,7 @@ const SOLUTIONS = [
         {
           "label":"Service Design",
           "ariaLabel":false,
-          "href":"#"
+          "href":"/solutions/service-design"
         }
       ]
     }
@@ -53,7 +53,7 @@ const SOLUTIONS = [
         {
           "label":"Product strategy",
           "ariaLabel":false,
-          "href":"#"
+          "href":"/solutions/product-strategy"
         }
       ]
     }
