@@ -12,7 +12,7 @@ export default function Hero({ data }) {
         <h1 className="text-40 text-yeah-yellow font-bold">
           { data.name && <span className="sr-only block text-16 font-normal mb-2 text-white">{ data.name }</span> }
           { data.title }</h1>
-          <ReactMarkdown className="text-24 space-y-6">{ data.catchline }</ReactMarkdown>
+          <ReactMarkdown className="text-24 space-y-6">{ data.catchline || data.text }</ReactMarkdown>
         <ul className="space-y-2">
           { data?.actions?.map(action =>
             <li>

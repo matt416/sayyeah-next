@@ -11,8 +11,8 @@ import Carousel from "ui/components/Carousel"
 import Badge from "ui/components/Badge"
 import Video from "ui/components/Video"
 
-import Hero from 'ui/rows/Hero'
-import CallToAction from 'ui/rows/CallToAction'
+import Hero from 'ui/stackitems/Hero'
+import CallToAction from 'ui/stackitems/CallToAction'
 import StackItem from 'ui/components/StackItem'
 import StackContent from 'ui/components/StackContent'
 

@@ -22,6 +22,10 @@
 }
 
 
+.as\:h2 {
+  @apply text-40 font-bold max-w-[40rem]
+}
+
 /* a:focus {
   text-decoration: underline;
   text-decoration-thickness: 3px;
