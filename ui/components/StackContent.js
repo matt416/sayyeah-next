@@ -10,7 +10,7 @@ const TRAITS = traits({
   }
 })
 
-export default function ViewContent({ children, size, className, ...props }){
+export default function StackContent({ children, size, className, ...props }){
   return (
     <div className={TRAITS.apply({ size }, className)} { ...props }>
       { children }

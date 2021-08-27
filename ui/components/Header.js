@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import mainMenu from "data/en-ca/collections/mainmenu.json"
-
 function Navigation({ name }){
   return <nav aria-label={ name } className="flex items-center">
     <ul className="flex space-x-8 text-lg py-6">
@@ -9,7 +8,6 @@ function Navigation({ name }){
     </ul>
   </nav>
 }
-
 
 Navigation.Item = ({ children, href = "#" }) => (
   <li>
@@ -24,7 +22,7 @@ Navigation.Item = ({ children, href = "#" }) => (
 export default function Header(){
   return <div className="bg-black text-white w-full px-4">
     <header className="max-w-[60rem] mx-auto flex justify-between items-center">
-      <span className="font-bold text-lg">Say Yeah</span>
+      <a href="/" className="font-bold text-lg">Say Yeah</a>
       <Navigation name="Primary"/>
     </header>
   </div>

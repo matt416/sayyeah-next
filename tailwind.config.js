@@ -1,7 +1,7 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './ui/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./ui/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false, // or "media" or "class"
   theme: {
     fontSize:{
       12: "0.75rem",
@@ -22,13 +22,15 @@ module.exports = {
     extend: {
       colors: {
         yeah: {
-          yellow: '#FCD400',
-          gold: '#EEBD0F',
-          bronze: '#976A27',
-          cola: '#301F01',
-          grey: '#EFEFEF'
+          sunshine: "#FFE64A",
+          yellow: "#FCD400",
+          gold: "#EEBD0F",
+          bronze: "#976A27",
+          tan: "#CB9340",
+          cola: "#301F01",
+          grey: "#EFEFEF"
         },
-        black: '#0D0800',
+        black: "#0D0800",
       },
     },
   },
