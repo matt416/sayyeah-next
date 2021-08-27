@@ -1,5 +1,5 @@
 import Link from 'next/link'
-
+import SkipBlock from 'ui/components/SkipBlock'
 import mainMenu from "data/en-ca/collections/mainmenu.json"
 function Navigation({ name }){
   return <nav aria-label={ name } className="flex items-center">
@@ -20,10 +20,13 @@ Navigation.Item = ({ children, href = "#" }) => (
 )
 
 export default function Header(){
-  return <div className="bg-black text-white w-full px-4">
+  return <>
+    <SkipBlock target="#main-content" />
+    <div className="bg-black text-white w-full px-4">
     <header className="max-w-[60rem] mx-auto flex justify-between items-center">
       <a href="/" className="font-bold text-lg">Say Yeah</a>
       <Navigation name="Primary"/>
     </header>
   </div>
+  </>
 }

@@ -13,13 +13,14 @@ import Video from "ui/components/Video"
 
 import Hero from 'ui/stackitems/Hero'
 import CallToAction from 'ui/stackitems/CallToAction'
-import StackItem from 'ui/components/StackItem'
-import StackContent from 'ui/components/StackContent'
-
-const Local = {}
+import { Stack, StackItem, StackContent } from 'ui/components/Stack'
 
 /*** Hero (with Hero component) */
-const HERO ={
+const HERO = {
+  "image": {
+    src: "/heroes/homepage.png"
+  },
+  "name":"Say Yeah",
   "title":"Deliver products and services that win diverse markets",
   "catchline":"As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
   "actions":[
@@ -212,7 +213,7 @@ const FEATURED_TESTIMONIAL = {
 export default function Home() {
   return (
     <Layout>
-      <main className="flex flex-col items-center justify-center flex-1">
+      <Stack>
         <Hero data={ HERO } />
 
         {/** Outcome Cards */}
@@ -224,11 +225,11 @@ export default function Home() {
           </StackContent>
 
           <Carousel className="-mx-4">
-            { OUTCOME_CARDS.map(card => (
-            <Card className="text-black">
+            { OUTCOME_CARDS.map((card, key) => (
+            <Card className="text-black" key={ key }>
               <Card.Photo src='https://source.unsplash.com/random/401x225' />
               <Card.Content className="space-y-4">
-                { card?.tags?.map(tag => <Badge>{ tag }</Badge>)}
+                { card?.tags?.map((tag, key) => <Badge key={ key }>{ tag }</Badge>)}
                 <ReactMarkdown className="text-20 font-bold">Reshaping experience to support and retain users through a multi-step sales funnel.</ReactMarkdown>
               </Card.Content>
             </Card>
@@ -241,8 +242,8 @@ export default function Home() {
             <h2 className="text-32 font-bold">Bring clarity to decision-making</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              { DECISION_CARDS.map(item => (
-                <Card>
+              { DECISION_CARDS.map((item, key) => (
+                <Card key={key}>
                   <Card.Content className="flex flex-col items-start h-full">
                     <ReactMarkdown className="text-20 leading-normal mb-4">{ item.text }</ReactMarkdown>
 
@@ -307,8 +308,8 @@ export default function Home() {
                     ariaLabel: false,
                   }
                 },
-              ].map(item => (
-                <Card className="">
+              ].map((item, key) => (
+                <Card key={key}>
                   <div className="bg-yeah-sunshine p-4">
                     { item.icon && <></> }
                     <p className="text-24 font-bold">{ item?.fact }</p>
@@ -341,10 +342,10 @@ export default function Home() {
               Solve your most impactful organizational challenges
             </h2>
 
-            { IMPACTFUL_CHALLENGES.map(item => (
-              <div>
+            { IMPACTFUL_CHALLENGES.map((item, key) => (
+              <div key={ key }>
                 <p className="text-24 font-bold pb-2">{ item.text }</p>
-                { item.actions.map(action => <Action href={ action.href }>{ action.label }</Action> )}
+                { item.actions.map((action, key) => <Action key={key} href={ action.href }>{ action.label }</Action> )}
               </div>
             ))}
           </StackContent>
@@ -357,8 +358,8 @@ export default function Home() {
             <h2 className="text-40 font-bold mb-8">Client roster</h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              { CLIENT_ROSTER?.map(client =>
-                <div className="bg-black bg-opacity-5 rounded min-h-[6rem] flex items-center justify-center">
+              { CLIENT_ROSTER?.map(( client, key ) =>
+                <div className="bg-black bg-opacity-5 rounded min-h-[6rem] flex items-center justify-center" key={ key }>
                   { client.name }
                 </div>
               )}
@@ -440,18 +441,10 @@ export default function Home() {
             <h2 className="text-40 font-bold mb-8">We’ve been featured by</h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-
-            {
-            [
-              { "name": "SXSW" },
-              { "name": "FITC" },
-              { "name": "Digital Journal" },
-              { "name": "UX Magazine" },
-              { "name": "CTV News Channel" },
-            ].map(client =>
-              <div className="bg-black bg-opacity-5 rounded min-h-[6rem] flex items-center justify-center">
-                { client.name }
-              </div>
+              { FEATURED_PRESS.map((client, key) =>
+                <div key={ key } className="bg-black bg-opacity-5 rounded min-h-[6rem] flex items-center justify-center">
+                  { client.name }
+                </div>
               )}
             </div>
 
@@ -459,7 +452,7 @@ export default function Home() {
         </StackItem>
 
         <CallToAction>Let’s explore how delivering more inclusive products and services can help you win markets</CallToAction>
-      </main>
+      </Stack>
     </Layout>
   )
 }

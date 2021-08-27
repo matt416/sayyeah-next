@@ -1,20 +1,24 @@
+import { useGetStaticPaths, useGetStaticProps } from 'helpers/fetchData'
+
 import Layout from 'ui/Layout'
 
 import Quoted from "ui/components/Quoted"
 import Button from "ui/components/Button"
 import Card from "ui/components/Card"
 import Heading from "ui/components/Heading"
-import { StackItem, StackContent } from "ui/components/Stack"
+import { Stack, StackItem, StackContent } from "ui/components/Stack"
 import Hero from "ui/stackitems/Hero"
 import CallToAction from "ui/stackitems/CallToAction"
 import CaseStudies from "ui/stackitems/CaseStudies"
 import ReactMarkdown from 'react-markdown'
 
-import data from "data/en-ca/solutions/service-design.json"
+export default function Solutions({ data }){
 
-export default function ServiceDesign(){
+  if (!data) return null;
+
   return <Layout>
 
+    <Stack>
       <Hero data={ data.hero }/>
 
       <StackItem className="bg-yeah-cola text-white">
@@ -23,7 +27,7 @@ export default function ServiceDesign(){
             { data.solutions.title }
           </Heading>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             { data.solutions.questions.map(item =>
               <Quoted className="text-28 font-bold">
                 { item }
@@ -95,14 +99,33 @@ export default function ServiceDesign(){
           </Card>
           )}
           </div>
-
-
         </StackContent>
       </StackItem>
 
       <CallToAction>
         { data.callToAction }
       </CallToAction>
-
+    </Stack>
   </Layout>
+}
+
+
+
+export async function getStaticProps({ params }) {
+
+  const { slug } = params
+
+  return {
+    props: {
+      data: await useGetStaticProps({ type: "solutions", slug })
+    },
+    revalidate: 1,
+  }
+}
+
+export async function getStaticPaths(){
+  return {
+    paths: await useGetStaticPaths({ type: "solutions" }),
+    fallback: true
+  }
 }

@@ -25,10 +25,17 @@ const STACKITEM_TRAITS = traits({
 
 
 
-export default function StackItem({ children, divide, className, ...props }){
+export default function StackItem({ children, divide, className, image, ...props }){
+
+  const style = {
+    backgroundImage: `url(${image})`,
+    backgroundSize: "cover",
+    backgroundPosition: "50% 50%",
+    backgroundRepeat: "no-repeat",
+  }
 
   return (
-    <div className={ STACKITEM_TRAITS.apply({ divide }, className) } { ...props }>
+    <div className={ STACKITEM_TRAITS.apply({ divide }, className) } style={ image ? style : {} } { ...props }>
         { children }
     </div>
   )

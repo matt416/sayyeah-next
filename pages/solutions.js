@@ -2,6 +2,7 @@ import React from 'react'
 import ReactMarkdown from "react-markdown"
 
 import Layout from 'ui/Layout'
+import { Stack, StackItem, StackContent } from 'ui/components/Stack'
 
 import Action from "ui/components/Action"
 import Card from "ui/components/Card"
@@ -11,8 +12,6 @@ import Carousel from "ui/components/Carousel"
 import Hero from 'ui/stackitems/Hero'
 import CallToAction from 'ui/stackitems/CallToAction'
 
-import StackItem from 'ui/components/StackItem'
-import StackContent from 'ui/components/StackContent'
 
 
 const HERO = {
@@ -134,7 +133,8 @@ const SOLUTIONS = [
 
 export default function Solutions(){
   return <Layout>
-    <main className="flex flex-col items-center justify-center flex-1">
+    <Stack>
+
       <Hero data={ HERO } />
 
       <StackItem className="bg-yeah-yellow text-black flex-col space-y-24">
@@ -194,6 +194,6 @@ export default function Solutions(){
       </StackItem>
 
       <CallToAction>Let us know your most pressing challenges and we’ll guide you towards your next phase of organizational success.</CallToAction>
-    </main>
+    </Stack>
   </Layout>
 }

@@ -4,7 +4,7 @@ export default function Video({ data }) {
 return (
       <ReactPlayer
         width="100%"
-        height={false}
+        height=""
         url={ data.url }
         controls={ true }
         config={{

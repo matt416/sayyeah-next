@@ -21,7 +21,7 @@ export const useGetStaticProps = async ({ slug, type = "pages" }) => {
     return JSON.parse(data)
   }
 
-export const useGetStaticPaths = async ({ type = pages }) => {
+export const useGetStaticPaths = async ({ type }) => {
   const DIRECTORY = `${DATA_ROOT}${type}`.toLowerCase()
 
   const directory = path.join(process.cwd(), DIRECTORY)
@@ -31,11 +31,11 @@ export const useGetStaticPaths = async ({ type = pages }) => {
 
   const paths = targetFiles.map(page => {
     return {
-      params: { "slug": [path.basename(page, '.json')] }
+      params: { "slug": path.basename(page, '.json') }
     }
   })
 
-  paths.push({ params: { slug: [] }})
   console.log(paths)
+  // paths.push({ params: { slug: [] }})
   return paths
 }

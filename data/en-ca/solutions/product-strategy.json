@@ -1,24 +1,26 @@
 {
   "hero":{
     "image":{
-      "src":"/heroes/service-design.png"
+      "src":"/heroes/product-design.png"
     },
-    "title":"Service design",
-    "text":"Optimize your team’s efforts to deliver a consistent, connected customer experience that drives engagement and retention."
+    "title":"Product strategy",
+    "text":"The product strategy, scoping, and implementation expertise necessary to excel in the connected age."
   },
   "solutions":{
-    "title":"The solutions to your customer experience challenges.",
+    "title":"Inclusive design answers important organizational questions",
     "questions":[
-      "How can we improve omni-channel customer experience",
-      "How can we improve omni-channel customer experience"
+      "Are there unintended ways we may be limiting access to our content, products, or services?",
+      "How can we avoid making our users feel excluded by our products or services?",
+      "Can we make our products or services easier to use for everyone?",
+      "Can we grow our market share by delivering more inclusive products and services?"
     ]
   },
   "description":{
-    "title":"Connected experiences, delivered",
-    "text":"In the connected world, where people and devices are always on, consumer expectations are extremely high. For consumers, “omnichannel” is another way of saying “wherever I am”, and “experience” means consistent, considerate, and authentic interactions, always.\n\n To compete in the connected age, your organization needs to stop thinking strictly in terms of internal needs and focus on meeting customer needs at every step of their journey, from awareness to purchase, engagement to retention. Our digitally-tuned service design and product strategy team give you access to the multichannel, multi-device, multi-disciplined players you need to move from just producing products and services to delivering connected experiences."
+    "title":"Take your digital product further",
+    "text":"It’s easy to identify a comprehensive wish list of scope requests and technical requirements that on their own check off a feature list, but these requirements won’t drive users to actions that deliver effective results for your organization.\n\n  An effective product strategy hones in on those key user behaviors that lead to positive action, serving both your organization as well as user needs, emotions, and motivations. It’s meeting these criteria that helps you bring an effective digital product to market as quickly as possible, or to shape your existing product in more immediate and effective ways. All with the analytics and behavioral tracking in place to validate, measure, and improve our collective efforts on an ongoing basis.\n\n  We accomplish this together by first exploring the key value we can deliver for the organization and the product users. This allows us to define an experience and service delivery approach that we can accomplish together within an effective timeline and budget framework, including planning for all the technical requirements necessary to get to market."
   },
   "toolkit":{
-    "title":"Our service design toolkit",
+    "title":"Our product strategy toolkit",
     "items":[
       {
         "title":"Discovery",

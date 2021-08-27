@@ -12,12 +12,14 @@
 //   }
 // })
 
-const Button = ({ children, className, href, ariaLabel = false }) =>
-  <a
-    href={ href }
-    aria-label={ ariaLabel }
-    className={ `inline-flex min-h-[2rem] font-bold items-center justify-center px-6 py-2 rounded ${className} ` }>
+const Button = ({ children, className, href, ariaLabel }) => {
+
+  return <a
+  href={ href }
+  aria-label={ ariaLabel }
+  className={ `inline-flex min-h-[2rem] font-bold items-center justify-center px-6 py-2 rounded ${className} ` }>
       { children }
   </a>
 
+}
 export default Button
