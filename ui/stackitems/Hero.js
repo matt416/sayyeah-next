@@ -17,8 +17,8 @@ export default function Hero({ data }) {
           </ReactMarkdown>
         { data?.actions?.length > 0 &&
           <ul className="space-y-2">
-            { data?.actions?.map(action =>
-              <li>
+            { data?.actions?.map((action, key) =>
+              <li key={ key } >
                 <a href={ action.href } aria-label={ action.ariaLabel }>
                   { action.label }
                 </a>

@@ -1,0 +1,26 @@
+#mobileMenuContainer {
+  overflow-y:hidden;
+}
+
+#mobileMenuContainer.open {
+  overflow-y:scroll;
+}
+
+#mobileMenuContainer.open .overlay {
+  visibility:visible;
+  opacity: 0.8;
+}
+#mobileMenuContainer.open  .menu {
+  transform:translate3d(0,0,0);
+}
+
+.overlay {
+  opacity:0;
+  transform:translateZ(0);
+  transition: opacity 0.3s, visibility 0.3s, z-index 0.3s;
+}
+
+.menu {
+  transform:translate3d(0, 100%, 0);
+  transition:transform 0.3s, visibility 0.3s;
+}

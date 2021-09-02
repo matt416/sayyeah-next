@@ -186,7 +186,7 @@ export default function Solutions(){
           </h2>
 
           <Carousel className="-m-4">
-            Ain't nobody
+
           </Carousel>
 
           <Action type="forward-arrow">All case studies</Action>

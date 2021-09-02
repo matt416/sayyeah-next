@@ -14,3 +14,11 @@ export function cssVariable(node, property, set){
     console.log(e)
   }
 }
+
+// import { cssVariable } from 'helpers/cssVariable'
+// import { isClient } from 'helpers/isClient'
+  // useEffect(() => {
+  //   if (isClient) {
+  //     console.log(cssVariable(carousel.current, '--card-size'))
+  //   }
+  // })

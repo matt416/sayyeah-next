@@ -15,6 +15,7 @@ import Hero from 'ui/stackitems/Hero'
 import CallToAction from 'ui/stackitems/CallToAction'
 import { Stack, StackItem, StackContent } from 'ui/components/Stack'
 
+
 /*** Hero (with Hero component) */
 const HERO = {
   "image": {
@@ -231,11 +232,13 @@ export default function Home() {
               <Card.Content className="space-y-4">
                 { card?.tags?.map((tag, key) => <Badge key={ key }>{ tag }</Badge>)}
                 <ReactMarkdown className="text-20 font-bold">Reshaping experience to support and retain users through a multi-step sales funnel.</ReactMarkdown>
+                <a href="#">Link</a>
               </Card.Content>
             </Card>
             ))}
           </Carousel>
         </StackItem>
+
 
         <StackItem className="bg-yeah-yellow text-black">
           <StackContent className="space-y-8">
@@ -264,15 +267,13 @@ export default function Home() {
           </StackContent>
         </StackItem>
 
-
-
         <StackItem className="bg-yeah-yellow text-black flex flex-col" divide={ true }>
           <StackContent className="mb-8">
             <h2 className="text-28 font-bold max-w-[40rem]">
               Evolving markets create new opportunities
             </h2>
           </StackContent>
-          <Carousel className="-mx-4">
+          <Carousel className="-mx-4" size="343px">
             {
               [
                 {

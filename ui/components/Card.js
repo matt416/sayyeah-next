@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { traits } from "helpers/traits";
+import { useEffect, useRef, useState, forwardRef } from "react";
 
 const TRAIT = traits({
   default: "rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring",
@@ -8,13 +9,22 @@ const TRAIT = traits({
   }
 })
 
-function Card({ bg, children, className }){
+const Card = forwardRef(({ bg, children, className }, ref) => {
+
+  // const ref = useRef()
+  // const [state, setState] = useState({})
+  // useEffect(() => {
+  //   // console.log(ref.current.getBoundingClientRect())
+
+  //   // setState(ref.current.getBoundingClientRect())
+  // })
+//ref={ ref }
   return (
-    <div className={ TRAIT.apply({ bg }, className )}>
+    <div data-type="card" className={ TRAIT.apply({ bg }, className )} ref={ ref }>
       { children }
     </div>
   )
-}
+})
 
 const TRAIT_PHOTO = traits({
   default: "flex items-stretch relative",

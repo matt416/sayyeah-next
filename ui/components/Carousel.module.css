@@ -1,37 +1,49 @@
 .carousel {
-  --card-size: 343px;
+  --card-size: 512px;
   --scroll-bar-offset: 2rem;
-  /* --padding-x: 1rem; */
   --content-area: 60rem;
-  --gutter: calc((100% - var(--content-area) ) / 2);
+  --gutter: max(calc((100% - var(--content-area) ) / 2), 1rem);
 
-  /* width: 100vw; */
   overflow-x: scroll;
   overflow-y: hidden;
-  /* padding-left: var(--padding-x); */
-  /* padding-right: var(--padding-x); */
 
   /* Set padding, and then reverse it with negataive margin to remove clipped space */
   padding-bottom: var(--scroll-bar-offset);
   margin-bottom: calc(-1 * var(--scroll-bar-offset));
-
   /* Clip the scrollbar so it's not visible */
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--scroll-bar-offset)), 0% calc(100% - var(--scroll-bar-offset)));
 }
 
-@media (max-width: 62rem) {
+/***
+Add gutter when window width is less than the max width
+Example:
+Window - 60rem
+Gutter Left - 1rem
+Gutter Right - 1rem
+*/
+
+/* @media (max-width: 62rem) {
   .carousel {
-    --gutter: 1rem
+    --gutter: 1rem;
+  }
+} */
+
+@media (max-width: 640px) {
+  .carousel {
+    --card-size: 90% !important;
   }
 }
 
 .carousel .content {
   display: grid;
   grid-auto-flow: column;
+  width: fit-content;
+  overflow: visible;
+  gap: 1rem;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
-  width: fit-content;
-  gap: 1rem;
   grid-auto-columns: minmax(var(--card-size), 1fr);
-  overflow-y:hidden;
+  /* position:relative; */
+  /* grid-template: 1fr / min-content; */
 }
+
