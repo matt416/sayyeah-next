@@ -25,7 +25,7 @@ const SOLUTIONS = [
   {
     "title":"Service Design",
     "questions":[
-      "How can technology improve how we work?",
+      "How do we deliver service more effectively by increasing online adoption?",
       "Are we making the best technology choices for our organization?"
     ],
     "answer":{
@@ -95,7 +95,7 @@ const SOLUTIONS = [
     }
   },
   {
-    "title":"Inclusive Design",
+    "title":"Inclusive Website Design",
     "questions":[
       "Can we do a better job of using our website as a tool for driving engagement and retention?",
       "Does our website follow standards that improve usability, accessibility, and inclusivity?"
