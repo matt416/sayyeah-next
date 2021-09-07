@@ -7,15 +7,17 @@
     "text":"Optimize your team’s efforts to deliver a consistent, connected customer experience that drives engagement and retention."
   },
   "solutions":{
-    "title":"The solutions to your customer experience challenges.",
+    "title":"Service design answers important operational questions",
     "questions":[
-      "How can we improve omni-channel customer experience",
+      "How do we deliver service more effectively by increasing online adoption?",
+      "Are we making the best technology choices for our organization?",
+      "How do we improve collaboration across our organization in order to improve service delivery?",
       "How can we improve omni-channel customer experience"
     ]
   },
   "description":{
     "title":"Connected experiences, delivered",
-    "text":"In the connected world, where people and devices are always on, consumer expectations are extremely high. For consumers, “omnichannel” is another way of saying “wherever I am”, and “experience” means consistent, considerate, and authentic interactions, always.\n\n To compete in the connected age, your organization needs to stop thinking strictly in terms of internal needs and focus on meeting customer needs at every step of their journey, from awareness to purchase, engagement to retention. Our digitally-tuned service design and product strategy team give you access to the multichannel, multi-device, multi-disciplined players you need to move from just producing products and services to delivering connected experiences."
+    "text":"The essence of service design is to create new services–or transform existing ones-that more closely align market needs with organizational objectives and capabilities.\n\n Most traditional service design shops urge their clients to primarily affect cultural or organizational change. \n\n **Our team focuses on a more pragmatic approach. It’s digital-centric and yields impressive results for our clients.**\n\n We offer you service and related product recommendations that are immediately actionable, delivering improvements across key metrics such as customer growth, engagement, retention, satisfaction, revenue, team efficiency, and more."
   },
   "toolkit":{
     "title":"Our service design toolkit",
@@ -39,11 +41,11 @@
     ]
   },
   "related":{
-    "title":"Our service design related processes",
+    "title":"Related services and resources",
     "items":[
       {
-        "title":"Research",
-        "text":"One constant throughout all of our digital transformation work is the need for effective research, analysis, synthesis, and actionable next steps for the organizations we work with. Let’s explore this core competency for delivering exceptional products and services.",
+        "title":"Organizational maturity assessment",
+        "text":"Our needs identification & readiness assessments considers the full complexity of achieving organizational and digital excellence towards improved operations, customer experience, and technology decision-making. \n\n Use this service to plot the roadmap to achieving digital excellence across your organization.",
         "action":{
           "href":"#",
           "label":"Learn more",
@@ -79,5 +81,5 @@
       }
     ]
   },
-  "callToAction":"Let’s explore how delivering more inclusive products and services can help you win diverse markets."
+  "callToAction":"Discover how assessing and refocusing your organization can lead to improved operations, customer experience, and technology decision-making."
 }
