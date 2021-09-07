@@ -21,7 +21,7 @@ const HERO = {
     src: "/heroes/homepage.png"
   },
   "name":"Say Yeah",
-  "title":"Deliver products and services that win diverse markets",
+  "title":"Optimize your products and services to better serve increasingly diverse markets",
   "catchline":"As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
   "actions":[
     {
@@ -30,7 +30,7 @@ const HERO = {
       "href":"#"
     },
     {
-      "label":"The role of technolgy in building market leaders",
+      "label":"The role of technology in building market leaders",
       "ariaLabel":false,
       "href":"#"
     }
@@ -185,8 +185,8 @@ const DECISION_CARDS = [
     "text":"**Modernize your organization** towards more efficient service delivery and improved customer experience.",
     "actions":[
       {
-        "label":"Get started",
-        "ariaLabel":"Get started, modernize your organization",
+        "label":"Service design",
+        "ariaLabel":"Service design, modernize your organization",
         "href":"#"
       }
     ]
@@ -196,8 +196,8 @@ const DECISION_CARDS = [
     "text":"**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
     "actions":[
       {
-        "label":"Get started",
-        "ariaLabel":"Get started, define, deliver, and maintain digital products",
+        "label":"Product strategy",
+        "ariaLabel":"Product strategy, define, deliver, and maintain digital products",
         "href":"#"
       }
     ]
