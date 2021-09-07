@@ -293,7 +293,7 @@ export default function Home() {
                   }
                 },{
                   icon: false,
-                  fact: "Diversity of markets and communities continues to grow",
+                  fact: "Diversity of customer segments and communities continues to grow",
                   action: {
                     label:"Follow the trends that lead to increasing market diversity",
                     href:"#",
