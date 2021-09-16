@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from 'ui/components/Header'
 import { useHideMenuOnRouteChange } from "ui/components/MobileMenu"
 import { SSRProvider } from 'react-aria'
-const Layout = ({ children, title = "Say Yeah" }) => {
+const Layout = ({ children, includeHeader = true, title = "Say Yeah" }) => {
   useHideMenuOnRouteChange()
 
   return <SSRProvider>
@@ -12,7 +12,7 @@ const Layout = ({ children, title = "Say Yeah" }) => {
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Header></Header>
+    { includeHeader && <Header></Header> }
 
     { children }
 

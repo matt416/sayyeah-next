@@ -19,8 +19,31 @@ module.exports = {
       40: ["2.5rem", { lineHeight: "1.2em" } ],
       48: "3.0rem",
     },
+    fontFamily: {
+      'sans' : [
+        'Aspira',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        '"Noto Sans"',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"',
+      ]
+    },
     extend: {
       colors: {
+        "blue-50": "#D5E5FE",
+        "blue-50-10\%": "rgba(214,230,254,0.1)",
+        "yellow-50": "#FFF0A5",
+        "yellow-50-10\%": "rgba(249,249,229,0.1)",
         yeah: {
           sunshine: "#FFE64A",
           yellow: "#FCD400",
@@ -32,6 +55,9 @@ module.exports = {
         },
         black: "#0D0800",
       },
+      maxWidth : {
+        "screen-xs": "28rem"
+      }
     },
   },
   variants: {

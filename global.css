@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .card-grid {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -21,6 +25,25 @@
   overflow:hidden;
 }
 
+.bg-gradient-image-essential-heading {
+  background-image: url("/bg-essential-audit-heading.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+*:focus:not([tabindex='-1']), button:focus {
+  outline:4px #f96700 solid;
+  outline-offset:2px;
+}
+*:focus[tabindex='-1'] {
+  outline:none !important;
+}
+
+@responsive {
+  .grid-cols-2\/1{
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
 
 .as\:h2 {
   @apply text-40 font-bold max-w-[40rem]
