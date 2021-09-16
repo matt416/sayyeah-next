@@ -17,7 +17,7 @@ module.exports = {
       fallback: [
         {
           source: '/:path*',
-          destination: `https://kanetix.sayyeah.work/:path*`,
+          destination: `https://sayyeah.com/:path*`,
         },
       ],
     }
