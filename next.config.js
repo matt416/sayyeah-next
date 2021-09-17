@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         source: '/:path*',
-        destination: `https://kanetix.sayyeah.work/:path*`
+        destination: `https://tpilaw.sayyeah.work/:path*`
       }
     ]
   }
