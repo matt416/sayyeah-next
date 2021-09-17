@@ -65,7 +65,7 @@ export default function Solutions(){
 
 
           <div className="flex flex-col space-y-4">
-            <img src="/audit/hurt-browser.svg" alt="" width="88" height="64"/>
+            <img src="/_public/audit/hurt-browser.svg" alt="" width="88" height="64"/>
 
             <h3 className="text-24 font-bold">Is your website fundamentally broken?</h3>
             <p>The Inclusive Website essential website audit reviews your content, design, and code to consider performance, usability, accessibilty, inclusivity, and ongoing management.</p>
@@ -73,7 +73,7 @@ export default function Solutions(){
           </div>
 
           <div className="flex flex-col space-y-4">
-            <img src="/audit/healed-browser.svg" alt="" width="88" height="64"/>
+            <img src="/_public/audit/healed-browser.svg" alt="" width="88" height="64"/>
 
             <h3 className="text-24 font-bold">What’s the best approach to fixing your website?</h3>
             <p>Your website is delivered by code that impacts performance, usability, accessibility, and management. If this code is not structured based on well established standards you may not be able to fix your website without incurring great expense.</p>
@@ -113,7 +113,7 @@ export default function Solutions(){
           </div>
 
           <div className="flex flex-col space-y-4">
-            <img src="/audit/prevent.svg" alt="" width="64" height="64"/>
+            <img src="/_public/audit/prevent.svg" alt="" width="64" height="64"/>
             <h3 className="text-24 font-bold">
               Your site may be actively preventing people from accessing your website content, limiting market access and engagement
             </h3>
@@ -123,7 +123,7 @@ export default function Solutions(){
           </div>
 
           <div className="flex flex-col space-y-4">
-            <img src="/audit/poor-performance.svg" alt="" width="64" height="64"/>
+            <img src="/_public/audit/poor-performance.svg" alt="" width="64" height="64"/>
 
             <h3 className="text-24 font-bold">
               Poor performance that makes people give up using your site
@@ -134,7 +134,7 @@ export default function Solutions(){
           </div>
 
           <div className="flex flex-col space-y-4">
-            <img src="/audit/not-usable.svg" alt="" width="64" height="64"/>
+            <img src="/_public/audit/not-usable.svg" alt="" width="64" height="64"/>
 
             <h3 className="text-24 font-bold">
               Not easily usable by many people
@@ -145,7 +145,7 @@ export default function Solutions(){
           </div>
 
           <div className="flex flex-col space-y-4">
-            <img src="/audit/difficult-improvement.svg" alt="" width="64" height="64"/>
+            <img src="/_public/audit/difficult-improvement.svg" alt="" width="64" height="64"/>
 
             <h3 className="text-24 font-bold">
               Difficult to make changes and improve
