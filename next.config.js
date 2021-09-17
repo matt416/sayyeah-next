@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         source: '/:path*',
-        destination: `ttps://kanetix.sayyeah.work/:path*`
+        destination: `https://kanetix.sayyeah.work/:path*`
       }
     ]
   }
