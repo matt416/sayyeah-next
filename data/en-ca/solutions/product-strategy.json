@@ -1,7 +1,7 @@
 {
   "hero":{
     "image":{
-      "src":"/heroes/product-design.png"
+      "src":"/_public/heroes/product-design.png"
     },
     "title":"Product strategy",
     "text":"The product strategy, scoping, and implementation expertise necessary to excel in the connected age."
