@@ -22,7 +22,7 @@ Navigation.Item = ({ children, href = "#", mode = "dark" }) => (
   </li>
 )
 
-export default function Header({ mode = "dark" }){
+export default function Header({ mode = "dark", includeNav = true }){
   const toggleMobileMenu = useMobileMenuStore(state => state.toggle)
 
   return <>
@@ -41,23 +41,27 @@ export default function Header({ mode = "dark" }){
       <a href="/" className="ml-[-28px] hidden md:block">
         <SayYeahLogo alt="Say Yeah! Home" width="48" height="104" />
       </a>
-      <Navigation name="Header" mode={ mode } />
 
-      <div className="md:hidden py-4">
-        <button
-          className="px-4 py-2 rounded hover:bg-black hover:text-white"
-          onClick={ () => toggleMobileMenu() }
-        >
-          Menu
-        </button>
-      </div>
-      </div>
 
-      <MobileMenu>
+      { includeNav && <>
+        <Navigation name="Header" mode={ mode } />
+
+        <div className="md:hidden py-4">
+          <button
+            className="px-4 py-2 rounded hover:bg-black hover:text-white"
+            onClick={ () => toggleMobileMenu() }
+            >
+            Menu
+          </button>
+        </div>
+      </>}
+    </div>
+
+    { includeNav && <MobileMenu>
         <ul className="flex flex-col space-y-8 text-lg py-6">
           { mainMenu.map((item, key) => <Navigation.Item href={ item.href } key={key}>{ item.label }</Navigation.Item> )}
         </ul>
-      </MobileMenu>
+      </MobileMenu> }
     </header>
 
 

@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         source: '/:path*',
-        destination: `https://tpilaw.sayyeah.work/:path*`
+        destination: `http://sayyeah.com/:path*`
       }
     ]
   }

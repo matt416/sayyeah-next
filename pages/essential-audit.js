@@ -19,7 +19,7 @@ const EssentialAuditCard = ({ className }) => <div className={ `flex flex-col md
   <p className="mb-4">Let us help you answer these critical questions, <strong>is my website broken?</strong> and <strong>how can I fix it?</strong></p>
   <span className="grid grid-cols-3 mb-0 mt-auto">
     <span className="flex-1 flex justify-center items-center border border-gray-200 mr-2 rounded font-bold bg-white">$499</span>
-    <Button href="#" className="bg-black text-white col-span-2">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
+    <Button href="/checkout" className="bg-black text-white col-span-2">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
   </span>
 </div>
 
@@ -52,7 +52,7 @@ export default function Solutions(){
             </ol>
             <p className="mb-6">Get the answers for just $499</p>
 
-            <Button href="#" className="bg-black text-white">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
+            <Button href="/checkout" className="bg-black text-white">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
           </div>
 
 
