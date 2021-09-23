@@ -46,7 +46,7 @@ function useCheckout(){
 
     const redirect_url = await StorefrontCheckout().create_checkout_and_get_redirect_url(values)
 
-    // window.location.href = redirect_url;
+    window.location.href = redirect_url;
     updateState({ isLoading: false })
     return;
 

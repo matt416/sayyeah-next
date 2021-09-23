@@ -23,8 +23,6 @@ const shopifyCheckout = {
       { key: "Agree to terms and conditions", value: data.agree_terms_and_conditions ? 'Yes' : 'No' }, // Make boolean human readable
     ]
 
-    console.log(customAttributes)
-
     const product = await client.product.fetchByHandle(data.product_sku)
 
     const variant_id = product.variants[0].id;
@@ -47,6 +45,5 @@ const shopifyCheckout = {
 export default function StorefrontCheckout() {
   const checkout = Object.create(shopifyCheckout);
   checkout.initialize_client();
-  console.log(checkout)
   return checkout;
 }
