@@ -16,11 +16,12 @@ import CallToAction from 'ui/stackitems/CallToAction'
 
 const EssentialAuditCard = ({ className }) => <div className={ `flex flex-col md:col-span-2 bg-gradient-to-b from-blue-50 to-blue-50-10% rounded-xl p-6 ${className}` }>
   <h3 className="text-24 font-bold mb-4">Get the essential website audit</h3>
-  <p className="mb-4">Let us help you answer these critical questions, <strong>is my website broken?</strong> and <strong>how can I fix it?</strong></p>
-  <span className="grid grid-cols-3 mb-0 mt-auto">
-    <span className="flex-1 flex justify-center items-center border border-gray-200 mr-2 rounded font-bold bg-white">$499</span>
-    <Button href="/checkout" className="bg-black text-white col-span-2">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
-  </span>
+  <p className="mb-4">Answer these two critical questions:</p>
+  <ul className="text-18 font-bold space-y-2 mb-4 list-inside">
+    <li>Is your website broken?</li>
+    <li>How can you fix it?</li>
+  </ul>
+    <Button href="/checkout" className="bg-black text-white col-span-2 text-18">Buy now for $499 <span className="sr-only">The essential website audit </span></Button>
 </div>
 
 export default function Solutions(){
@@ -31,26 +32,28 @@ export default function Solutions(){
       <section className="pb-12 pt-[128px] md:pt-[192px] md:pb-16 min-h-[60vh] flex px-6 bg-gradient-image-essential-heading shadow-inner ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-screen-xs md:max-w-screen-md mx-auto items-end">
 
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-6">
             <h2 className="text-28 md:text-32 font-bold">Over 90% of websites are fundamentally broken</h2>
-            <p className="text-24 font-bold">Is yours one of them?</p>
-            <p>This means over 90% of websites have issues that are a combination of:</p>
-            <ol className="list-decimal list-inside space-y-2">
+            <div>
+            <p className="mb-2">This means over 90% of websites have issues that are a combination of:</p>
+            <ol className="list-counter list-inside space-y-2">
               <li>actively preventing people from accessing content</li>
               <li>poor performance that causes visitors to give up using the site</li>
               <li>not easily usable by many people</li>
               <li>difficult to manage and improve</li>
             </ol>
+            </div>
+            <p className="text-24 font-bold">What about your site?</p>
           </div>
 
           <div className="flex flex-col text-20 bg-white rounded-xl p-6">
-            <h3 className="text-24 font-bold mb-2">Get the essential website audit</h3>
-            <p className="text-20 mb-4">Answer these two critical questions</p>
-            <ol className="text-18 space-y-2 mb-4 list-decimal list-inside">
+            {/* <h3 className="text-24 font-bold mb-2">Get the essential website audit</h3> */}
+            <p className="mb-4">The Essential Website Audit answers these two critical questions:</p>
+            <ul className="font-bold space-y-2 mb-4 list-inside">
               <li>Is your website broken?</li>
               <li>How can you fix it?</li>
-            </ol>
-            <p className="mb-6">Get the answers for just $499</p>
+            </ul>
+            <p className="mt-4 mb-6">Get the answers for just <span className="font-bold">$499</span></p>
 
             <Button href="/checkout" className="bg-black text-white">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
           </div>
@@ -167,7 +170,7 @@ export default function Solutions(){
           <div className="flex flex-col md:col-span-3 bg-gradient-to-b from-yellow-50 to-yellow-50-10% rounded-xl p-6">
             <h3 className="text-24 font-bold mb-4">Inclusive Website Design Service</h3>
             <p className="mb-4">Our inclusive website design service will guide your team through creating a comprehensive, accessible, and inclusive website design, and will also support your team in developing and making the site live.</p>
-              <Button href="#" className="bg-black text-white mt-auto mb-0">Learn more<span className="sr-only"> about Inclusive Web Design</span></Button>
+              <Button href="https://sayyeah.com/approach/inclusive-design/" className="bg-black text-white mt-auto mb-0">Learn more<span className="sr-only"> about Inclusive Web Design</span></Button>
           </div>
         </div>
       </section>

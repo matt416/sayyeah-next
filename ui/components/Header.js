@@ -7,20 +7,18 @@ import SayYeahLogo from 'ui/svg/sayyeah-logo'
 export function Navigation({ name, mode = "dark" }){
   return <nav aria-label={ name } className="md:flex items-center hidden">
     <ul className="flex space-x-8 text-lg py-4">
-      { mainMenu.map((item, key) => <Navigation.Item href={ item.href } key={key} mode={ mode }>{ item.label }</Navigation.Item> )}
+      { mainMenu.map((item, key) =>
+          <li key={ key }>
+            <Link href={ item.href }>
+              <a className={` px-4 py-2 rounded ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
+                { item.label }
+              </a>
+            </Link>
+          </li>
+        )}
     </ul>
   </nav>
 }
-
-Navigation.Item = ({ children, href = "#", mode = "dark" }) => (
-  <li>
-    <Link href={ href }>
-      <a className={` px-4 py-2 rounded ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
-        { children }
-      </a>
-    </Link>
-  </li>
-)
 
 export default function Header({ mode = "dark", includeNav = true }){
   const toggleMobileMenu = useMobileMenuStore(state => state.toggle)
@@ -58,8 +56,16 @@ export default function Header({ mode = "dark", includeNav = true }){
     </div>
 
     { includeNav && <MobileMenu>
-        <ul className="flex flex-col space-y-8 text-lg py-6">
-          { mainMenu.map((item, key) => <Navigation.Item href={ item.href } key={key}>{ item.label }</Navigation.Item> )}
+        <ul className="flex flex-col text-lg p-2">
+          { mainMenu.map((item, key) =>
+            <li key={ key }>
+              <Link href={ item.href }>
+                <a className={` px-4 py-2 rounded flex min-h-[3rem] items-center ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
+                  { item.label }
+                </a>
+              </Link>
+            </li>
+          )}
         </ul>
       </MobileMenu> }
     </header>

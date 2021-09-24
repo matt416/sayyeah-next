@@ -77,7 +77,7 @@ export default function Checkout() {
               {/* { fetchStatus.isError && "We've got a problem."} */}
               <div>
                 <span className="text-16">Please provide us with the URL of the website you'd like us to review</span>
-                <TextInput label="Website url" name="website_url" type="text" required={ true } />
+                <TextInput label="Website" name="website_url" type="text" required={ true } />
               </div>
 
               <div>
@@ -91,7 +91,7 @@ export default function Checkout() {
               <Checkbox name="agree_terms_and_conditions">I have read and agree to the <a href="https://sayyeah.com/essential-website-audit/terms-and-conditions/" className="underline">Terms and Conditions</a></Checkbox>
               <Hidden name="product_sku" id="product_sku" />
 
-              <SubmitButton label={ `Buy now - ${ESSENTIAL_AUDIT_PRICE.value}` } isLoading={ fetchStatus.isLoading } />
+              <SubmitButton label={ `Proceed to checkout` } isLoading={ fetchStatus.isLoading } />
             </Form>
           </Formik>
 

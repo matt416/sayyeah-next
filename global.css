@@ -46,7 +46,7 @@
 }
 
 .as\:h2 {
-  @apply text-40 font-bold max-w-[40rem]
+  @apply text-40 font-bold max-w-[40rem];
 }
 
 /* a:focus {
@@ -80,3 +80,53 @@
 * {
   outline: 1px solid red;
 } */
+
+
+
+/* ol li, ul li {
+  font-size: $root-paragraph-font-size;
+  line-height: $root-paragraph-line-height;
+  list-style: none;
+  margin-bottom: 8px;
+  small {
+    font-size: 0.875em;
+    display: block;
+  }
+
+} */
+
+ol.list-counter, ul.list-bullet {
+  li {
+    list-style-position: inside;
+    position: relative;
+    padding-left: 3ex;
+    overflow: hidden;
+  }
+  li::before {
+    content: "• ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:  inline-block;
+    height: 100%;
+    width: 3ex;
+  }
+}
+
+ol.list-counter {
+  counter-reset: ol-list;
+
+  li {
+    counter-increment: ol-list;
+  }
+
+  li::before{
+    content: counter(ol-list) ". ";
+  }
+}
+
+
+.custom\:bg-image-checkmark {
+  background-image:url('/_public/checkmark.png');
+  background-size:contain;
+}

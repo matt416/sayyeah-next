@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         source: '/:path*',
-        destination: `http://sayyeah.com/:path*`
+        destination: `http://localhost:3000/:path*`
       }
     ]
   }

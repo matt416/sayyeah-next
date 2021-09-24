@@ -20,9 +20,9 @@ export const SubmitButton = ({ label, isLoading, className, ...props }) => {
     base:'h-12 px-6 py-3 bg-primary-2 text-white bg-black rounded-lg flex font-bold text-18',
   }
   return (
-    <button type="submit" className={ clsx(classnames.base, className)}>
-      { isLoading ? 'Sending' : label }
-      { isLoading && <img src="/loading@4x.png" className="animate-spin ml-3" alt="Loading" width="24" height="24" /> }
+    <button type="submit" className={ clsx(classnames.base, className)} disabled={ isLoading }>
+      { isLoading ? 'Loading' : label }
+      { isLoading && <img src="/_public/loading.png" className="animate-spin ml-3" alt="" width="24" height="24" /> }
     </button>
   )
 }
@@ -84,7 +84,7 @@ export const Checkbox = ({ children, ...props }) => {
     <div className="py-4">
       <label className="checkbox-input flex">
         <input type="checkbox" {...field} {...props}
-          className="appearance-none border-gray-300 w-[1.25rem] h-[1.25rem] border rounded-md checked:bg-black checked:border-transparent mr-2 flex-shrink-0" />
+          className="appearance-none border-gray-300 w-[1.25rem] h-[1.25rem] border rounded-md checked:bg-black checked:border-transparent mr-2 flex-shrink-0 custom:bg-image-checkmark" />
         <span>{children}</span>
       </label>
       <FieldError {...meta} />
