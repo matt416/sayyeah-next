@@ -1,7 +1,7 @@
 {
   "hero":{
     "image":{
-      "src":"/heroes/service-design.png"
+      "src":"/_public/heroes/service-design.png"
     },
     "title":"Service design",
     "text":"Optimize your team’s efforts to deliver a consistent, connected customer experience that drives engagement and retention."
