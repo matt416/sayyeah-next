@@ -20,17 +20,17 @@ export function Navigation({ name, mode = "dark" }){
   </nav>
 }
 
-export default function Header({ mode = "dark", includeNav = true }){
+export default function Header({ mode = "dark", children, className, includeNav = true }){
   const toggleMobileMenu = useMobileMenuStore(state => state.toggle)
 
   return <>
     <SkipBlock target="#main-content" />
-    <header className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}>
+    <header className={ className }>
 
     {/* <header className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}> */}
     {/* <header className="max-w-[60rem] mx-auto flex justify-between items-center"> */}
     {/* <div className="bg-black text-white w-full px-4"> */}
-    <div className="max-w-screen-xs md:max-w-screen-md mx-auto pt-4 flex items-start justify-between">
+    <div className="max-w-screen-xs md:max-w-screen-md mx-auto pt-4 flex items-start justify-between pb-12">
 
       <a href="/"  className="ml-[-21px] md:hidden">
         <SayYeahLogo alt="Say Yeah! Home" width="36" height="78" />
@@ -68,6 +68,8 @@ export default function Header({ mode = "dark", includeNav = true }){
           )}
         </ul>
       </MobileMenu> }
+
+      { children }
     </header>
 
 

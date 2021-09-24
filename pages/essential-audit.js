@@ -23,13 +23,13 @@ const EssentialAuditCard = ({ className }) => <div className={ `flex flex-col md
   </ul>
     <Button href="/checkout" className="bg-black text-white col-span-2 text-18">Buy now for $499 <span className="sr-only">The essential website audit </span></Button>
 </div>
-
+//className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}
+//pt-[128px] md:pt-[192px]
 export default function Solutions(){
   return <Layout includeHeader={ false }>
-    <Header mode="light" />
-    <main id="main-content">
-      <h1 className="sr-only">The Essential Website Audit</h1>
-      <section className="pb-12 pt-[128px] md:pt-[192px] md:pb-16 min-h-[60vh] flex px-6 bg-gradient-image-essential-heading shadow-inner ">
+    <Header mode="light" className="bg-gradient-image-essential-heading ">
+    <h1 className="sr-only">The Essential Website Audit</h1>
+      <section className="pb-12  md:pb-16 flex px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-screen-xs md:max-w-screen-md mx-auto items-end">
 
           <div className="flex flex-col space-y-6">
@@ -61,6 +61,9 @@ export default function Solutions(){
 
         </div>
       </section>
+
+    </Header>
+    <main id="main-content">
 
       <section className="py-12 md:py-16 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12  max-w-screen-xs md:max-w-screen-md mx-auto min-h-full content-center">
