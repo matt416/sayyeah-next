@@ -1,6 +1,6 @@
 [
   { "label": "Solutions", "href": "/solutions" },
-  { "label": "Work", "href": "#" },
-  { "label": "Insights", "href": "#" },
-  { "label": "About", "href": "#" }
+  { "label": "Work", "href": "/work" },
+  { "label": "Insights", "href": "/digital-insights" },
+  { "label": "About", "href": "/about-us" }
 ]
