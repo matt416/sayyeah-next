@@ -28,7 +28,7 @@ module.exports = {
       fallback: [
         {
           source: '/:path*',
-          destination: `https://live.sayyeah.work/:path*/`,
+          destination: `https://insights.sayyeah.com/:path*/`,
         },
       ],
     }
