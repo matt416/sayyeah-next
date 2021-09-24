@@ -1,7 +1,5 @@
-const SkipBlock = ({ target = "#main-content"}) => <div className="absolute top-[1rem] left-[1rem]">
-  <a href={ target } className="sr-only focus:not-sr-only">
-    <span className=" text-lg bg-black text-white min-h-[3rem] rounded-md px-4 flex items-center">Skip to main content</span>
-    </a>
+const SkipBlock = ({ target = "#main-content"}) => <div className="px-4 w-full bg-black flex items-center justify-center">
+    <a href={ target } className="sr-only focus:not-sr-only text-lg text-white outline-white">Skip to main content</a>
   </div>
 
 export default SkipBlock

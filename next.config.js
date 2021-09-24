@@ -11,26 +11,15 @@ module.exports = {
 
     return config;
   },
-  // async rewrites() {
-
-  //   return {
-  //     fallback: [
-  //       {
-  //         source: '/:path*',
-  //         destination: `https://kanetix.sayyeah.work/:path*`,
-  //       },
-  //     ],
-  //   }
-  // }
-
   async rewrites() {
+
     return {
       fallback: [
         {
           source: '/:path*',
-          destination: `https://insights.sayyeah.com/:path*/`,
+          destination: `https://insights.sayyeah.com/:path*`,
         },
       ],
     }
   }
-}
+};

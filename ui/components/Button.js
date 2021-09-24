@@ -17,7 +17,7 @@ const Button = ({ children, className, href, ariaLabel }) => {
   return <a
   href={ href }
   aria-label={ ariaLabel }
-  className={ `inline-flex min-h-[3rem] font-bold items-center justify-center px-6 py-2 rounded-md ${className} ` }>
+  className={ `inline-flex min-h-[2rem] font-bold items-center justify-center px-6 py-2 rounded ${className} ` }>
       { children }
   </a>
 
