@@ -22,6 +22,21 @@ module.exports = {
   //     ],
   //   }
   // }
+  trailingSlash:true,
+
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/:path*',
+  //       headers: [
+  //         {
+  //           key: 'x-hello',
+  //           value: 'there',
+  //         },
+  //       ],
+  //     },
+  //   ]
+  // },
 
   async rewrites() {
     return {
