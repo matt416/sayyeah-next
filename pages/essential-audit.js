@@ -36,7 +36,7 @@ export default function Solutions(){
             <h2 className="text-28 md:text-32 font-bold">Over 90% of websites are fundamentally broken</h2>
             <div>
             <p className="mb-2">This means over 90% of websites have issues that are a combination of:</p>
-            <ol className="list-counter list-inside space-y-2">
+            <ol className="list-decimal list-outside space-y-2 pl-[1.1em]">
               <li>actively preventing people from accessing content</li>
               <li>poor performance that causes visitors to give up using the site</li>
               <li>not easily usable by many people</li>
