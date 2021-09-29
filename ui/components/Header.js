@@ -9,11 +9,9 @@ export function Navigation({ name, mode = "dark" }){
     <ul className="flex space-x-8 text-lg py-4">
       { mainMenu.map((item, key) =>
           <li key={ key }>
-            {/* <Link > */}
-              <a href={ item.href } className={` px-4 py-2 rounded ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
+              <a  href={ item.href } className={` px-4 py-2 rounded ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
                 { item.label }
               </a>
-            {/* </Link> */}
           </li>
         )}
     </ul>
@@ -59,11 +57,9 @@ export default function Header({ mode = "dark", children, className, includeNav 
         <ul className="flex flex-col text-lg p-2">
           { mainMenu.map((item, key) =>
             <li key={ key }>
-              {/* <Link > */}
                 <a href={ item.href } className={` px-4 py-2 rounded flex min-h-[3rem] items-center ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
                   { item.label }
                 </a>
-              {/* </Link> */}
             </li>
           )}
         </ul>
