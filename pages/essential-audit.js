@@ -23,6 +23,16 @@ export default function EssentialAudit(){
     <NextSeo
       title="The Essential Website Audit. 90% of websites are broken. Is yours?"
       description="The Essential Website Audit answers these two critical questions: Is your website broken? How can you fix it? Order today."
+      openGraph={{
+        images: [
+          {
+            url: '/img/og-essential-website-audit.png',
+            width: 1200,
+            height: 627,
+            alt: 'The Essential Website Audit from Say Yeah!',
+          },
+        ],
+      }}
     />
 
 

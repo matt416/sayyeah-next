@@ -26,6 +26,16 @@ export default function Form(){
       nofollow={ true }
       title="Order the Essential Website Audit service from Say Yeah!"
       description="Order the Essential Website Audit today for $499.00. Fill out this form and continue to confirm how you can improve your website."
+      openGraph={{
+        images: [
+          {
+            url: '/img/og-essential-website-audit.png',
+            width: 1200,
+            height: 627,
+            alt: 'The Essential Website Audit from Say Yeah!',
+          },
+        ],
+      }}
     />
 
     {/* <Header includeNav={ false } mode="light" /> */}

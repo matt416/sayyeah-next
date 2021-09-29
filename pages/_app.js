@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
         },
         {
           rel: 'manifest',
-          href: '/favicon/site-manifest.json'
+          href: '/favicon/manifest.webmanifest'
         }
       ]}
     />
