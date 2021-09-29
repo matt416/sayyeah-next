@@ -36,8 +36,8 @@ export default function EssentialAudit(){
     />
 
 
-    <Header mode="light" className="bg-gradient-image-essential-heading ">
-    <h1 className="sr-only">The Essential Website Audit</h1>
+    <Header mode="light" className="bg-gradient-image-essential-heading">
+      <h1 className="sr-only">The Essential Website Audit</h1>
       <section className="pb-12  md:pb-16 flex px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-screen-xs md:max-w-screen-md mx-auto items-end">
 

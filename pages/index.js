@@ -15,75 +15,6 @@ import Hero from 'ui/stackitems/Hero'
 import CallToAction from 'ui/stackitems/CallToAction'
 import { Stack, StackItem, StackContent } from 'ui/components/Stack'
 
-
-/*** Hero (with Hero component) */
-const HERO = {
-  "image": {
-    src: "/heroes/homepage.png"
-  },
-  "name":"Say Yeah",
-  "title":"Deliver products and services that win diverse markets",
-  "catchline":"As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
-  "actions":[
-    {
-      "label":"Why designing for the average person hurts your bottom line",
-      "ariaLabel":false,
-      "href":"#"
-    },
-    {
-      "label":"The role of technolgy in building market leaders",
-      "ariaLabel":false,
-      "href":"#"
-    }
-  ]
-}
-
-/*** Outcome Cards */
-const OUTCOME_CARDS = [
-  {
-    "photo":{
-      "src":""
-    },
-    "tags":[
-      "Service design"
-    ],
-    "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
-    "logo":""
-  },
-  {
-    "photo":{
-      "src":""
-    },
-    "tags":[
-      "Service design"
-    ],
-    "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
-    "logo":""
-  },
-  {
-    "photo":{
-      "src":""
-    },
-    "tags":[
-      "Service design"
-    ],
-    "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
-    "logo":""
-  },
-  {
-    "photo":{
-      "src":""
-    },
-    "tags":[
-      "Service design"
-    ],
-    "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
-    "logo":""
-  }
-]
-
-
-
 /*** Impactful Challenges */
 
 const IMPACTFUL_CHALLENGES = [
@@ -214,8 +145,28 @@ const FEATURED_TESTIMONIAL = {
 export default function Home() {
   return (
     <Layout>
-      <Stack>
-        <Hero data={ HERO } />
+      <main tabIndex="-1" id="maincontent" className="flex flex-col items-center justify-center flex-1">
+        <Hero data={{
+          "image": {
+            src: "/heroes/homepage.png"
+          },
+          "name":"Say Yeah",
+          "title":"Deliver products and services that win diverse markets",
+          "catchline":"As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
+          "actions":[
+            {
+              "label":"Why designing for the average person hurts your bottom line",
+              "ariaLabel":false,
+              "href":"#"
+            },
+            {
+              "label":"The role of technolgy in building market leaders",
+              "ariaLabel":false,
+              "href":"#"
+            }
+          ]
+        }}
+      />
 
         {/** Outcome Cards */}
         <StackItem className="bg-yeah-cola text-white flex flex-col">
@@ -226,7 +177,43 @@ export default function Home() {
           </StackContent>
 
           <Carousel className="-mx-4">
-            { OUTCOME_CARDS.map((card, key) => (
+            { [{
+              "photo":{
+                "src":""
+              },
+              "tags":[
+                "Service design"
+              ],
+              "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
+              "logo":""
+            },{
+              "photo":{
+                "src":""
+              },
+              "tags":[
+                "Service design"
+              ],
+              "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
+              "logo":""
+            },{
+              "photo":{
+                "src":""
+              },
+              "tags":[
+                "Service design"
+              ],
+              "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
+              "logo":""
+            },{
+              "photo":{
+                "src":""
+              },
+              "tags":[
+                "Service design"
+              ],
+              "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
+              "logo":""
+            }].map((card, key) => (
             <Card className="text-black" key={ key }>
               <Card.Photo src='https://source.unsplash.com/random/401x225' />
               <Card.Content className="space-y-4">
@@ -453,7 +440,7 @@ export default function Home() {
         </StackItem>
 
         <CallToAction>Let’s explore how delivering more inclusive products and services can help you win markets</CallToAction>
-      </Stack>
+      </main>
     </Layout>
   )
 }
