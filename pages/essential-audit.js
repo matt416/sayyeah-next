@@ -1,18 +1,11 @@
 import React from 'react'
-import ReactMarkdown from "react-markdown"
 
 import Layout from 'ui/Layout'
-import { Stack, StackItem, StackContent } from 'ui/components/Stack'
-
+import { NextSeo } from "next-seo"
 import Header from "ui/components/Header"
 
-import Action from "ui/components/Action"
-import Card from "ui/components/Card"
 import Button from "ui/components/Button"
-import Carousel from "ui/components/Carousel"
 
-import Hero from 'ui/stackitems/Hero'
-import CallToAction from 'ui/stackitems/CallToAction'
 
 const EssentialAuditCard = ({ className }) => <div className={ `flex flex-col md:col-span-2 bg-gradient-to-b from-blue-50 to-blue-50-10% rounded-xl p-6 ${className}` }>
   <h3 className="text-24 font-bold mb-4">Get the essential website audit</h3>
@@ -25,8 +18,14 @@ const EssentialAuditCard = ({ className }) => <div className={ `flex flex-col md
 </div>
 //className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}
 //pt-[128px] md:pt-[192px]
-export default function Solutions(){
+export default function EssentialAudit(){
   return <Layout includeHeader={ false }>
+    <NextSeo
+      title="The Essential Website Audit. 90% of websites are broken. Is yours?"
+      description="The Essential Website Audit answers these two critical questions: Is your website broken? How can you fix it? Order today."
+    />
+
+
     <Header mode="light" className="bg-gradient-image-essential-heading ">
     <h1 className="sr-only">The Essential Website Audit</h1>
       <section className="pb-12  md:pb-16 flex px-6">
@@ -71,8 +70,9 @@ export default function Solutions(){
 
 
           <div className="flex flex-col space-y-4">
-            <img src="/_public/audit/hurt-browser.svg" alt="" width="88" height="64"/>
-
+            <a href="/">
+            <img src="/_public/audit/hurt-browser.svg" alt="Hurt" width="88" height="64"/>
+            </a>
             <h3 className="text-24 font-bold">Is your website fundamentally broken?</h3>
             <p>The Inclusive Website essential website audit reviews your content, design, and code to consider performance, usability, accessibilty, inclusivity, and ongoing management.</p>
             <p>We’ll let you know if there are critical issues you can fix to improve website access and engagement.</p>

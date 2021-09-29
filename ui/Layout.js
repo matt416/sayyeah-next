@@ -3,19 +3,19 @@ import Head from 'next/head'
 import Header from 'ui/components/Header'
 import { useHideMenuOnRouteChange } from "ui/components/MobileMenu"
 import { SSRProvider } from 'react-aria'
-const Layout = ({ children, includeHeader = true, title = "Say Yeah" }) => {
+import { NextSeo } from 'next-seo'
+
+const Layout = ({ children, includeHeader = true, includeNav = true, mode = "dark", className }) => {
   useHideMenuOnRouteChange()
 
   return <SSRProvider>
-    <Head>
-      <title>{ title }</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
 
-    { includeHeader && <Header></Header> }
+
+    <div className={ className }>
+    { includeHeader && <Header includeNav={ includeNav } mode={ mode }></Header> }
 
     { children }
-
+    </div>
     {/** <Footer></Footer> */}
   </SSRProvider>
 
