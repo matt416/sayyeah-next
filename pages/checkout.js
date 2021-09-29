@@ -29,7 +29,7 @@ export default function Form(){
       openGraph={{
         images: [
           {
-            url: '/img/og-essential-website-audit.png',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/img/og-essential-website-audit.png`,
             width: 1200,
             height: 627,
             alt: 'The Essential Website Audit from Say Yeah!',
