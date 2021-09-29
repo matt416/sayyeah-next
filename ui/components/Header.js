@@ -32,11 +32,11 @@ export default function Header({ mode = "dark", children, className, includeNav 
     {/* <div className="bg-black text-white w-full px-4"> */}
     <div className="max-w-screen-xs md:max-w-screen-md mx-auto pt-4 flex items-start justify-between pb-12">
 
-      <a href="/"  className="ml-[-21px] md:hidden">
+      <a href="/"  className="ml-[-21px] md:hidden" aria-label="Say Yeah! Home" >
         <SayYeahLogo alt="Say Yeah! Home" width="36" height="78" />
       </a>
 
-      <a href="/" className="ml-[-28px] hidden md:block">
+      <a href="/" className="ml-[-28px] hidden md:block" aria-label="Say Yeah! Home" >
         <SayYeahLogo alt="Say Yeah! Home" width="48" height="104" />
       </a>
 
