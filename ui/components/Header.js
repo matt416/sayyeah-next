@@ -1,8 +1,7 @@
-import Link from 'next/link'
 import SkipBlock from 'ui/components/SkipBlock'
 import mainMenu from "data/en-ca/collections/mainmenu.json"
 import { MobileMenu, useMobileMenuStore } from './MobileMenu'
-import SayYeahLogo from 'ui/svg/sayyeah-logo'
+import SayYeahLogo from 'ui/svg/SayYeahLogo.svg.js'
 
 export function Navigation({ name, mode = "dark" }){
   return <nav aria-label={ name } className="md:flex items-center hidden">
@@ -18,26 +17,24 @@ export function Navigation({ name, mode = "dark" }){
   </nav>
 }
 
-export default function Header({ mode = "dark", children, className, includeNav = true }){
+export default function Header({ mode = "dark", children, className, includeNav = true, style }){
   const toggleMobileMenu = useMobileMenuStore(state => state.toggle)
 
-  return <>
+return <>
     <SkipBlock target="#main-content" />
-    <header className={ className }>
+    <header className={ `px-10 ${className} ${ mode == "dark" ? "text-white" : "text-black "}` } style={ style }>
 
     {/* <header className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}> */}
     {/* <header className="max-w-[60rem] mx-auto flex justify-between items-center"> */}
     {/* <div className="bg-black text-white w-full px-4"> */}
     <div className="max-w-screen-xs md:max-w-screen-md mx-auto pt-4 flex items-start justify-between pb-12">
 
-      <a href="/"  className="ml-[-21px] md:hidden" aria-label="Say Yeah! Home" >
-        <SayYeahLogo alt="Say Yeah! Home" width="36" height="78" />
-      </a>
-
-      <a href="/" className="ml-[-28px] hidden md:block" aria-label="Say Yeah! Home" >
-        <SayYeahLogo alt="Say Yeah! Home" width="48" height="104" />
-      </a>
-
+    <span className="md:hidden">
+      <SayYeahLogo href="/" className="ml-[-21px]" alt="Say Yeah! Home" width="36" height="78"/>
+    </span>
+    <span className="hidden md:block">
+      <SayYeahLogo href="/" className="ml-[-28px]" alt="Say Yeah! Home" width="48" height="104" />
+    </span>
 
       { includeNav && <>
         <Navigation name="Header" mode={ mode } />

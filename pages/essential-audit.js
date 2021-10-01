@@ -14,12 +14,11 @@ const EssentialAuditCard = ({ className }) => <div className={ `flex flex-col md
     <li>Is your website broken?</li>
     <li>How can you fix it?</li>
   </ul>
-    <Button href="/checkout" className="bg-black text-white col-span-2 text-18">Buy now for $499 <span className="sr-only">The essential website audit </span></Button>
+  <Button href="/checkout" className="bg-black text-white col-span-2 text-18">Buy now for $499 <span className="sr-only">The essential website audit </span></Button>
 </div>
-//className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}
-//pt-[128px] md:pt-[192px]
+
 export default function EssentialAudit(){
-  return <Layout includeHeader={ false }>
+  return <Layout mode="light">
     <NextSeo
       title="The Essential Website Audit. 90% of websites are broken. Is yours?"
       description="The Essential Website Audit answers these two critical questions: Is your website broken? How can you fix it? Order today."
@@ -35,10 +34,10 @@ export default function EssentialAudit(){
       }}
     />
 
+    <main tabIndex="-1" id="main-content" className="stack-header-and-main-using-grid">
+      <section className="pb-12 md:pb-16 flex px-10 relative bg-gradient-image-essential-heading include-padding-for-header">
 
-    <Header mode="light" className="bg-gradient-image-essential-heading">
-      <h1 className="sr-only">The Essential Website Audit</h1>
-      <section className="pb-12  md:pb-16 flex px-6">
+        <h1 className="sr-only">The Essential Website Audit</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-screen-xs md:max-w-screen-md mx-auto items-end">
 
           <div className="flex flex-col space-y-6">
@@ -56,7 +55,7 @@ export default function EssentialAudit(){
           </div>
 
           <div className="flex flex-col text-20 bg-white rounded-xl p-6">
-            {/* <h3 className="text-24 font-bold mb-2">Get the essential website audit</h3> */}
+            <h2 className="sr-only">Get the essential website audit</h2>
             <p className="mb-4">The Essential Website Audit answers these two critical questions:</p>
             <ul className="font-bold space-y-2 mb-4 list-inside">
               <li>Is your website broken?</li>
@@ -70,19 +69,13 @@ export default function EssentialAudit(){
 
         </div>
       </section>
-
-    </Header>
-    <main id="main-content">
-
-      <section className="py-12 md:py-16 px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12  max-w-screen-xs md:max-w-screen-md mx-auto min-h-full content-center">
+      <section className="py-12 md:py-16 px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-screen-xs md:max-w-screen-md mx-auto min-h-full content-center">
           <h2 className="text-28 md:text-32 font-bold col-span-full">What you’ll learn from the audit</h2>
 
 
           <div className="flex flex-col space-y-4">
-            <a href="/">
-            <img src="/_public/audit/hurt-browser.svg" alt="Hurt" width="88" height="64"/>
-            </a>
+            <img src="/_public/audit/hurt-browser.svg" alt="" width="88" height="64"/>
             <h3 className="text-24 font-bold">Is your website fundamentally broken?</h3>
             <p>The Inclusive Website essential website audit reviews your content, design, and code to consider performance, usability, accessibilty, inclusivity, and ongoing management.</p>
             <p>We’ll let you know if there are critical issues you can fix to improve website access and engagement.</p>
@@ -98,7 +91,7 @@ export default function EssentialAudit(){
         </div>
       </section>
 
-      <section className="py-12 md:py-16 px-6">
+      <section className="py-12 md:py-16 px-10">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12  max-w-screen-xs md:max-w-screen-md mx-auto min-h-full items-start justify-items-center">
           <h2 className="sr-only">Our essential website audit approach</h2>
 
@@ -121,7 +114,7 @@ export default function EssentialAudit(){
 
       </section>
 
-      <section className="py-12 md:py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-50-10%">
+      <section className="py-12 md:py-16 px-10 bg-gradient-to-b from-blue-50 to-blue-50-10%">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12  max-w-screen-xs md:max-w-screen-md mx-auto min-h-full items-start">
           <div className="col-span-full max-w-screen-sm space-y-4">
             <h2 className="text-28 md:text-32 font-bold">How does it impact my customers if my website is broken?</h2>
@@ -174,7 +167,7 @@ export default function EssentialAudit(){
         </div>
       </section>
 
-      <section className="py-12 md:py-16 px-6">
+      <section className="py-12 md:py-16 px-10">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-4 max-w-screen-xs md:max-w-screen-md mx-auto min-h-full">
           <h2 className="text-28 md:text-32 font-bold col-span-full">Get started today</h2>
 
@@ -189,6 +182,6 @@ export default function EssentialAudit(){
       </section>
 
     </main>
-    <footer></footer>
+
   </Layout>
 }

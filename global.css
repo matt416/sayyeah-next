@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /** Equal to the logo height + top padding + bottom padding */
+  --header-height: 142px; /** 78px + 16px + 48px */
+
+  @screen md {
+    --header-height: 168px; /** 104px + 16px + 48px */
+  }
+}
+
+.stack-header-and-main-using-grid {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+#main-content {
+  scroll-margin-top: 3rem;
+}
+
+#main-content section:first-child {
+  /** Include padding for header in the first section of the main element */
+  padding-top: var(--header-height);
+}
+
+
+.DEFAULT_CONTENT {
+  @apply max-w-screen-xs md:max-w-screen-md mx-auto;
+}
+.DEFAULT_GRID_GAP {
+  @apply gap-8 md:gap-12;
+}
+.DEFAULT_GRID_COLS {
+  @apply grid-cols-1 md:grid-cols-2;
+}
+.DEFAULT_SECTION {
+  @apply py-12 md:py-16 px-10 w-full;
+}
+
+
+/*
+.include-padding-for-header {
+  padding-top: var(--header-height);
+} */
 .card-grid {
   display: grid;
   grid-template-rows: 1fr auto;
