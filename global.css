@@ -11,11 +11,6 @@
   }
 }
 
-.stack-header-and-main-using-grid {
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
-
 #main-content {
   scroll-margin-top: 3rem;
 }
@@ -24,7 +19,6 @@
   /** Include padding for header in the first section of the main element */
   padding-top: var(--header-height);
 }
-
 
 .DEFAULT_CONTENT {
   @apply max-w-screen-xs md:max-w-screen-md mx-auto;
