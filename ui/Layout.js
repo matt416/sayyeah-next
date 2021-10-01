@@ -1,22 +1,20 @@
 import React from 'react'
-import Head from 'next/head'
 import Header from 'ui/components/Header'
+import Footer from 'ui/components/Footer'
+
 import { useHideMenuOnRouteChange } from "ui/components/MobileMenu"
 import { SSRProvider } from 'react-aria'
-import { NextSeo } from 'next-seo'
 
 const Layout = ({ children, includeHeader = true, includeNav = true, mode = "dark", className }) => {
   useHideMenuOnRouteChange()
 
   return <SSRProvider>
-
-
-    <div className={ className }>
-    { includeHeader && <Header includeNav={ includeNav } mode={ mode }></Header> }
+    <div className={`grid grid-cols-1 ${className}`}>
+    { includeHeader && <Header includeNav={ includeNav } mode={ mode } className="stack-header-and-main-using-grid z-50" ></Header> }
 
     { children }
     </div>
-    {/** <Footer></Footer> */}
+    <Footer />
   </SSRProvider>
 
 }
