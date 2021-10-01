@@ -38,14 +38,14 @@ module.exports = {
   //   ]
   // },
 
-  async rewrites() {
-    return {
+  async rewrites() { // Fallback on production, don't do this locally please!
+    return process.env.NODE_ENV === "production" ? {
       fallback: [
         {
           source: '/:path*',
           destination: `https://insights.sayyeah.com/:path*/`,
         },
       ],
-    }
+    } : []
   }
 }
