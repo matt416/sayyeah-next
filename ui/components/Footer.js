@@ -16,8 +16,6 @@ export default function Footer() {
           <div className="space-y-4 flex flex-col items-start">
           <SayYeahLogo href="/" className="text-yeah-yellow ml-[-28px]" alt="Say Yeah! Home" />
 
-            <p className="text-18">We drive business with digital.</p>
-
             <h3 className="sr-only">Contact information</h3>
             <address className="not-italic">
               <dl className="flex flex-col items-start space-y-1">
