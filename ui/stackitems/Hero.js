@@ -6,15 +6,18 @@ export default function Hero({ data }) {
 
   if (isEmpty(data)) { return null }
 
-  return <StackItem className="min-h-[60vh] bg-black text-white" image={ data?.image?.src }>
-    <StackContent className="grid gap-6 grid-cols-1 md:grid-cols-2 max-w-[60rem] content-center">
+  return <section className="DEFAULT_SECTION min-h-[60vh] bg-black text-white" image={ data?.image?.src }>
+    <div className="grid DEFAULT_GRID_GAP DEFAULT_GRID_COLS DEFAULT_CONTENT content-center">
       <div className="flex flex-col items-start space-y-6">
         <h1 className="text-40 text-yeah-yellow font-bold">
           { data.name && <span className="sr-only block text-16 font-normal mb-2 text-white">{ data.name }</span> }
           { data.title }</h1>
-          <ReactMarkdown className="text-24 space-y-6">
-            { data.catchline || data.text }
-          </ReactMarkdown>
+
+          { data.catchline || data.text ?
+            <ReactMarkdown className="text-24 space-y-6">
+              { data.catchline || data.text }
+            </ReactMarkdown>
+          : null }
         { data?.actions?.length > 0 &&
           <ul className="space-y-2">
             { data?.actions?.map((action, key) =>
@@ -27,6 +30,6 @@ export default function Hero({ data }) {
           </ul>
         }
       </div>
-    </StackContent>
-  </StackItem>
+    </div>
+  </section>
 }

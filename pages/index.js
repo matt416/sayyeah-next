@@ -2,7 +2,7 @@ import React from 'react'
 import ReactMarkdown from "react-markdown"
 
 import Layout from 'ui/Layout'
-
+import Header from "ui/components/Header"
 import Action from "ui/components/Action"
 import Card from "ui/components/Card"
 import Button from "ui/components/Button"
@@ -15,224 +15,76 @@ import Hero from 'ui/stackitems/Hero'
 import CallToAction from 'ui/stackitems/CallToAction'
 import { Stack, StackItem, StackContent } from 'ui/components/Stack'
 
-/*** Impactful Challenges */
-
-const IMPACTFUL_CHALLENGES = [
-  {
-    "text":"How can technology improve how we work?",
-    "actions":[
-      {
-        "href":"#",
-        "label":"Assessing your organization",
-        "ariaLabel":false
-      }
-    ]
-  },
-  {
-    "text":"Can our products and services better serve our market?",
-    "actions":[
-      {
-        "href":"#",
-        "label":"Assessing your organization",
-        "ariaLabel":false
-      }
-    ]
-  },
-  {
-    "text":"Can we improve customer experience by working as a more cohesive team?",
-    "actions":[
-      {
-        "href":"#",
-        "label":"Assessing your organization",
-        "ariaLabel":false
-      }
-    ]
-  },
-  {
-    "text":"Are we making the best technology choices for our organization?",
-    "actions":[
-      {
-        "href":"#",
-        "label":"Assessing your organization",
-        "ariaLabel":false
-      }
-    ]
-  },
-  {
-    "text":"Can we more effeciently design and deliver a digital product?",
-    "actions":[
-      {
-        "href":"#",
-        "label":"Assessing your organization",
-        "ariaLabel":false
-      }
-    ]
-  },
-  {
-    "text":"Are there unintended ways we may be limiting access to our content, products, and services?",
-    "actions":[
-      {
-        "href":"#",
-        "label":"Assessing your organization",
-        "ariaLabel":false
-      }
-    ]
-  }
-]
-
-/*** Featured Video */
-const VIDEO = {
-  "url":"https://sayyeah.com/wp-content/uploads/2020/02/mark_testimonial.mp4",
-  "poster":"https://sayyeah.com/wp-content/uploads/2020/02/mark_testimonial-1.jpg",
-  "tracks":[
-    {
-      "kind":"subtitles",
-      "label":"English",
-      "src":"/captions/markdowds_testimonial.vtt",
-      "srcLang":"en",
-      "default":true
-    }
-  ]
-}
-
-/*** Featured Publications */
-const FEATURED_PRESS = [
-  { "name": "SXSW" },
-  { "name": "FITC" },
-  { "name": "Digital Journal" },
-  { "name": "UX Magazine" },
-  { "name": "CTV News Channel" },
-]
-
-/*** Client Roster */
-const CLIENT_ROSTER = [
-  { "name": "Toronto Public Library" },
-  { "name": "Boon" }
-]
-
-/*** Decision Cards */
-const DECISION_CARDS = [
-  {
-    "icon":"",
-    "text":"**Modernize your organization** towards more efficient service delivery and improved customer experience.",
-    "actions":[
-      {
-        "label":"Get started",
-        "ariaLabel":"Get started, modernize your organization",
-        "href":"#"
-      }
-    ]
-  },
-  {
-    "icon":"",
-    "text":"**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
-    "actions":[
-      {
-        "label":"Get started",
-        "ariaLabel":"Get started, define, deliver, and maintain digital products",
-        "href":"#"
-      }
-    ]
-  }
-]
-/*** Featured Testimonial */
-const FEATURED_TESTIMONIAL = {
-  "cite":"Aran Hamilton, CEO, Vantage Analytics",
-  "text":"Working with Say Yeah is a major step towards not wasting hundreds of thousands of dollars building the wrong thing because of poor planning."
-}
-
-
 export default function Home() {
   return (
     <Layout>
-      <main tabIndex="-1" id="maincontent" className="flex flex-col items-center justify-center flex-1">
-        <Hero data={{
-          "image": {
-            src: "/heroes/homepage.png"
-          },
-          "name":"Say Yeah",
-          "title":"Deliver products and services that win diverse markets",
-          "catchline":"As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
-          "actions":[
-            {
-              "label":"Why designing for the average person hurts your bottom line",
-              "ariaLabel":false,
-              "href":"#"
-            },
-            {
-              "label":"The role of technolgy in building market leaders",
-              "ariaLabel":false,
-              "href":"#"
-            }
-          ]
-        }}
-      />
 
-        {/** Outcome Cards */}
-        <StackItem className="bg-yeah-cola text-white flex flex-col">
-          <StackContent className="pb-4">
+      <main tabIndex="-1" id="main-content" className="stack-header-and-main-using-grid">
+
+        <Hero data={{
+          image: { src: "/heroes/homepage.png" },
+          name: "Say Yeah",
+          title: "Deliver products and services that win diverse markets",
+          catchline: "As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
+          actions: [{
+            href: "#",
+            label: "Why designing for the average person hurts your bottom line",
+            ariaLabel: false,
+          },{
+            href: "#",
+            label: "The role of technolgy in building market leaders",
+            ariaLabel: false,
+          }]
+        }}
+        />
+        <section className="DEFAULT_SECTION bg-yeah-cola text-white">
+          <div className="grid DEFAULT_GRID_COLS DEFAULT_CONTENT DEFAULT_GRID_GAP">
+
             <h2 className="text-32 font-bold text-yeah-yellow col-span-full">
             Achieve exceptional outcomes
             </h2>
-          </StackContent>
 
-          <Carousel className="-mx-4">
-            { [{
-              "photo":{
-                "src":""
-              },
-              "tags":[
-                "Service design"
-              ],
-              "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
-              "logo":""
-            },{
-              "photo":{
-                "src":""
-              },
-              "tags":[
-                "Service design"
-              ],
-              "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
-              "logo":""
-            },{
-              "photo":{
-                "src":""
-              },
-              "tags":[
-                "Service design"
-              ],
-              "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
-              "logo":""
-            },{
-              "photo":{
-                "src":""
-              },
-              "tags":[
-                "Service design"
-              ],
-              "text":"Reshaping experience to support and retain users through a multi-step sales funnel.",
-              "logo":""
-            }].map((card, key) => (
-            <Card className="text-black" key={ key }>
-              <Card.Photo src='https://source.unsplash.com/random/401x225' />
-              <Card.Content className="space-y-4">
-                { card?.tags?.map((tag, key) => <Badge key={ key }>{ tag }</Badge>)}
-                <ReactMarkdown className="text-20 font-bold">Reshaping experience to support and retain users through a multi-step sales funnel.</ReactMarkdown>
-                <a href="#">Link</a>
-              </Card.Content>
-            </Card>
-            ))}
-          </Carousel>
-        </StackItem>
+            { // Iterate outcomes
+              [{
+                photo: { src: "" },
+                tags: ["Service design"],
+                text: "Reshaping experience to support and retain users through a multi-step sales funnel.",
+                logo: ""
+              },{
+                photo: { src: "" },
+                tags: ["Service design"],
+                text: "Reshaping experience to support and retain users through a multi-step sales funnel.",
+                logo: ""
+              }].map((card, key) => (
+                <Card className="text-black" key={ key }>
+                  <Card.Photo src='https://source.unsplash.com/random/401x225' />
+                  <Card.Content className="space-y-4">
+                    { card?.tags?.map((tag, key) => <Badge key={ key }>{ tag }</Badge>) }
+                    <ReactMarkdown className="text-20 font-bold">Reshaping experience to support and retain users through a multi-step sales funnel.</ReactMarkdown>
+                    <a href="#">Link</a>
+                  </Card.Content>
+                </Card>
+              ))
+            }
+          </div>
+        </section>
 
 
-        <StackItem className="bg-yeah-yellow text-black">
-          <StackContent className="space-y-8">
+        <section className="DEFAULT_SECTION bg-yeah-yellow text-black">
+          <div className="DEFAULT_CONTENT space-y-8">
             <h2 className="text-32 font-bold">Bring clarity to decision-making</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              { DECISION_CARDS.map((item, key) => (
+              {
+                [{
+                  icon: "",
+                  text: "**Modernize your organization** towards more efficient service delivery and improved customer experience.",
+                  actions: [{ label: "Get started", ariaLabel: "Get started, modernize your organization", href: "#" }]
+                },{
+                  icon: "",
+                  text: "**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
+                  actions: [{ label: "Get started", ariaLabel: "Get started, define, deliver, and maintain digital products", href: "#"}]
+                }].map((item, key) => (
                 <Card key={key}>
                   <Card.Content className="flex flex-col items-start h-full">
                     <ReactMarkdown className="text-20 leading-normal mb-4">{ item.text }</ReactMarkdown>
@@ -251,16 +103,17 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-          </StackContent>
-        </StackItem>
+          </div>
+        </section>
 
-        <StackItem className="bg-yeah-yellow text-black flex flex-col" divide={ true }>
-          <StackContent className="mb-8">
-            <h2 className="text-28 font-bold max-w-[40rem]">
+        <section className="DEFAULT_SECTION bg-yeah-yellow w-full">
+          <div className="grid DEFAULT_CONTENT DEFAULT_GRID_COLS gap-4 md:gap-8">
+
+            <h2 className="text-28 font-bold max-w-[40rem] col-span-full">
               Evolving markets create new opportunities
             </h2>
-          </StackContent>
-          <Carousel className="-mx-4" size="343px">
+
+
             {
               [
                 {
@@ -268,32 +121,28 @@ export default function Home() {
                   fact: "75% of people require accommodations for eyesight",
                   action: {
                     label:"Accommodate for different eyesight across your products and services",
-                    href:"#",
-                    ariaLabel: false,
+                    href:"#", ariaLabel: false,
                   }
                 },{
                   icon: false,
                   fact: "40% of people have brains that work in neurodiverse ways",
                   action: {
                     label:"Improve products and services by planning for different ways of thinking",
-                    href:"#",
-                    ariaLabel: false,
+                    href:"#", ariaLabel: false,
                   }
                 },{
                   icon: false,
                   fact: "Diversity of markets and communities continues to grow",
                   action: {
                     label:"Follow the trends that lead to increasing market diversity",
-                    href:"#",
-                    ariaLabel: false,
+                    href:"#", ariaLabel: false,
                   }
                 },{
                   icon: false,
                   fact: "Individualism has overtaken conformance as a way of being",
                   action: {
                     label:"Explore how technology has accellerated humanity’s path to self-discovery",
-                    href:"#",
-                    ariaLabel: false,
+                    href:"#", ariaLabel: false,
                   }
                 },
               ].map((item, key) => (
@@ -308,20 +157,21 @@ export default function Home() {
                 </Card>
               ))
             }
-          </Carousel>
-          <StackContent className="mt-8">
+
+          <div className="mt-8 col-span-full">
             <p className="text-24 font-bold max-w-[40rem]">Contact us today to more effectively deliver products and services that win diverse markets</p>
-          </StackContent>
-        </StackItem>
+          </div>
+          </div>
+        </section>
 
         {/** Featured Testimonial */}
-        <StackItem className="bg-yeah-yellow text-black" >
-          <StackContent size="md">
-            <Testimonial cite={ FEATURED_TESTIMONIAL.cite }>
-              <ReactMarkdown>{ FEATURED_TESTIMONIAL.text }</ReactMarkdown>
+        <section className="DEFAULT_SECTION bg-yeah-yellow text-black" >
+          <div className="DEFAULT_CONTENT">
+            <Testimonial cite="Aran Hamilton, CEO, Vantage Analytics">
+              <ReactMarkdown>Working with Say Yeah is a major step towards not wasting hundreds of thousands of dollars building the wrong thing because of poor planning.</ReactMarkdown>
             </Testimonial>
-          </StackContent>
-        </StackItem>
+          </div>
+        </section>
 
         {/** Impactful Challenges */}
         <StackItem className="bg-yeah-cola text-white">
@@ -330,7 +180,26 @@ export default function Home() {
               Solve your most impactful organizational challenges
             </h2>
 
-            { IMPACTFUL_CHALLENGES.map((item, key) => (
+            { // Iterate Impactful Challenges
+            [{
+              text: "How can technology improve how we work?",
+              actions: [{ href: "#", label :"Assessing your organization", ariaLabel: false }]
+            },{
+              text: "Can our products and services better serve our market?",
+              actions: [{ href: "#", label :"Assessing your organization", ariaLabel: false }]
+            },{
+              text: "Can we improve customer experience by working as a more cohesive team?",
+              actions: [{ href: "#", label :"Assessing your organization", ariaLabel: false }]
+            },{
+              text: "Are we making the best technology choices for our organization?",
+              actions: [{ href: "#", label :"Assessing your organization", ariaLabel: false }]
+            },{
+              text: "Can we more effeciently design and deliver a digital product?",
+              actions: [{ href: "#", label :"Assessing your organization", ariaLabel: false }]
+            },{
+              text: "Are there unintended ways we may be limiting access to our content, products, and services?",
+              actions: [{ href: "#", label :"Assessing your organization", ariaLabel: false }]
+            }].map((item, key) => (
               <div key={ key }>
                 <p className="text-24 font-bold pb-2">{ item.text }</p>
                 { item.actions.map((action, key) => <Action key={key} href={ action.href }>{ action.label }</Action> )}
@@ -346,7 +215,10 @@ export default function Home() {
             <h2 className="text-40 font-bold mb-8">Client roster</h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              { CLIENT_ROSTER?.map(( client, key ) =>
+              { [
+                { "name": "Toronto Public Library" },
+                { "name": "Boon" }
+              ]?.map(( client, key ) =>
                 <div className="bg-black bg-opacity-5 rounded min-h-[6rem] flex items-center justify-center" key={ key }>
                   { client.name }
                 </div>
@@ -362,7 +234,19 @@ export default function Home() {
             <div className="col-span-full mb-3">
               <h2 className="text-40 font-bold">The client experience</h2>
             </div>
-            <Video data={ VIDEO } />
+            <Video data={{
+              url: "https://sayyeah.com/wp-content/uploads/2020/02/mark_testimonial.mp4",
+              poster: "https://sayyeah.com/wp-content/uploads/2020/02/mark_testimonial-1.jpg",
+              tracks: [
+                {
+                  kind: "subtitles",
+                  label: "English",
+                  src: "/captions/markdowds_testimonial.vtt",
+                  srcLang: "en",
+                  default: true
+                }
+              ]
+            }} />
           </StackContent>
         </StackItem>
 
@@ -414,10 +298,6 @@ export default function Home() {
               </p>
             </div>
 
-            <Carousel>
-
-            </Carousel>
-
             <Action>All insights</Action>
 
           </StackContent>
@@ -429,11 +309,23 @@ export default function Home() {
             <h2 className="text-40 font-bold mb-8">We’ve been featured by</h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              { FEATURED_PRESS.map((client, key) =>
-                <div key={ key } className="bg-black bg-opacity-5 rounded min-h-[6rem] flex items-center justify-center">
-                  { client.name }
-                </div>
-              )}
+              { /* Iterate Featured Outlets */
+                [{
+                  name: "SXSW"
+                },{
+                  name: "FITC"
+                },{
+                  name: "Digital Journal"
+                },{
+                  name: "UX Magazine"
+                },{
+                  name: "CTV News Channel"
+                }].map((client, key) =>
+                  <div key={ key } className="bg-black bg-opacity-5 rounded min-h-[6rem] flex items-center justify-center">
+                    { client.name }
+                  </div>
+                )
+              }
             </div>
 
           </StackContent>
