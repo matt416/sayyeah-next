@@ -16,16 +16,14 @@ export default function Footer() {
           <div className="space-y-4 flex flex-col items-start">
           <SayYeahLogo href="/" className="text-yeah-yellow ml-[-28px]" alt="Say Yeah! Home" />
 
-            <p className="text-18">We drive business with digital.</p>
-
             <h3 className="sr-only">Contact information</h3>
             <address className="not-italic">
               <dl className="flex flex-col items-start space-y-1">
                 <dt className="sr-only">Toll free</dt>
-                <dd>877.SAY.YEAH (877.729.9324)</dd>
+                <dd>877-SAY-YEAH (877-729-9324)</dd>
 
                 <dt className="sr-only">Phone</dt>
-                <dd>416.642.9694</dd>
+                <dd>416-642-9694</dd>
 
                 <dt className="sr-only">Email</dt>
                 <dd><a href="mailto:hello@sayyeah.com" className="hover:underline">hello@sayyeah.com</a></dd>

@@ -14,7 +14,7 @@ const EssentialAuditCard = ({ className }) => <div className={ `flex flex-col md
     <li>Is your website broken?</li>
     <li>How can you fix it?</li>
   </ul>
-  <Button href="/checkout" className="bg-black text-white col-span-2 text-18">Buy now for $499 <span className="sr-only">The essential website audit </span></Button>
+  <Button href="/checkout/" className="bg-black text-white col-span-2 text-18">Buy now for $499 <span className="sr-only">The essential website audit </span></Button>
 </div>
 
 export default function EssentialAudit(){
@@ -63,7 +63,7 @@ export default function EssentialAudit(){
             </ul>
             <p className="mt-4 mb-6">Get the answers for just <span className="font-bold">$499</span></p>
 
-            <Button href="/checkout" className="bg-black text-white">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
+            <Button href="/checkout/" className="bg-black text-white">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
           </div>
 
 

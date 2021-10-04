@@ -9,8 +9,8 @@ const Layout = ({ children, includeHeader = true, includeNav = true, mode = "dar
   useHideMenuOnRouteChange()
 
   return <SSRProvider>
-    <div className={`grid grid-cols-1 ${className}`}>
-    { includeHeader && <Header includeNav={ includeNav } mode={ mode } className="stack-header-and-main-using-grid z-50" ></Header> }
+    <div className={`${className}`}>
+    { includeHeader && <Header includeNav={ includeNav } mode={ mode } ></Header> }
 
     { children }
     </div>

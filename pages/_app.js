@@ -20,7 +20,6 @@ function MyApp({ Component, pageProps }) {
         site: '@sayyeahto',
         cardType: 'summary_large_image',
       }}
-      titleTemplate="%s | Say Yeah!"
       defaultTitle="Say Yeah!"
       canonical={ defaultCanonical }
       additionalLinkTags={[
