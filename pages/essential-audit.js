@@ -77,7 +77,7 @@ export default function EssentialAudit(){
           <div className="flex flex-col space-y-4">
             <img src="/_public/audit/hurt-browser.svg" alt="" width="88" height="64"/>
             <h3 className="text-24 font-bold">Is your website fundamentally broken?</h3>
-            <p>The Inclusive Website essential website audit reviews your content, design, and code to consider performance, usability, accessibilty, inclusivity, and ongoing management.</p>
+            <p>The essential website audit reviews your content, design, and code to consider performance, usability, accessibility, inclusivity, and ongoing management.</p>
             <p>We’ll let you know if there are critical issues you can fix to improve website access and engagement.</p>
           </div>
 
