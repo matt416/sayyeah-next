@@ -118,7 +118,6 @@ export default function EssentialAudit(){
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12  max-w-screen-xs md:max-w-screen-md mx-auto min-h-full items-start">
           <div className="col-span-full max-w-screen-sm space-y-4">
             <h2 className="text-28 md:text-32 font-bold">How does it impact my customers if my website is broken?</h2>
-            <p>Your site can be used and loved by even more people, and you can avoid alienating or excluding potential customers, here’s how</p>
           </div>
 
           <div className="flex flex-col space-y-4">
