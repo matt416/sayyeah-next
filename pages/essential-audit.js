@@ -2,19 +2,23 @@ import React from 'react'
 
 import Layout from 'ui/Layout'
 import { NextSeo } from "next-seo"
-import Header from "ui/components/Header"
 
 import Button from "ui/components/Button"
 
+const EVENT_BUY_NOW = "umami--click--buy-now"
 
-const EssentialAuditCard = ({ className }) => <div className={ `flex flex-col md:col-span-2 bg-gradient-to-b from-blue-50 to-blue-50-10% rounded-xl p-6 ${className}` }>
+const EssentialAuditCard = ({ className, eventCode = EVENT_BUY_NOW }) => <div className={ `flex flex-col md:col-span-2 bg-gradient-to-b from-blue-50 to-blue-50-10% rounded-xl p-6 ${className}` }>
   <h3 className="text-24 font-bold mb-4">Get the essential website audit</h3>
   <p className="mb-4">Answer these two critical questions:</p>
   <ul className="text-18 font-bold space-y-2 mb-4 list-inside">
     <li>Is your website broken?</li>
     <li>How can you fix it?</li>
   </ul>
-  <Button href="/checkout/" className="bg-black text-white col-span-2 text-18">Buy now for $499 <span className="sr-only">The essential website audit </span></Button>
+  <Button
+    href="/checkout/"
+    className={`bg-black text-white col-span-2 text-18 ${eventCode}`}
+    >Buy now for $499 <span className="sr-only">The essential website audit </span>
+  </Button>
 </div>
 
 export default function EssentialAudit(){
@@ -63,7 +67,8 @@ export default function EssentialAudit(){
             </ul>
             <p className="mt-4 mb-6">Get the answers for just <span className="font-bold">$499</span></p>
 
-            <Button href="/checkout/" className="bg-black text-white">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
+            <Button
+              href="/checkout/" className="bg-black text-white umami--click--buy-now umami--click--buy-now-section-header">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
           </div>
 
 
@@ -92,7 +97,7 @@ export default function EssentialAudit(){
       </section>
 
       <section className="py-12 md:py-16 px-10">
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12  max-w-screen-xs md:max-w-screen-md mx-auto min-h-full items-start justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 max-w-screen-xs md:max-w-screen-md mx-auto min-h-full items-start justify-items-center">
           <h2 className="sr-only">Our essential website audit approach</h2>
 
 
@@ -109,7 +114,7 @@ export default function EssentialAudit(){
             </div>
           </div>
 
-          <EssentialAuditCard />
+          <EssentialAuditCard eventCode="umami--click--buy-now umami--click--buy-now-section-main-start"/>
         </div>
 
       </section>
@@ -170,12 +175,12 @@ export default function EssentialAudit(){
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-4 max-w-screen-xs md:max-w-screen-md mx-auto min-h-full">
           <h2 className="text-28 md:text-32 font-bold col-span-full">Get started today</h2>
 
-          <EssentialAuditCard />
+          <EssentialAuditCard eventCode="umami--click--buy-now umami--click--buy-now-section-main-end"/>
 
           <div className="flex flex-col md:col-span-3 bg-gradient-to-b from-yellow-50 to-yellow-50-10% rounded-xl p-6">
             <h3 className="text-24 font-bold mb-4">Inclusive Website Design Service</h3>
             <p className="mb-4">Our inclusive website design service will guide your team through creating a comprehensive, accessible, and inclusive website design, and will also support your team in developing and making the site live.</p>
-              <Button href="https://sayyeah.com/approach/inclusive-design/" className="bg-black text-white mt-auto mb-0">Learn more<span className="sr-only"> about Inclusive Web Design</span></Button>
+              <Button href="https://sayyeah.com/approach/inclusive-design/" className="bg-black text-white mt-auto mb-0 umami--click--learn-inclusive-design">Learn more<span className="sr-only"> about Inclusive Web Design</span></Button>
           </div>
         </div>
       </section>
