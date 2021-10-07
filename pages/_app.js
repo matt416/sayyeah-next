@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css'
 import '../global.css'
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router'
+import Head from "next/head"
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
