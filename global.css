@@ -5,7 +5,7 @@
 :root {
   /** Equal to the logo height + top padding + bottom padding */
   --header-height: 142px; /** 78px + 16px + 48px */
-
+  --focus-outline-color: #7954ff; /** Purple colour with 4.5 or greater contrast ratio on black and white backgrounds */
   @screen md {
     --header-height: 168px; /** 104px + 16px + 48px */
   }
@@ -68,7 +68,7 @@
 }
 
 *:focus:not([tabindex='-1']), button:focus {
-  outline:4px #f96700 solid;
+  outline:4px var(--focus-outline-color) solid;
   outline-offset:2px;
 }
 *:focus[tabindex='-1'] {

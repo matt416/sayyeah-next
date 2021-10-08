@@ -72,7 +72,7 @@ export default function Checkout() {
       <div className="max-w-[36rem] mx-auto bg-white p-8 rounded-xl">
         <h1 className="text-28 font-bold mb-4">Order the Essential Website Audit</h1>
           <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
-            <Form noValidate="" method="POST" action="#" acceptCharset="UTF-8">
+            <Form noValidate="" method="POST" action="#" acceptCharset="UTF-8" className="umami--submit--checkout">
               {/* <FormErrors /> */}
               {/* { fetchStatus.isError && "We've got a problem."} */}
               <div>

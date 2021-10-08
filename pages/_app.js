@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css'
 import '../global.css'
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router'
+import Head from "next/head"
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
@@ -38,6 +39,12 @@ function MyApp({ Component, pageProps }) {
         }
       ]}
     />
+    <Head>
+      { process.env.NODE_ENV === 'production'
+        ? <script async defer data-website-id="c6ced2e3-7833-4b82-80cf-aa02ea98fb5d" src="https://umami-lac.vercel.app/umami.js"></script>
+        : null
+      }
+    </Head>
     <Component {...pageProps} />
     </>
   )

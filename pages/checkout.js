@@ -40,7 +40,9 @@ export default function Form(){
 
     {/* <Header includeNav={ false } mode="light" /> */}
     <main id="main-content">
-      <Checkout />
+      <section className="pb-12">
+        <Checkout />
+      </section>
     </main>
   </Layout>
 }
