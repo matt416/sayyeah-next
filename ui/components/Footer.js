@@ -101,8 +101,8 @@ export default function Footer() {
                   </li>
                   { group.children
                       ? group.children.map((item, key) => (
-                        <li>
-                          <a className="hover:underline" key={ `${item.href}-${key}` } href={ item.href }>
+                        <li key={ `${item.href}-${key}` }>
+                          <a className="hover:underline" href={ item.href }>
                             { item.label }
                             { item.srLabelSuffix
                               ? <span className="sr-only"> { item.srLabelSuffix }</span>
