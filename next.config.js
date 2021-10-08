@@ -41,7 +41,12 @@ module.exports = {
       return [
         {
           source: '/essential',
-          destination: '/essential-audit/',
+          destination: '/essential-website-audit/',
+          permanent: true,
+        },
+        {
+          source: '/essential-audit',
+          destination: '/essential-website-audit/',
           permanent: true,
         },
       ]
