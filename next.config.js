@@ -37,7 +37,15 @@ module.exports = {
   //     },
   //   ]
   // },
-
+  async redirects() {
+      return [
+        {
+          source: '/essential',
+          destination: '/essential-audit/',
+          permanent: true,
+        },
+      ]
+  },
   async rewrites() { // Fallback on production, don't do this locally please!
     return process.env.NODE_ENV === "production" ? {
       fallback: [
