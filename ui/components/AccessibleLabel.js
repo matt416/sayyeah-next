@@ -1,4 +1,8 @@
+import { isString } from "helpers/isType"
+
 export default function AccessibleLabel({ children }) {
+
+  if (!isString(children)) return <>{ children }</>
 
   const [label, srLabel] = children.split("|")
 

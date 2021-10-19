@@ -1,16 +1,15 @@
 import React from 'react'
 import ReactMarkdown from "react-markdown"
 
-import Layout from 'ui/Layout'
-import { Stack, StackItem, StackContent } from 'ui/components/Stack'
+import Layout from 'ui/layout/Layout'
 
 import Action from "ui/components/Action"
 import Card from "ui/components/Card"
 import Button from "ui/components/LinkButton"
 import Carousel from "ui/components/Carousel"
 
-import Hero from 'ui/stackitems/Hero'
-import CallToAction from 'ui/stackitems/CallToAction'
+import Hero from 'ui/templates/Hero'
+import CallToAction from 'ui/templates/CallToAction'
 
 const HERO = {
   name: "Solutions",
@@ -131,7 +130,7 @@ const SOLUTIONS = [
 
 export default function Solutions(){
   return <Layout>
-    <Stack>
+    {/* <Stack>
 
       <Hero data={ HERO } />
 
@@ -192,6 +191,6 @@ export default function Solutions(){
       </StackItem>
 
       <CallToAction>Let us know your most pressing challenges and we’ll guide you towards your next phase of organizational success.</CallToAction>
-    </Stack>
+    </Stack> */}
   </Layout>
 }

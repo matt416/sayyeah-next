@@ -72,10 +72,11 @@ export const RELATED_SERVICE_SUMMARIES = {
   },
 }
 
-export default function RelatedServiceCards({ items }){
+export default function RelatedServiceCards({ title = "Related services and resources", items }){
+
   return <Section bgColor="yellow">
           <Grid>
-          <h2 className="text-32 font-bold col-span-full max-w-[40rem]">Related services and resources</h2>
+          <h2 className="text-32 font-bold col-span-full max-w-[40rem]">{ title }</h2>
 
           { items.map(key => RELATED_SERVICE_SUMMARIES[key]).map(({ title, text, action }) => <Card className="bg-sy-sunshine p-6 flex flex-col">
             <h3 className="text-24 font-bold mb-4">

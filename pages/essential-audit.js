@@ -1,9 +1,10 @@
 import React from 'react'
-
-import Layout from 'ui/Layout'
 import { NextSeo } from "next-seo"
 
-import Button from "ui/components/LinkButton"
+import Layout from 'ui/layout/Layout'
+import Main from 'ui/layout/Main'
+
+import LinkButton from "ui/components/LinkButton"
 
 const EVENT_BUY_NOW = "umami--click--buy-now"
 
@@ -14,11 +15,11 @@ const EssentialAuditCard = ({ className, eventCode = EVENT_BUY_NOW }) => <div cl
     <li>Is your website broken?</li>
     <li>How can you fix it?</li>
   </ul>
-  <Button
+  <LinkButton
     href="/checkout/"
     className={`bg-black text-white col-span-2 text-18 ${eventCode}`}
     >Buy now for $499 <span className="sr-only">The essential website audit </span>
-  </Button>
+  </LinkButton>
 </div>
 
 export default function EssentialAudit(){
@@ -38,7 +39,7 @@ export default function EssentialAudit(){
       }}
     />
 
-    <main tabIndex="-1" id="main-content" className="stack-header-and-main-using-grid">
+    <Main>
       <section className="pb-12 md:pb-16 flex px-10 relative bg-gradient-image-essential-heading include-padding-for-header">
 
         <h1 className="sr-only">The Essential Website Audit</h1>
@@ -67,8 +68,8 @@ export default function EssentialAudit(){
             </ul>
             <p className="mt-4 mb-6">Get the answers for just <span className="font-bold">$499</span></p>
 
-            <Button
-              href="/checkout/" className="bg-black text-white umami--click--buy-now umami--click--buy-now-section-header">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></Button>
+            <LinkButton
+              href="/checkout/" className="bg-black text-white umami--click--buy-now umami--click--buy-now-section-header">Buy now  <span className="sr-only">Buy the essential website audit for $499</span></LinkButton>
           </div>
 
 
@@ -180,12 +181,12 @@ export default function EssentialAudit(){
           <div className="flex flex-col md:col-span-3 bg-gradient-to-b from-yellow-50 to-yellow-50-10% rounded-xl p-6">
             <h3 className="text-24 font-bold mb-4">Inclusive Website Design Service</h3>
             <p className="mb-4">Our inclusive website design service will guide your team through creating a comprehensive, accessible, and inclusive website design, and will also support your team in developing and making the site live.</p>
-              <Button href="https://sayyeah.com/approach/inclusive-design/" className="bg-black text-white mt-auto mb-0 umami--click--learn-inclusive-design">Learn more<span className="sr-only"> about Inclusive Web Design</span></Button>
+              <LinkButton href="https://sayyeah.com/approach/inclusive-design/" className="bg-black text-white mt-auto mb-0 umami--click--learn-inclusive-design">Learn more<span className="sr-only"> about Inclusive Web Design</span></LinkButton>
           </div>
         </div>
       </section>
 
-    </main>
+    </Main>
 
   </Layout>
 }

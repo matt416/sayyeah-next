@@ -1,9 +1,9 @@
 
-import Layout from 'ui/Layout'
+import Layout from 'ui/layout/Layout'
 
 import LinkButton from "ui/components/LinkButton"
 
-import Hero from "ui/stackitems/Hero"
+import Hero from "ui/templates/Hero"
 import RelatedServiceCards from 'ui/templates/RelatedServiceCards'
 import ClientCards from 'ui/templates/ClientCards'
 

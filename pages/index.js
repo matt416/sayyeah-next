@@ -1,43 +1,29 @@
 import React from 'react'
 import ReactMarkdown from "react-markdown"
-import dynamic from 'next/dynamic'
-import Layout from 'ui/Layout'
-import Header from "ui/components/Header"
-import Action from "ui/components/Action"
+import Layout from 'ui/layout/Layout'
 import Card from "ui/components/Card"
 import LinkButton from "ui/components/LinkButton"
 import LinkArrow from "ui/components/LinkArrow"
 import Testimonial from 'ui/components/Testimonial'
-import Carousel from "ui/components/Carousel"
-import Badge from "ui/components/Badge"
 import Video from "ui/components/Video"
-import Link from "next/link"
-import Hero from 'ui/stackitems/Hero'
-import CallToAction from 'ui/stackitems/CallToAction'
-import { Stack, StackItem, StackContent } from 'ui/components/Stack'
+import Hero from 'ui/templates/Hero'
+import CallToAction from 'ui/templates/CallToAction'
 import LeftQuote from 'ui/svg/LeftQuote'
 import RightQuote from 'ui/svg/RightQuote'
-import Grid from "ui/components/Grid"
+
+import Grid from "ui/layout/Grid"
+import Flex from "ui/layout/Flex"
 import Section from "ui/layout/Section"
-import ContentBlock from "ui/components/ContentBlock"
-import ContentBlockLg from "ui/components/ContentBlockLg"
 
-import Tpl from "ui/svg/clients/Tpl"
-import Cannect from "ui/svg/clients/Cannect"
+// import Tpl from "ui/svg/clients/Tpl"
+// import Cannect from "ui/svg/clients/Cannect"
 
-import Sxsw from "ui/svg/media/Sxsw"
-import Fitc from "ui/svg/media/Fitc"
-import DigitalJournal from "ui/svg/media/DigitalJournal"
-import UxMagazine from 'ui/svg/media/UxMagazine'
-import CtvNewsChannel from 'ui/svg/media/CtvNewsChannel'
+// import Sxsw from "ui/svg/media/Sxsw"
+// import Fitc from "ui/svg/media/Fitc"
+// import DigitalJournal from "ui/svg/media/DigitalJournal"
+// import UxMagazine from 'ui/svg/media/UxMagazine'
+// import CtvNewsChannel from 'ui/svg/media/CtvNewsChannel'
 
-const CLIENT_ROSTER = [Tpl, Cannect]
-
-// const CLIENT_ROSTER = ["Tpl", "Aon"].map((fileName) => {
-//   return dynamic(() => import(`ui/svg/clients/${ fileName }` ))
-// })
-
-// console.log(CLIENT_ROSTER)
 
 
 export default function Home() {
@@ -241,14 +227,12 @@ export default function Home() {
           </Grid>
         </Section>
 
-
-
         <Section bgColor="bg-sy-yellow" textColor="text-black">
-          <ContentBlock size="lg">
+          <Flex>
             <h2 className="text-40 font-bold mb-8">Client roster</h2>
 
             <Grid maxW={ false } margin={ false } gridCols="grid-cols-2 md:grid-cols-4">
-              { CLIENT_ROSTER.map(( Client, key ) =>
+              { [].map(( Client, key ) =>
                 <div className="bg-black bg-opacity-5 rounded-lg flex items-center justify-center p-4" key={ key }>
                   { <Client width={ null } height={ null } className="w-full" /> }
                 </div>
@@ -257,11 +241,11 @@ export default function Home() {
             </Grid>
 
             <LinkArrow href="/work/">Additional clients and industries served</LinkArrow>
-          </ContentBlock>
+          </Flex>
         </Section>
 
         <Section bgColor="bg-sy-yellow" textColor="text-black" className="border-t border-black border-opacity-5">
-          <ContentBlock maxW="w-full max-w-[60rem]" width="">
+          <Flex>
             <h2 className="text-32 font-bold mb-4">The client experience</h2>
             <Video data={{
               url: "https://sayyeah.com/wp-content/uploads/2020/02/mark_testimonial.mp4",
@@ -276,7 +260,7 @@ export default function Home() {
                 }
               ]
             }} />
-          </ContentBlock>
+          </Flex>
         </Section>
         <Section textColor="text-white" bgColor="bg-sy-earth">
           <Grid gap="gap-4 gap-y-12 md:gap-x-16 md:gap-y-8" className="text-18">
@@ -329,11 +313,11 @@ export default function Home() {
         </Section> */}
 
         <Section bgColor="bg-sy-yellow" textColor="text-black">
-          <ContentBlock>
+          <Flex>
             <h2 className="text-32 font-bold mb-8">We’ve been featured by</h2>
 
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              { /* Iterate Featured Outlets */
+            {/**<ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              {
                 [{
                   name: "SXSW",
                   src: <Sxsw/>
@@ -356,8 +340,8 @@ export default function Home() {
                 )
               }
             </ul>
-
-          </ContentBlock>
+            */}
+          </Flex>
         </Section>
 
         <CallToAction

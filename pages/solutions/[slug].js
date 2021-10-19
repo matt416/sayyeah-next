@@ -1,59 +1,49 @@
 import { useGetStaticPaths, useGetStaticProps } from 'helpers/fetchData'
-
-import { SERVICE_SUMMARIES } from 'data/en-ca/collections/service_summaries'
-
-import Layout from 'ui/Layout'
+import ReactMarkdown from 'react-markdown'
 
 import LeftQuote from "ui/svg/LeftQuote"
 import RightQuote from "ui/svg/RightQuote"
 import LinkButton from "ui/components/LinkButton"
-import Card from "ui/components/Card"
 import Heading from "ui/components/Heading"
-import { Stack, StackItem, StackContent } from "ui/components/Stack"
-import Hero from "ui/stackitems/Hero"
-import CallToAction from "ui/stackitems/CallToAction"
-import CaseStudies from "ui/stackitems/CaseStudies"
-import ReactMarkdown from 'react-markdown'
-import AccessibleLabel from "ui/components/AccessibleLabel"
+import Quote from 'ui/components/Quote'
+import Layout from 'ui/layout/Layout'
+import Section from 'ui/layout/Section'
+import Grid from 'ui/layout/Grid'
+import Flex from 'ui/layout/Flex'
+import Main from 'ui/layout/Main'
+
+import Hero from "ui/templates/Hero"
+import CallToAction from "ui/templates/CallToAction"
+import RelatedServiceCards from 'ui/templates/RelatedServiceCards'
+
 export default function Solutions({ data }){
 
   if (!data) return null;
 
-
   return <Layout>
-
-    <main tabIndex="-1" id="main-content" className="stack-header-and-main-using-grid">
+    <Main>
       <Hero { ...data.hero }/>
 
-      <StackItem className="bg-sy-earth text-white">
-        <StackContent className="space-y-8">
-          <Heading level="2" className="text-sy-yellow max-w-[40rem]">
-            { data.solutions.title }
-          </Heading>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            { data.solutions.questions.map((item, key) =>
-              <div key={ key }>
-                <p className="text-24 font-bold mb-4 inline-block">
-                  <LeftQuote width="16" className="ml-[-1.5rem] text-sy-mocha"/>{ item }<RightQuote width="16" className="text-sy-mocha" />
-                </p>
-              </div>
-            )}
+      { (({ title, questions, callToAction }) => {
+      return <Section bgColor="bg-sy-earth" textColor="white">
+        <Grid>
+          <h2 className="max-w-readable text-32 text-sy-yellow font-bold col-span-full">{ title }</h2>
+          { questions.map((item, key) =>
+            <Quote key={ key }>{ item }</Quote>
+          )}
+          <div className="max-w-readable col-span-full text-20 text-sy-mocha space-y-4">
+            <p>{ callToAction.text }</p>
+            <LinkButton href={ callToAction.action.href } bgColor="bg-sy-yellow" textColor="text-black">{ callToAction.action.label }</LinkButton>
           </div>
+        </Grid>
+      </Section>
 
-          { data.solutions.callToAction ?
-            <>
-              <p className="text-sy-mocha text-24 font-bold max-w-[40rem]">
-                { data.solutions.callToAction.text }
-              </p>
-              <LinkButton href={ data.solutions.callToAction.action.href } textColor="text-black" bgColor="bg-sy-yellow">{ data.solutions.callToAction.action.label }</LinkButton>
-            </>
-          : null }
-        </StackContent>
-      </StackItem>
+      })(data.solutions) }
 
-      <StackItem className="bg-sy-yellow text-black" divide={ true }>
-        <StackContent>
+
+
+      <Section bgColor="yellow" textColor="black" divide={ true }>
+        <Flex>
 
           <div className="max-w-[40rem] space-y-4 text-18">
 
@@ -62,11 +52,11 @@ export default function Solutions({ data }){
           </Heading>
           <ReactMarkdown>{ data.description.text }</ReactMarkdown>
           </div>
-        </StackContent>
-      </StackItem>
+        </Flex>
+      </Section>
 
-      <StackItem className="bg-sy-yellow text-black">
-        <StackContent className="grid grid-cols-1 gap-12">
+      <Section bgColor="yellow" textColor="black" divide={ true }>
+        <Flex>
           <Heading level="2" className="max-w-[40rem]">
             { data.toolkit.title }
           </Heading>
@@ -78,42 +68,18 @@ export default function Solutions({ data }){
             </div>
             )}
           </div>
-        </StackContent>
-      </StackItem>
+        </Flex>
+      </Section>
 
 
       {/* <CaseStudies></CaseStudies> */}
 
-      <StackItem className="bg-sy-yellow text-black">
-        <StackContent className="grid grid-cols-1 gap-12">
-          <Heading level="2" className="max-w-[40rem]">
-            { data.related.title }
-          </Heading>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          { data.related.items.map(key => SERVICE_SUMMARIES[key]).map(({ title, text, action }) => <Card className="bg-sy-sunshine p-6 flex flex-col">
-            <h3 className="text-24 font-bold mb-4">
-              { title }
-            </h3>
-            <p className="mb-4">
-              { text }
-            </p>
-            <LinkButton
-              href={ action.href }
-              className="text-black border border-sy-gold hover:bg-sy-gold mt-auto mb-0 bg-transparent"
-            >
-              <AccessibleLabel>{ action.label }</AccessibleLabel>
-            </LinkButton>
-          </Card>
-          )}
-          </div>
-        </StackContent>
-      </StackItem>
+      <RelatedServiceCards { ...data.related } />
 
       <CallToAction>
         { data.callToAction }
       </CallToAction>
-    </main>
+    </Main>
   </Layout>
 }
 

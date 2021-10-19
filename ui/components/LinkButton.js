@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { splitClassesAndAttributes } from "helpers/tw"
 import clsx from "clsx"
+import AccessibleLabel from "./AccessibleLabel"
 
 const LinkButton = ({ children, className, href, ...props }) => {
 
@@ -19,7 +20,7 @@ const LinkButton = ({ children, className, href, ...props }) => {
     classes,
     className
   ) }>
-    { children }
+    <AccessibleLabel>{ children }</AccessibleLabel>
   </a></Link>
 
 }
