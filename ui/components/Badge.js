@@ -1,18 +1,20 @@
-import { traits } from 'helpers/traits'
-import { twMerge } from 'tailwind-merge'
+import { splitClassesAndAttributes } from "helpers/tw"
+import clsx from "clsx"
 
-const TRAIT = traits({
-  default: "px-2.5 py-0.5 rounded-full",
-  color: {
-    default: "px-2.5 py-0.5 rounded-full",
-    black: "bg-black text-yeah-yellow"
-  }
-})
+const Badge = ({ children, className, href, ...props }) => {
 
-export default function Badge({ children, color, className, ...props }){
+  const [classes, attributes] = splitClassesAndAttributes(props, {
+    textSize: "text-16",
+    fontWeight: "font-normal",
+    textColor: "",
+    bgColor: "bg-sy-yellow"
+  })
 
-  const appearance = twMerge("px-2.5 py-0.5 rounded-full bg-yeah-yellow text-black", className)
-// TRAIT.apply({ color }, className)
-  return <span className={ appearance }>{ children }</span>
+  return <span
+      className={ clsx("px-3 pt-1.5 pb-1 rounded-full", classes, className) } { ...attributes }
+    >
+      { children }
+    </span>
 
 }
+export default Badge

@@ -1,15 +1,19 @@
 import clsx from "clsx";
-import { traits } from "helpers/traits";
+import { traits, splitStyleAndAttributes } from "helpers/traits";
 import { useEffect, useRef, useState, forwardRef } from "react";
 
 const TRAIT = traits({
-  default: "rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring",
   bg: {
-    default: "bg-white",
+    white: "bg-white",
   }
 })
 
 const Card = forwardRef(({ bg, children, className }, ref) => {
+
+  const [defaults, attributes] = splitStyleAndAttributes({ ...bg }, {
+    bg: "white"
+  })
+
 
   // const ref = useRef()
   // const [state, setState] = useState({})
@@ -20,7 +24,7 @@ const Card = forwardRef(({ bg, children, className }, ref) => {
   // })
 //ref={ ref }
   return (
-    <div data-type="card" className={ TRAIT.apply({ bg }, className )} ref={ ref }>
+    <div data-type="card" className={ TRAIT.apply(defaults, `rounded-lg overflow-hidden ${className}` )} ref={ ref }>
       { children }
     </div>
   )

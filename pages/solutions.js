@@ -6,13 +6,11 @@ import { Stack, StackItem, StackContent } from 'ui/components/Stack'
 
 import Action from "ui/components/Action"
 import Card from "ui/components/Card"
-import Button from "ui/components/Button"
+import Button from "ui/components/LinkButton"
 import Carousel from "ui/components/Carousel"
 
 import Hero from 'ui/stackitems/Hero'
 import CallToAction from 'ui/stackitems/CallToAction'
-
-
 
 const HERO = {
   name: "Solutions",
@@ -137,7 +135,7 @@ export default function Solutions(){
 
       <Hero data={ HERO } />
 
-      <StackItem className="bg-yeah-yellow text-black flex-col space-y-24">
+      <StackItem className="bg-sy-yellow text-black flex-col space-y-24">
         <StackContent>
           <h2 className="text-40 font-bold w-full max-w-[40rem]">
             We offer a suite of solutions that help you achieve your most impactful objectives
@@ -164,7 +162,7 @@ export default function Solutions(){
                     { item?.answer?.actions.map( action => (
                       <Button
                       key={ action.href }
-                      className="bg-yeah-gold text-black mt-auto mb-0"
+                      className="bg-sy-gold text-black mt-auto mb-0"
                       href={ action.href }
                       ariaLabel={ action.ariaLabel }
                       >
@@ -179,7 +177,7 @@ export default function Solutions(){
         </StackContent>
       </StackItem>
 
-      <StackItem className="bg-black text-yeah-yellow">
+      <StackItem className="bg-black text-sy-yellow">
         <StackContent className="space-y-4">
           <h2 className="text-40 font-bold w-full max-w-[40rem]">
             Related case studies

@@ -7,11 +7,22 @@
     "text":"Optimize your team’s efforts to deliver a consistent, connected customer experience that drives engagement and retention."
   },
   "solutions":{
-    "title":"The solutions to your customer experience challenges.",
+    "title":"Service design answers important operational questions",
     "questions":[
-      "How can we improve omni-channel customer experience",
-      "How can we improve omni-channel customer experience"
-    ]
+      "How do we deliver services more effectively by increasing online adoption?",
+      "Are we making the best technology choices for our organization?",
+      "How do we improve collaboration across our organization in order to improve service delivery?",
+      "How do we improve the omni-channel customer experience?"
+    ],
+    "callToAction": {
+      "text": "We’re here to help you answer these and other questions that will help your organization operate more effectively.",
+      "action":{
+        "href":"#",
+        "label":"Get in touch",
+        "srLabel":" "
+      }
+
+    }
   },
   "description":{
     "title":"Connected experiences, delivered",

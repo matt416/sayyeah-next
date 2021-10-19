@@ -83,10 +83,10 @@ function useScrollEffect(isMenuVisible){
 
 
 const MenuTitle = ({ label = "Menu", onClose }) => (
-  <div className="font-bold px-6 py-4 border-b border-black border-opacity-5 bg-opacity-95 flex justify-between items-center w-full sticky top-0 bg-white">
+  <div className="font-bold px-6 py-4 border-b border-black border-opacity-5 bg-opacity-95 flex justify-between items-center w-full sticky top-0 bg-white text-black">
     { label }
-    <button type="button" onClick={ onClose } onKeyUp={ (e) => handleKeyUp('Space', onClose, e) }>
-      &times; Close
+    <button type="button" onClick={ onClose } aria-label="Close" onKeyUp={ (e) => handleKeyUp('Space', onClose, e) }>
+      Close &times;
     </button>
   </div>
 )

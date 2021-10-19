@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, Children, Fragment } from "react"
 import styles from "./Carousel.module.css"
 // import clsx from 'clsx'
-import Arrow from "ui/svg/Arrow.svg"
+import Arrow from "ui/svg/Arrow"
 
 import smoothscroll from 'smoothscroll-polyfill';
 

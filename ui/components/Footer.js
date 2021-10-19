@@ -7,14 +7,14 @@ import Pinterest from "ui/svg/Pinterest.svg.js"
 
 export default function Footer() {
 
-  return <footer className="bg-black text-white DEFAULT_SECTION">
+  return <footer className="bg-black text-white standard-section">
     <div className="DEFAULT_CONTENT grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
         <h2 className="sr-only">Footer</h2>
 
         <div className="col-span-1" >
 
           <div className="space-y-4 flex flex-col items-start">
-          <SayYeahLogo href="/" className="text-yeah-yellow ml-[-28px]" alt="Say Yeah! Home" />
+          <SayYeahLogo href="/" className="text-sy-yellow ml-[-28px]" alt="Say Yeah! Home" />
 
             <h3 className="sr-only">Contact information</h3>
             <address className="not-italic">

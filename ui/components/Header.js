@@ -1,16 +1,18 @@
 import SkipBlock from 'ui/components/SkipBlock'
 import mainMenu from "data/en-ca/collections/mainmenu.json"
 import { MobileMenu, useMobileMenuStore } from './MobileMenu'
+import Link from "next/link"
 import SayYeahLogo from 'ui/svg/SayYeahLogo.svg.js'
+import AccessibleSvg from 'ui/svg/AccessibleSvg'
 
 export function Navigation({ name, mode = "dark" }){
   return <nav aria-label={ name } className="md:flex items-center hidden">
     <ul className="flex space-x-8 text-lg py-4">
       { mainMenu.map((item, key) =>
           <li key={ key }>
-              <a  href={ item.href } className={` px-4 py-2 rounded ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
+              <Link href={ item.href }><a className={` px-4 py-2 rounded ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
                 { item.label }
-              </a>
+              </a></Link>
           </li>
         )}
     </ul>
@@ -22,6 +24,7 @@ export default function Header({ mode = "dark", children, className, includeNav 
 
 return <>
     <header className={ `h-[0] relative px-10 z-40 ${className} ${ mode == "dark" ? "text-white" : "text-black "}` } style={ style }>
+
     <SkipBlock target="#main-content" className="z-50"/>
 
     {/* <header className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}> */}
@@ -37,7 +40,7 @@ return <>
     </span>
 
       { includeNav && <>
-        <Navigation name="Header" mode={ mode } />
+        <Navigation name="Main menu" mode={ mode } />
 
         <div className="md:hidden py-4">
           <button
@@ -54,9 +57,9 @@ return <>
         <ul className="flex flex-col text-lg p-2">
           { mainMenu.map((item, key) =>
             <li key={ key }>
-                <a href={ item.href } className={` px-4 py-2 rounded flex min-h-[3rem] items-center ${ mode == 'dark' ? "hover:bg-white hover:text-black" : "hover:bg-black hover:text-white"}`}>
+                <Link href={ item.href }><a className={` px-4 py-2 rounded flex min-h-[3rem] items-center hover:bg-black hover:text-white text-black` }>
                   { item.label }
-                </a>
+                </a></Link>
             </li>
           )}
         </ul>

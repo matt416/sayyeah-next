@@ -1,7 +1,7 @@
 import Layout from 'ui/Layout'
 
 import Quoted from "ui/components/Quoted"
-import Button from "ui/components/Button"
+import Button from "ui/components/LinkButton"
 import Card from "ui/components/Card"
 import Heading from "ui/components/Heading"
 import { StackItem, StackContent } from "ui/components/Stack"
@@ -17,9 +17,9 @@ export default function ServiceDesign(){
 
       <Hero data={ data.hero }/>
 
-      <StackItem className="bg-yeah-cola text-white">
+      <StackItem className="bg-sy-earth text-white">
         <StackContent className="space-y-8">
-          <Heading level="2" className="text-yeah-yellow max-w-[40rem]">
+          <Heading level="2" className="text-sy-yellow max-w-[40rem]">
             { data.solutions.title }
           </Heading>
 
@@ -31,16 +31,16 @@ export default function ServiceDesign(){
             )}
           </div>
 
-          <p className="text-yeah-tan text-24 font-bold max-w-[40rem]">
+          <p className="text-sy-mocha text-24 font-bold max-w-[40rem]">
           We’re here to help you answer these and other questions that improve engagement with your market.
           </p>
 
-          <Button href="#" className="text-black bg-yeah-yellow">Get in touch</Button>
+          <Button href="#" className="text-black bg-sy-yellow">Get in touch</Button>
 
         </StackContent>
       </StackItem>
 
-      <StackItem className="bg-yeah-yellow text-black" divide={ true }>
+      <StackItem className="bg-sy-yellow text-black" divide={ true }>
         <StackContent>
 
           <div className="max-w-[40rem] space-y-4 text-18">
@@ -53,7 +53,7 @@ export default function ServiceDesign(){
         </StackContent>
       </StackItem>
 
-      <StackItem className="bg-yeah-yellow text-black">
+      <StackItem className="bg-sy-yellow text-black">
         <StackContent className="grid grid-cols-1 gap-12">
           <Heading level="2" className="max-w-[40rem]">
             { data.toolkit.title }
@@ -72,14 +72,14 @@ export default function ServiceDesign(){
 
       <CaseStudies></CaseStudies>
 
-      <StackItem className="bg-yeah-yellow text-black">
+      <StackItem className="bg-sy-yellow text-black">
         <StackContent className="grid grid-cols-1 gap-12">
           <Heading level="2" className="max-w-[40rem]">
             { data.related.title }
           </Heading>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          { data.related.items.map(({ title, text, action }) => <Card className="bg-yeah-sunshine p-6 flex flex-col">
+          { data.related.items.map(({ title, text, action }) => <Card className="bg-sy-sunshine p-6 flex flex-col">
             <h3 className="text-24 font-bold mb-4">
               { title }
             </h3>
@@ -88,7 +88,7 @@ export default function ServiceDesign(){
             </p>
             <Button
               href={ action.href }
-              className="text-black border border-yeah-gold hover:bg-yeah-gold mt-auto mb-0"
+              className="text-black border border-sy-gold hover:bg-sy-gold mt-auto mb-0"
             >
               { action.label } { action.srLabel && <span className="sr-only">{ action.srLabel }</span> }
             </Button>

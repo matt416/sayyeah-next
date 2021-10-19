@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from 'ui/Layout'
 import { NextSeo } from "next-seo"
 
-import Button from "ui/components/Button"
+import Button from "ui/components/LinkButton"
 
 const EVENT_BUY_NOW = "umami--click--buy-now"
 

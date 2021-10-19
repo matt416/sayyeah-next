@@ -35,7 +35,7 @@ export const useGetStaticPaths = async ({ type }) => {
     }
   })
 
-  console.log(paths)
+  // console.log(paths)
   // paths.push({ params: { slug: [] }})
   return paths
 }

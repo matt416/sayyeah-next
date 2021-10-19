@@ -9,17 +9,17 @@ const STACKITEM_TRAITS = traits({
     true: "border-b border-black border-opacity-5"
   },
 // bgColor: {
-//   yellow: 'bg-yeah-yellow',
+//   yellow: 'bg-sy-yellow',
 //   black: "bg-black",
-//   cola: "bg-yeah-cola",
+//   cola: "bg-sy-earth",
 //   white: "bg-white",
 // },
 // textColor: {
 //   black: "text-black",
 //   white: "text-white"
-    // default: 'bg-yeah-yellow text-black',
+    // default: 'bg-sy-yellow text-black',
     // black: 'bg-black text-white',
-    // cola: 'bg-yeah-cola text-white'
+    // cola: 'bg-sy-earth text-white'
 // }
 })
 

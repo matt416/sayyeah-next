@@ -7,7 +7,8 @@ export default function InlineSvg({ id, children, href, width, height, viewBox, 
   const _svg = ( <svg
     role="img"
     preserveAspectRatio={ preserveAspectRatio }
-    aria-labelledby={ svgID }
+    aria-labelledby={ alt !== false ? svgID : null }
+    aria-hidden={ alt === false ? true : null }
     focusable="false"
     width={ width }
     height={ height }
@@ -15,7 +16,7 @@ export default function InlineSvg({ id, children, href, width, height, viewBox, 
     viewBox={ _viewBox }
     className={ className }
   >
-    <title id={ svgID }>{ alt }</title>
+    { alt !== false ? <title id={ svgID }>{ alt }</title> : null }
     { children }
   </svg> )
 

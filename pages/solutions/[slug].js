@@ -1,9 +1,12 @@
 import { useGetStaticPaths, useGetStaticProps } from 'helpers/fetchData'
 
+import { SERVICE_SUMMARIES } from 'data/en-ca/collections/service_summaries'
+
 import Layout from 'ui/Layout'
 
-import Quoted from "ui/components/Quoted"
-import Button from "ui/components/Button"
+import LeftQuote from "ui/svg/LeftQuote"
+import RightQuote from "ui/svg/RightQuote"
+import LinkButton from "ui/components/LinkButton"
 import Card from "ui/components/Card"
 import Heading from "ui/components/Heading"
 import { Stack, StackItem, StackContent } from "ui/components/Stack"
@@ -11,40 +14,45 @@ import Hero from "ui/stackitems/Hero"
 import CallToAction from "ui/stackitems/CallToAction"
 import CaseStudies from "ui/stackitems/CaseStudies"
 import ReactMarkdown from 'react-markdown'
-
+import AccessibleLabel from "ui/components/AccessibleLabel"
 export default function Solutions({ data }){
 
   if (!data) return null;
 
+
   return <Layout>
 
-    <Stack>
-      <Hero data={ data.hero }/>
+    <main tabIndex="-1" id="main-content" className="stack-header-and-main-using-grid">
+      <Hero { ...data.hero }/>
 
-      <StackItem className="bg-yeah-cola text-white">
+      <StackItem className="bg-sy-earth text-white">
         <StackContent className="space-y-8">
-          <Heading level="2" className="text-yeah-yellow max-w-[40rem]">
+          <Heading level="2" className="text-sy-yellow max-w-[40rem]">
             { data.solutions.title }
           </Heading>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            { data.solutions.questions.map(item =>
-              <Quoted className="text-28 font-bold">
-                { item }
-              </Quoted>
+            { data.solutions.questions.map((item, key) =>
+              <div key={ key }>
+                <p className="text-24 font-bold mb-4 inline-block">
+                  <LeftQuote width="16" className="ml-[-1.5rem] text-sy-mocha"/>{ item }<RightQuote width="16" className="text-sy-mocha" />
+                </p>
+              </div>
             )}
           </div>
 
-          <p className="text-yeah-tan text-24 font-bold max-w-[40rem]">
-          We’re here to help you answer these and other questions that improve engagement with your market.
-          </p>
-
-          <Button href="#" className="text-black bg-yeah-yellow">Get in touch</Button>
-
+          { data.solutions.callToAction ?
+            <>
+              <p className="text-sy-mocha text-24 font-bold max-w-[40rem]">
+                { data.solutions.callToAction.text }
+              </p>
+              <LinkButton href={ data.solutions.callToAction.action.href } textColor="text-black" bgColor="bg-sy-yellow">{ data.solutions.callToAction.action.label }</LinkButton>
+            </>
+          : null }
         </StackContent>
       </StackItem>
 
-      <StackItem className="bg-yeah-yellow text-black" divide={ true }>
+      <StackItem className="bg-sy-yellow text-black" divide={ true }>
         <StackContent>
 
           <div className="max-w-[40rem] space-y-4 text-18">
@@ -57,7 +65,7 @@ export default function Solutions({ data }){
         </StackContent>
       </StackItem>
 
-      <StackItem className="bg-yeah-yellow text-black">
+      <StackItem className="bg-sy-yellow text-black">
         <StackContent className="grid grid-cols-1 gap-12">
           <Heading level="2" className="max-w-[40rem]">
             { data.toolkit.title }
@@ -74,28 +82,28 @@ export default function Solutions({ data }){
       </StackItem>
 
 
-      <CaseStudies></CaseStudies>
+      {/* <CaseStudies></CaseStudies> */}
 
-      <StackItem className="bg-yeah-yellow text-black">
+      <StackItem className="bg-sy-yellow text-black">
         <StackContent className="grid grid-cols-1 gap-12">
           <Heading level="2" className="max-w-[40rem]">
             { data.related.title }
           </Heading>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          { data.related.items.map(({ title, text, action }) => <Card className="bg-yeah-sunshine p-6 flex flex-col">
+          { data.related.items.map(key => SERVICE_SUMMARIES[key]).map(({ title, text, action }) => <Card className="bg-sy-sunshine p-6 flex flex-col">
             <h3 className="text-24 font-bold mb-4">
               { title }
             </h3>
             <p className="mb-4">
               { text }
             </p>
-            <Button
+            <LinkButton
               href={ action.href }
-              className="text-black border border-yeah-gold hover:bg-yeah-gold mt-auto mb-0"
+              className="text-black border border-sy-gold hover:bg-sy-gold mt-auto mb-0 bg-transparent"
             >
-              { action.label } { action.srLabel && <span className="sr-only">{ action.srLabel }</span> }
-            </Button>
+              <AccessibleLabel>{ action.label }</AccessibleLabel>
+            </LinkButton>
           </Card>
           )}
           </div>
@@ -105,11 +113,9 @@ export default function Solutions({ data }){
       <CallToAction>
         { data.callToAction }
       </CallToAction>
-    </Stack>
+    </main>
   </Layout>
 }
-
-
 
 export async function getStaticProps({ params }) {
 

@@ -26,7 +26,7 @@ function Testimonial({ children, cite }){
     {/* <div className="flex"> */}
     <p>
 
-    <LeftQuote className="inline mb-4 mr-2"/>Working with Say Yeah is a major step towards not wasting hundreds of thousands of dollars building the wrong thing because of poor planning.<RightQuote className="inline mr-2"/>
+    <LeftQuote width="16" className="ml-[-1.5rem]"/>Working with Say Yeah is a major step towards not wasting hundreds of thousands of dollars building the wrong thing because of poor planning.<RightQuote width="16"/>
     </p>
     {/* </div> */}
 
