@@ -33,7 +33,7 @@ export default function Footer() {
 
         </div>
 
-        <nav className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 sm:gap-y-12" aria-label="Footer">
+        <nav className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 sm:gap-y-12" aria-label="Footer Menu">
             <h3 className="sr-only">Footer navigation</h3>
             {
               [
@@ -90,7 +90,7 @@ export default function Footer() {
                     { label: "Supplier diversity", href: "/about-us/supplier-diversity/", srLabelSuffix: null },
                     { label: "Contact us", href: "/contact-us/", srLabelSuffix: null },
                   ]}].map((group) => (
-                <ul className="flex flex-col items-start space-y-2" key={ group.label } aria-labelledby={ group.id }>
+                <ul className="flex flex-col items-start space-y-2" key={ group.label }>{/** aria-labelledby={ group.id } */}
                   <li>
                     <a href={ group.href } className="font-bold mb-4 hover:underline" id={ group.id }>
                       { group.label }
@@ -101,7 +101,7 @@ export default function Footer() {
                   </li>
                   { group.children
                       ? group.children.map((item, key) => (
-                        <li>
+                        <li key={ key }>
                           <a className="hover:underline" key={ `${item.href}-${key}` } href={ item.href }>
                             { item.label }
                             { item.srLabelSuffix
@@ -116,14 +116,11 @@ export default function Footer() {
 
               ))
             }
-
         </nav>
-
-
     </div>
 
     <h3 className="sr-only" id="find-us-on-social-media">Find us on social media</h3>
-    <ul className="text-white flex mt-16 justify-center mx-auto space-x-12" aria-labelledby="find-us-on-social-media">
+    <ul className="text-white flex mt-16 justify-center mx-auto space-x-12">{/**aria-labelledby="find-us-on-social-media" */}
       <li><LinkedIn href="https://www.linkedin.com/company/sayyeahto/"/></li>
       <li><Twitter href="https://twitter.com/sayyeahto/"/></li>
       <li><Vimeo href="https://vimeo.com/sayyeah/"/></li>

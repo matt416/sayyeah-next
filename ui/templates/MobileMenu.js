@@ -113,7 +113,7 @@ export function MobileMenu({ children }){
         <Overlay onClose={ toggleMenu } />
 
         <nav
-          aria-label="Primary"
+          aria-label="Main menu"
           className={`mt-auto w-full bg-white z-[2] ${styles.menu}`}
         >
           <MenuTitle title="Menu" onClose={ toggleMenu } />

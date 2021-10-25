@@ -1,0 +1,55 @@
+{
+  "hero":{
+    "image":{
+      "src":"/_public/heroes/service-design.png"
+    },
+    "title":"User research",
+    "text":"Market & user research"
+  },
+  "solutions":{
+    "title":"Research is the key to realizing untapped opportunities",
+    "questions":[
+      "How do we improve customer experience by better aligning to the needs of our target market?",
+      "How can customer segmentation and journey mapping improve our products and services?",
+      "Is there a low cost way we can materially improve our existing products and services?",
+      "What market opportunities are we missing?  "
+    ],
+    "callToAction": {
+      "text": "We’re here to help you answer these and other questions that improve engagement with your market.",
+      "action":{
+        "href":"#",
+        "label":"Get in touch"
+      }
+    }
+  },
+  "description":{
+    "title":"Why research is key to any digital transformation strategy",
+    "text":"One constant throughout all of our digital transformation work is the need for effective research, analysis, synthesis, and actionable next steps for the organizations we work with.\n\n Understanding how vital effective research practices are in shaping and meeting organizational outcomes, we have cultivated multi-disciplinary research expertise and built trusted supplier relationships that cover all facets of research.\n\n From internal organizational insights to broad market insights, qualitative to quantitative, in-person to remote, we pull from an extensive research toolkit to ensure exceptional organizational outcomes."
+  },
+  "toolkit":{
+    "title":"Our service design toolkit",
+    "items":[
+      {
+        "title":"Discovery",
+        "text":"Using a variety of information gathering and research methods, we identify and map the holistic experience of your services, and how customers, staff and other players move through your service’s touchpoints."
+      },
+      {
+        "title":"Analysis",
+        "text":"We do a deep-dive into identifying organizational gaps, market opportunities, and process improvements, with tactics including customer journey mapping, service blueprinting, and more."
+      },
+      {
+        "title":"Optimization and implementation",
+        "text":"Our analysis and synthesis of findings will set the blueprint that guides your team in making strategic improvements to your services. You’ll have the tools you need to align internal teams and stakeholders, deliver services more efficiently, and apply the added lens of digital strategy consulting to uncover new automation, data, and digital product opportunities."
+      },
+      {
+        "title":"Continuous improvement",
+        "text":"Our team will coach you through foundational objectives and key results (OKRs) and key performance indicators (KPIs), related data tracking, user testing, analysis, and methodologies to make your service delivery stronger on an ongoing basis."
+      }
+    ]
+  },
+  "related":{
+    "title":"Our service design related processes",
+    "items":["research", "systemStrategy" ,"inclusiveDesign", "digitalExcellence"]
+  },
+  "callToAction":"Let’s explore how delivering more inclusive products and services can help you win diverse markets."
+}

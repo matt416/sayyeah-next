@@ -27,7 +27,7 @@ export default function Section( { theme, children, className, image, nodeType :
   const style = {
     backgroundImage: `url(${image})`,
     backgroundSize: "cover",
-    backgroundPosition: "50% 50%",
+    backgroundPosition: "0% 50%",
     backgroundRepeat: "no-repeat",
   }
 

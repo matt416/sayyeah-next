@@ -4,7 +4,7 @@ import Layout from 'ui/layout/Layout'
 import Card from "ui/components/Card"
 import LinkButton from "ui/components/LinkButton"
 import LinkArrow from "ui/components/LinkArrow"
-import Testimonial from 'ui/components/Testimonial'
+import Testimonial from 'ui/templates/Testimonial'
 import Video from "ui/components/Video"
 import Hero from 'ui/templates/Hero'
 import CallToAction from 'ui/templates/CallToAction'
@@ -176,12 +176,12 @@ export default function Home() {
 
         {/** Featured Testimonial */}
         <Section bgColor="bg-sy-yellow" textColor="text-black" className="border-t border-black border-opacity-5">
-          <div className="max-w-screen-xs md:max-w-screen-md mx-auto">
-            <h2 className="sr-only">Testimonail</h2>
+          <Flex>
+            <h2 className="sr-only">Testimonial</h2>
             <Testimonial cite="Aran Hamilton, CEO, Vantage Analytics">
-              <ReactMarkdown>Working with Say Yeah is a major step towards not wasting hundreds of thousands of dollars building the wrong thing because of poor planning.</ReactMarkdown>
+              Working with Say Yeah is a major step towards not wasting hundreds of thousands of dollars building the wrong thing because of poor planning.
             </Testimonial>
-          </div>
+          </Flex>
         </Section>
 
         {/** Impactful Challenges */}

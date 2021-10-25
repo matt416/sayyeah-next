@@ -66,24 +66,6 @@ export default function InclusiveWebsiteDesign(){
 
       </Section>
 
-      <Section bgColor="yellow" divide={ true }>
-        <Flex>
-          <div className="max-w-readable space-y-4">
-
-            <h2 className="text-32 font-bold">The success of your website begins with content</h2>
-
-            <p>In addition to our user-centred and inclusive website design and development processes, we’ll also support your team in the content strategy process for your next website.</p>
-
-            <p>For an existing website, it’s important to conduct a content audit to determine how current content is serving organizational goals and how it’s ranking on search engines. We’ll assess what content should stay or go, what content might need to be re-written to improve its effectiveness, and what keywords are most effective to write content for in order to grow the impact of your website over time.</p>
-
-            <p>If you’re starting with a new website, we guide your team through making a comprehensive content plan, which will help your new website accomplish your search engine, organic reach, transactional, and other on-site objectives for your website visitors.</p>
-
-            <p>These efforts will help increase traffic to your website, increase conversions across your website, and ensure that when you do work on new content, you can maximize that investment.</p>
-          </div>
-
-        </Flex>
-      </Section>
-
       <Section bgColor="yellow" divide="true">
         <Flex>
           <div className="max-w-readable space-y-4">
@@ -128,9 +110,18 @@ export default function InclusiveWebsiteDesign(){
         </Flex>
       </Section>
 
-
       <RelatedServiceCards items={ ["essentialWebsiteAudit", "accessibleWebsiteDesign", "usabilityTesting", "accessibleDevelopmentGuide"] }/>
-      <ClientCards bgColor="white" />
+
+      <ClientCards bgColor="white" items={ [
+        "webFoundation",
+        "torontoPublicLibrary",
+        "fafia",
+        "myseum",
+        "healthcareHumanFactors",
+        "neptis",
+        "microsoft",
+        "serviceOntario"
+      ]} />
 
       {/** Call to action */}
       <Section bgColor="white" divide="true">

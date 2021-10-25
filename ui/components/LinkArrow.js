@@ -2,7 +2,7 @@ import Link from "next/link"
 import { splitClassesAndAttributes } from "helpers/tw"
 import clsx from "clsx"
 import Arrow from "ui/svg/Arrow"
-
+import AccessibleLabel from "./AccessibleLabel"
 const LinkArrow = ({ children, className, href, ...props }) => {
 
   const [classes, attributes] = splitClassesAndAttributes(props, {
@@ -17,7 +17,7 @@ const LinkArrow = ({ children, className, href, ...props }) => {
     classes,
     className
   ) }>
-    { children }<Arrow/>
+    <AccessibleLabel>{ children }</AccessibleLabel><Arrow/>
   </a></Link>
 
 }

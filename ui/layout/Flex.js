@@ -21,5 +21,5 @@ export default function Flex( { children, style = null, className, tag : Tag = '
     space: 4,
   })
 
-  return <Tag className={ classes.apply(props, "flex flex-col items-start w-full px-4") } style={ style }>{ children }</Tag>
+  return <Tag className={ classes.apply(props, "flex flex-col items-start w-full px-4", className) } style={ style }>{ children }</Tag>
 }

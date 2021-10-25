@@ -41,45 +41,8 @@
     ]
   },
   "related":{
-    "title":"Our service design related processes",
-    "items":[
-      {
-        "title":"Research",
-        "text":"One constant throughout all of our digital transformation work is the need for effective research, analysis, synthesis, and actionable next steps for the organizations we work with. Let’s explore this core competency for delivering exceptional products and services.",
-        "action":{
-          "href":"#",
-          "label":"Learn more",
-          "srLabel":" about our research process"
-        }
-      },
-      {
-        "title":"System strategy",
-        "text":"System strategy helps accelerate internal decision-making with an approach that uncovers key opportunities to drive customer engagement and retention while optimizing operations. We achieve this by mapping internal capabilities and consumer objectives in order to define an effective roadmap that meets organizational and market needs.",
-        "action":{
-          "href":"#",
-          "label":"Learn more",
-          "srLabel":" about our system strategy process"
-        }
-      },
-      {
-        "title":"Inclusive design",
-        "text":"Inclusive design ensures your products and services are embraced by your market by welcoming diverse market segments to engage authentically with your organization. Learn how to design with intersectionality, usability, accessibility, and inclusion at the centre of your work.",
-        "action":{
-          "href":"#",
-          "label":"Learn more",
-          "srLabel":" about our inclusive design process"
-        }
-      },
-      {
-        "title":"Achieving digital excellence",
-        "text":"From communications to product to organizational efficiency, operating online involves significant depth of expertise. With digital channels and consumer touchpoints extending beyond online to in-person and at home, success in the connected age requires a breadth of expertise that defines your organization’s digital maturity and capabilities.",
-        "action":{
-          "href":"#",
-          "label":"Learn more",
-          "srLabel":" about achieving digital excellence"
-        }
-      }
-    ]
+    "title":"Our product strategy related processes",
+    "items":["research", "systemStrategy" ,"inclusiveDesign", "digitalExcellence"]
   },
   "callToAction":"Let’s explore how delivering more inclusive products and services can help you win diverse markets."
 }

@@ -15,7 +15,7 @@ export const RELATED_SERVICE_SUMMARIES = {
       }
     },
   usabilityTesting: {
-    "title":"Usability Testing",
+    "title":"Usability testing",
     "text":"An effective usability testing methodology helps you identify what’s working and what is limiting engagement across your digital ecosystem, ultimately making informed decisions on how to improve your digital ecosystem.\n\nWe use a three-step process—Plan, Test, Analyze—to focus your team on the most impactful optimization efforts.",
     "action":{
       "href":"#",
@@ -47,11 +47,11 @@ export const RELATED_SERVICE_SUMMARIES = {
       }
     },
   essentialWebsiteAudit: {
-    "title":"Achieving digital excellence",
+    "title":"Essential website audit",
     "text":"Over 90% of websites are fundamentally broken. Is yours one of them?\n\nThe Essential Website Audit answers these two critical questions: Is your website broken and how can you fix it?",
     "action":{
       "href":"#",
-      "label":"Learn more|the essential website audit",
+      "label":"Learn more|about the essential website audit",
     }
   },
   accessibleWebsiteDesign: {
@@ -63,8 +63,8 @@ export const RELATED_SERVICE_SUMMARIES = {
     }
   },
   accessibleDevelopmentGuide: {
-    "title":"Accessible Development Guide",
-    "text":"Uncover the roadblocks that impact access and engagement with over 90% of websites.\n\n The Accessible Development Guide is your team’s tutorial and cheat sheet to bring modern web development practices to your organization.Get started today to open up market access and improve website performance.",
+    "title":"Accessible development guide",
+    "text":"Uncover the roadblocks that impact access and engagement with over 90% of websites.\n\n The Accessible Development Guide is your team’s tutorial and cheat sheet to bring modern web development practices to your organization. Get started today to open up market access and improve website performance.",
     "action":{
       "href":"#",
       "label":"Explore|the accessible development guide"
@@ -75,23 +75,23 @@ export const RELATED_SERVICE_SUMMARIES = {
 export default function RelatedServiceCards({ title = "Related services and resources", items }){
 
   return <Section bgColor="yellow">
-          <Grid>
-          <h2 className="text-32 font-bold col-span-full max-w-[40rem]">{ title }</h2>
+    <Grid>
+    <h2 className="text-32 font-bold col-span-full max-w-[40rem]">{ title }</h2>
 
-          { items.map(key => RELATED_SERVICE_SUMMARIES[key]).map(({ title, text, action }) => <Card className="bg-sy-sunshine p-6 flex flex-col">
-            <h3 className="text-24 font-bold mb-4">
-              { title }
-            </h3>
+    { items.map(key => RELATED_SERVICE_SUMMARIES[key]).map(({ title, text, action }) => <Card className="bg-sy-sunshine p-6 flex flex-col">
+      <h3 className="text-24 font-bold mb-4">
+        { title }
+      </h3>
 
-            <ReactMarkdown className="space-y-3 mb-3">{ text }</ReactMarkdown>
-            <LinkButton
-              href={ action.href }
-              className="text-black border border-sy-gold hover:bg-black hover:border-black hover:text-white mt-auto mb-0 bg-transparent"
-              >
-              <AccessibleLabel>{ action.label }</AccessibleLabel>
-            </LinkButton>
-          </Card>
-          )}
-          </Grid>
-        </Section>
+      <ReactMarkdown className="space-y-3 mb-3">{ text }</ReactMarkdown>
+      <LinkButton
+        href={ action.href }
+        className="text-black border border-sy-gold hover:bg-black hover:border-black hover:text-white mt-auto mb-0 bg-transparent"
+        >
+        <AccessibleLabel>{ action.label }</AccessibleLabel>
+      </LinkButton>
+    </Card>
+    )}
+    </Grid>
+  </Section>
 }

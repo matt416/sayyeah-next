@@ -1,11 +1,42 @@
 import LeftQuote from "ui/svg/LeftQuote"
 import RightQuote from "ui/svg/RightQuote"
-export default function Quote({ children }) {
+
+import { traits } from "helpers/traits"
+
+const classes = traits({
+  textSize: {
+    24: "text-24",
+  },
+  fontWeight: {
+    bold: "font-bold"
+  },
+  margin: {
+    default: "mb-4"
+  },
+})
+
+const quoteClasses = traits({
+  quoteColor: {
+    mocha: "text-sy-mocha"
+  }
+})
+
+
+export default function Quote({ children, nodeType: Node = "p", quoteSize = 16, ...props}) {
+
+  classes.defaults({
+    textSize: 24,
+    fontWeight: "bold",
+    margin: "default"
+  })
+
+  quoteClasses.defaults({
+    quoteColor: "mocha"
+  })
+
   return (
-    <>
-      <p className="text-24 font-bold mb-4 inline-block">
-        <LeftQuote width="16" className="ml-[-1.5rem] text-sy-mocha"/>{ children }<RightQuote width="16" className="text-sy-mocha" />
-      </p>
-    </>
+    <Node className={ classes.apply(props, "inline-block") }>
+      <LeftQuote width={ quoteSize } className={ quoteClasses.apply(props, "ml-[-1.5rem]") }/>{ children }<RightQuote width={ quoteSize } className={ quoteClasses.apply(props) } />
+    </Node>
   )
 }

@@ -1,7 +1,7 @@
-import Header from 'ui/components/Header'
-import Footer from 'ui/components/Footer'
+import Header from 'ui/templates/Header'
+import Footer from 'ui/templates/Footer'
 
-import { useHideMenuOnRouteChange } from "ui/components/MobileMenu"
+import { useHideMenuOnRouteChange } from "ui/templates/MobileMenu"
 import { SSRProvider } from 'react-aria'
 
 export default function Layout({ children, includeHeader = true, includeNav = true, mode = "dark" }) {
