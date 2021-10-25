@@ -15,7 +15,20 @@ import Grid from 'ui/layout/Grid'
 export default function InclusiveWebsiteDesign(){
 
   return <Layout>
-
+    <NextSeo
+          title="The Essential Website Audit. 90% of websites are broken. Is yours?"
+          description="The Essential Website Audit answers these two critical questions: Is your website broken? How can you fix it? Order today."
+          openGraph={{
+            images: [
+              {
+                url: `${process.env.NEXT_PUBLIC_BASE_URL}/_public/heroes/user-research.png`,
+                width: 1200,
+                height: 627,
+                alt: 'The Essential Website Audit from Say Yeah!',
+              },
+            ],
+          }}
+        />
     <Main>
       <Hero {...{
           image: { src: "/_public/heroes/user-research.png" },
@@ -112,7 +125,9 @@ export default function InclusiveWebsiteDesign(){
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             { [
-              { title: 'Collaboration toward insight',
+              {
+                icon: "/_public/img/icons/collaborate.svg",
+                title: 'Collaboration toward insight',
                 body: 'We work closely with the client team throughout the project, collaborating on the planning and research, while targeting ideal insights and outcomes. As part of this process, we take the time to understand how we can work within the client’s strengths and capabilities to ensure actionable results.'
             },{
               title: 'Engaging in multiple perspectives',
@@ -124,6 +139,7 @@ export default function InclusiveWebsiteDesign(){
               title: 'Focusing on outcomes',
               body: 'Every research project has its constraints and desired outcomes. Different research methodologies are required to suit each goal. This stage is where an expansive research toolkit becomes critical. We define the most effective approach to gain meaninful insights that build toward impactful outcomes.'
             }].map(item => <div className="space-y-4">
+              <img src={ item.icon } role="img" alt=""/>
               <h3 className="text-24 font-bold leading-tight">{ item.title }</h3>
               <ReactMarkdown>{ item.body }</ReactMarkdown>
             </div>

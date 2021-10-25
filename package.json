@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "svg": "svgo -f ./public/img/clients -o ./public/img/clients --config=svgo.config.js --pretty --indent=2",
-    "svg-v": "svgo -v"
+    "icons": "svgo -f ./public/img/icons -o ./public/img/icons --config=svgo.config.js --pretty --indent=2"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.4",

@@ -1,4 +1,5 @@
 
+import { NextSeo } from 'next-seo'
 import Layout from 'ui/layout/Layout'
 
 import LinkButton from "ui/components/LinkButton"
@@ -15,7 +16,20 @@ import Quote from 'ui/components/Quote'
 export default function InclusiveWebsiteDesign(){
 
   return <Layout>
-
+    <NextSeo
+          title="The Essential Website Audit. 90% of websites are broken. Is yours?"
+          description="The Essential Website Audit answers these two critical questions: Is your website broken? How can you fix it? Order today."
+          openGraph={{
+            images: [
+              {
+                url: `${process.env.NEXT_PUBLIC_BASE_URL}/_public/heroes/inclusive-website-design.png`,
+                width: 1200,
+                height: 627,
+                alt: 'The Essential Website Audit from Say Yeah!',
+              },
+            ],
+          }}
+        />
     <main tabIndex="-1" id="main-content">
       <Hero {...{
           image: { src: "/_public/heroes/inclusive-website-design.png" },
@@ -110,7 +124,8 @@ export default function InclusiveWebsiteDesign(){
         </Flex>
       </Section>
 
-      <RelatedServiceCards items={ ["essentialWebsiteAudit", "accessibleWebsiteDesign", "usabilityTesting", "accessibleDevelopmentGuide"] }/>
+      <RelatedServiceCards items={ ["essentialWebsiteAudit", "accessibleWebsiteDesign", "usabilityTesting"] }/>
+      {/** accessibleDevelopmentGuide */}
 
       <ClientCards bgColor="white" items={ [
         "webFoundation",
