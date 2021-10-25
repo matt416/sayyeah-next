@@ -33,7 +33,7 @@ export default function InclusiveWebsiteDesign(){
             "Is there a low cost way we can materially improve our existing products and services?",
             "What market opportunities are we missing?"
           ].map((item, key) =>
-            <Quote>{ item }</Quote>
+            <Quote key={ key }>{ item }</Quote>
           )}
           <div className="max-w-readable col-span-full text-20 text-sy-mocha space-y-4">
             <p>We’re here to help you answer these and other questions that improve engagement with your market.</p>

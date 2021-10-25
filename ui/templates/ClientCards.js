@@ -63,7 +63,7 @@ function getItemsFromList(items, list) {
 
 export default function ClientCards({ items = [], title = "Select clients", ...props }) {
 
-  getItemsFromList(items, CLIENTS).map(item => console.log(camelCase(item.name)))
+  // getItemsFromList(items, CLIENTS).map(item => console.log(camelCase(item.name)))
 
   return (
     <Section bgColor="white" { ...props }>

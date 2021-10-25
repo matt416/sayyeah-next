@@ -11,8 +11,6 @@ const LinkArrow = ({ children, className, href, ...props }) => {
     textColor: false,
   })
 
-  console.log(classes)
-
   return <Link href={ href }><a { ...attributes } className={ clsx(
     classes,
     className
