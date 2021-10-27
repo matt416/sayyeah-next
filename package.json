@@ -8,11 +8,10 @@
     "icons": "svgo -f ./public/img/icons -o ./public/img/icons --config=svgo.config.js --pretty --indent=2"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.4",
     "camelcase": "^6.2.0",
     "clsx": "^1.1.1",
     "formik": "^2.2.9",
-    "next": "latest",
+    "next": "^12.0.0",
     "next-seo": "^4.28.1",
     "react": "^17.0.2",
     "react-aria": "^3.9.0",
