@@ -62,11 +62,11 @@ export default function Home() {
                 [{
                   img: { src: "/img/icons/devices.svg", alt: "" },
                   text: "**Modernize your organization** towards more efficient service delivery and improved customer experience.",
-                  actions: [{ label: "Service design", ariaLabel: null, href: "/services/service-design/" }]
+                  actions: [{ label: "Service design", href: "/solutions/service-design/" }]
                 },{
                   img: { src: "/img/icons/strategy.svg", alt: "" },
                   text: "**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
-                  actions: [{ label: "Product strategy", ariaLabel: null, href: "/services/product-strategy/"}]
+                  actions: [{ label: "Product strategy", href: "/solutions/product-strategy/"}]
                 }].map((item, key) => (
                 <Card key={key}>
                   <Card.Content className="flex flex-col items-start h-full">
