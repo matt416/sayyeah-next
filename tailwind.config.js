@@ -12,7 +12,7 @@ module.exports = {
       17: "1.0625rem",
       18: "1.125rem",
       20: "1.25rem", //["1.25rem", { lineHeight: "1.3em" } ],
-      24: "1.5rem", //["1.5rem", { lineHeight: "1.5em" } ],
+      24: ["1.5rem", { lineHeight: "1.3em" } ],
       28: "1.75rem",//["1.75rem", { lineHeight: "1.2em" } ],
       32: ["2.0rem", { lineHeight: "1.2em" } ],
       36: "2.25rem",

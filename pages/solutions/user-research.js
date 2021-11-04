@@ -2,6 +2,8 @@ import ReactMarkdown from "react-markdown"
 import LinkButton from "ui/components/LinkButton"
 import Quote from 'ui/components/Quote'
 
+import { NextSeo } from "next-seo"
+
 import Hero from "ui/templates/Hero"
 import RelatedServiceCards from 'ui/templates/RelatedServiceCards'
 import ClientCards from 'ui/templates/ClientCards'
@@ -11,27 +13,27 @@ import Main from 'ui/layout/Main'
 import Section from 'ui/layout/Section'
 import Flex from 'ui/layout/Flex'
 import Grid from 'ui/layout/Grid'
-
+import Image from "next/image"
 export default function InclusiveWebsiteDesign(){
 
   return <Layout>
     <NextSeo
-          title="The Essential Website Audit. 90% of websites are broken. Is yours?"
-          description="The Essential Website Audit answers these two critical questions: Is your website broken? How can you fix it? Order today."
-          openGraph={{
-            images: [
-              {
-                url: `${process.env.NEXT_PUBLIC_BASE_URL}/_public/heroes/user-research.png`,
-                width: 1200,
-                height: 627,
-                alt: 'The Essential Website Audit from Say Yeah!',
-              },
-            ],
-          }}
-        />
+      title="Research practices, methodologies, and learnings from Say Yeah!"
+      description="Learn how research can help your team accelerate decision-making to more effectively deliver exceptional products and services."
+      openGraph={{
+        images: [
+          {
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/heroes/user-research.png`,
+            width: 1200,
+            height: 627,
+            alt: 'Research practices, methodologies, and learnings from Say Yeah!',
+          },
+        ],
+      }}
+    />
     <Main>
       <Hero {...{
-          image: { src: "/_public/heroes/user-research.png" },
+          image: { src: "/heroes/user-research.png" },
           title: "Market & user research",
           catchline: "Learn how research can help your team accelerate decision-making and deliver exceptional products and services."
         }}
@@ -48,9 +50,11 @@ export default function InclusiveWebsiteDesign(){
           ].map((item, key) =>
             <Quote key={ key }>{ item }</Quote>
           )}
+
+
           <div className="max-w-readable col-span-full text-20 text-sy-mocha space-y-4">
-            <p>We’re here to help you answer these and other questions that improve engagement with your market.</p>
-            <LinkButton href="/contact-us/" bgColor="bg-sy-yellow" textColor="text-black">Get in touch</LinkButton>
+            <p className="font-bold text-20">We’re here to help you answer these and other questions that improve engagement with your market.</p>
+            <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
           </div>
         </Grid>
       </Section>
@@ -120,42 +124,63 @@ export default function InclusiveWebsiteDesign(){
       </Section>
 
       <Section bgColor="yellow" textColor="black" divide={ true }>
-        <Flex>
-          <h2 className="text-32 font-bold max-w-readable">Pillars of an effective research practice</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <Grid>
+          <h2 className="text-32 font-bold max-w-readable col-span-full">Pillars of an effective research practice</h2>
             { [
               {
-                icon: "/_public/img/icons/collaborate.svg",
+                img: { src: "/img/icons/collaborate.svg", alt: "" },
                 title: 'Collaboration toward insight',
                 body: 'We work closely with the client team throughout the project, collaborating on the planning and research, while targeting ideal insights and outcomes. As part of this process, we take the time to understand how we can work within the client’s strengths and capabilities to ensure actionable results.'
             },{
+              img: { src: "/img/icons/engage.svg", alt: "" },
               title: 'Engaging in multiple perspectives',
               body: 'To get the broadest view possible of both current and future state objectives, we encourage all stakeholders to give their input through inclusive surveying, workshopping, interviewing, and other techniques.'
             },{
+              img: { src: "/img/icons/empower.svg", alt: "" },
               title: 'Empowering others in the process',
               body: 'Iterative, ongoing research is a hallmark of exceptional organizations. Bringing research practices to an organization is a natural part of our engagements. We coach on human-centred processes, culture building, collaboration, and methodologies that support continuous insights, beyond our engagements.'
             },{
+              img: { src: "/img/icons/focus.svg", alt: "" },
               title: 'Focusing on outcomes',
               body: 'Every research project has its constraints and desired outcomes. Different research methodologies are required to suit each goal. This stage is where an expansive research toolkit becomes critical. We define the most effective approach to gain meaninful insights that build toward impactful outcomes.'
-            }].map(item => <div className="space-y-4">
-              <img src={ item.icon } role="img" alt=""/>
-              <h3 className="text-24 font-bold leading-tight">{ item.title }</h3>
-              <ReactMarkdown>{ item.body }</ReactMarkdown>
+            }].map(item => <div>
+              { item.img ? <Image src={ item.img.src } alt={ item.img.alt } width="48" height="48" /> : null }
+              <h3 className="text-24 font-bold mb-3">{ item.title }</h3>
+              <ReactMarkdown className="space-y-4">{ item.body }</ReactMarkdown>
             </div>
             )}
-          </div>
-        </Flex>
+            <div className="col-span-full max-w-readable space-y-4">
+              <p className="text-24 font-bold">Are you ready to bring exceptional research practices and outcomes to your organization?</p>
+              <LinkButton href="/contact-us/" bgColor="black" textColor="white">Get in touch</LinkButton>
+            </div>
+        </Grid>
       </Section>
 
-      <RelatedServiceCards items={ ["essentialWebsiteAudit", "accessibleWebsiteDesign", "usabilityTesting", "accessibleDevelopmentGuide"] }/>
-      <ClientCards bgColor="white" />
+      <Section bgColor="yellow" divide="true">
+        <RelatedServiceCards
+          items={ ["userResearch", "usabilityTesting", "systemStrategy", "journeyMapping", "continuousImprovement", "marketDefinition"] }
+        />
+      </Section>
 
+      <Section bgColor="white">
+        <ClientCards bgColor="white" title="Select service design clients" items={[
+          "torontoPublicLibrary",
+          "kanetix",
+          "serviceOntario",
+          "tourismToronto",
+          "virginGaming",
+          "ontario",
+          "nymi",
+          "metrolinx",
+        ]} />
+      </Section>
       {/** Call to action */}
       <Section bgColor="white" divide="true">
         <Flex>
-          <p className="text-24">Are you ready to improve the performance and outcomes of your website?</p>
-          <LinkButton href="#" bgColor="bg-sy-yellow" textColor="text-black">Get in touch</LinkButton>
+          <div className="max-w-readable space-y-4">
+          <p className="text-24 font-bold">Let’s explore how bringing inclusive research practices to your organization can accellerate decision-making and improve products and services.</p>
+          <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
+          </div>
         </Flex>
       </Section>
 

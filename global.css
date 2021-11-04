@@ -177,3 +177,8 @@ ol.list-counter {
   background-image:url('/_public/checkmark.png');
   background-size:contain;
 }
+
+
+*[href=""], *[href="#"]{
+  outline:8px red solid;
+}

@@ -17,22 +17,22 @@ export default function InclusiveWebsiteDesign(){
 
   return <Layout>
     <NextSeo
-          title="The Essential Website Audit. 90% of websites are broken. Is yours?"
-          description="The Essential Website Audit answers these two critical questions: Is your website broken? How can you fix it? Order today."
+          title="Inclusive Website Design services from Say Yeah! Reach your full market."
+          description="Deliver responsive, accessible, and delightful websites that welcome your entire market to engage with your content."
           openGraph={{
             images: [
               {
-                url: `${process.env.NEXT_PUBLIC_BASE_URL}/_public/heroes/inclusive-website-design.png`,
+                url: `${process.env.NEXT_PUBLIC_BASE_URL}/heroes/inclusive-website-design.png`,
                 width: 1200,
                 height: 627,
-                alt: 'The Essential Website Audit from Say Yeah!',
+                alt: 'Inclusive Website Design services from Say Yeah! Reach your full market.',
               },
             ],
           }}
         />
     <main tabIndex="-1" id="main-content">
       <Hero {...{
-          image: { src: "/_public/heroes/inclusive-website-design.png" },
+          image: { src: "/heroes/inclusive-website-design.png" },
           title: "Inclusive website design",
           catchline: "Deliver a responsive, accessible, and delightful website that welcomes your entire market to engage with your content, products, and services."
         }}
@@ -42,7 +42,7 @@ export default function InclusiveWebsiteDesign(){
         <Grid>
           <h2 className="max-w-readable text-32 text-sy-yellow font-bold col-span-full">Inclusive websites answer important organizational questions</h2>
           { [
-            "Can we improve monetization of our website through new and optimized transactionals flows?",
+            "Can we improve monetization of our website through new and optimized transactional flows?",
             "How can our website help us grow customer engagement and retention?",
             "Can our website improve the efficiency of our marketing, sales, and support teams?",
             "Is our website accessible?"
@@ -50,8 +50,8 @@ export default function InclusiveWebsiteDesign(){
             <Quote>{ item }</Quote>
           )}
           <div className="max-w-readable col-span-full text-20 text-sy-mocha space-y-4">
-            <p>We’re here to help you answer these and other questions that help you realize the ROI of your website.</p>
-            <LinkButton href="" bgColor="bg-sy-yellow" textColor="text-black">Get in touch</LinkButton>
+            <p className="font-bold text-20">We’re here to help you answer these and other questions that help you realize the ROI of your website.</p>
+            <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
           </div>
         </Grid>
       </Section>
@@ -118,31 +118,38 @@ export default function InclusiveWebsiteDesign(){
             </ol>
 
             <p className="font-bold text-20">Let’s talk through these steps together and help you improve the performance and outcomes of your website.</p>
-            <LinkButton href="/contact-us/" bgColor="bg-sy-gold" textColor="text-black">Get in touch</LinkButton>
+            <LinkButton href="/contact-us/" bgColor="bg-sy-gold" textColor="black">Get in touch</LinkButton>
 
           </div>
         </Flex>
       </Section>
 
-      <RelatedServiceCards items={ ["essentialWebsiteAudit", "accessibleWebsiteDesign", "usabilityTesting"] }/>
+      <Section bgColor="yellow" divide="true">
+        <RelatedServiceCards
+          items={ ["essentialWebsiteAudit", "accessibleWebsiteDesign", "usabilityTesting"] }
+        />
+      </Section>
       {/** accessibleDevelopmentGuide */}
 
-      <ClientCards bgColor="white" items={ [
-        "webFoundation",
-        "torontoPublicLibrary",
-        "fafia",
-        "myseum",
-        "healthcareHumanFactors",
-        "neptis",
-        "microsoft",
-        "serviceOntario"
-      ]} />
-
+      <Section bgColor="white">
+        <ClientCards bgColor="white" items={ [
+          "webFoundation",
+          "torontoPublicLibrary",
+          "fafia",
+          "myseum",
+          "healthcareHumanFactors",
+          "neptis",
+          "microsoft",
+          "serviceOntario"
+        ]} />
+      </Section>
       {/** Call to action */}
       <Section bgColor="white" divide="true">
         <Flex>
-          <p className="text-24">Are you ready to improve the performance and outcomes of your website?</p>
-          <LinkButton href="#" bgColor="bg-sy-yellow" textColor="text-black">Get in touch</LinkButton>
+          <div className="max-w-readable space-y-4">
+          <p className="text-24 font-bold">Are you ready to improve the performance and outcomes of your website?</p>
+          <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
+          </div>
         </Flex>
       </Section>
 

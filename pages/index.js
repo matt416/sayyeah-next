@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactMarkdown from "react-markdown"
+import Image from "next/image"
+
 import Layout from 'ui/layout/Layout'
 import Card from "ui/components/Card"
 import LinkButton from "ui/components/LinkButton"
@@ -10,60 +12,65 @@ import Hero from 'ui/templates/Hero'
 import CallToAction from 'ui/templates/CallToAction'
 import LeftQuote from 'ui/svg/LeftQuote'
 import RightQuote from 'ui/svg/RightQuote'
-
+import ClientCards from 'ui/templates/ClientCards'
+import PublicationCards from 'ui/templates/PublicationCards'
 import Grid from "ui/layout/Grid"
 import Flex from "ui/layout/Flex"
 import Section from "ui/layout/Section"
-
-// import Tpl from "ui/svg/clients/Tpl"
-// import Cannect from "ui/svg/clients/Cannect"
-
-// import Sxsw from "ui/svg/media/Sxsw"
-// import Fitc from "ui/svg/media/Fitc"
-// import DigitalJournal from "ui/svg/media/DigitalJournal"
-// import UxMagazine from 'ui/svg/media/UxMagazine'
-// import CtvNewsChannel from 'ui/svg/media/CtvNewsChannel'
-
-
+import { NextSeo } from "next-seo"
 
 export default function Home() {
   return (
     <Layout>
       <main tabIndex="-1" id="main-content" className="stack-header-and-main-using-grid">
 
+      <NextSeo
+      title="Inclusive design, service design, and digital excellence from Say Yeah!"
+      description="We help organizations deliver inclusive products and services that increase access to diverse markets. Learn more about Say Yeah!"
+      openGraph={{
+        images: [
+          {
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/heroes/homepage.png`,
+            width: 1200,
+            height: 627,
+            alt: 'Inclusive design, service design, and digital excellence from Say Yeah!',
+          },
+        ],
+      }}
+    />
+
+
         <Hero {...{
-          image: { src: "/_public/heroes/homepage.png" },
+          image: { src: "/heroes/homepage.png" },
           name: "Say Yeah",
           title: "Deliver products and services that win diverse markets",
           catchline: "As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
           actions: [{
-            href: "#",
+            href: "/digital-insights/roi-inclusive-design/",
             label: "Why designing for the average person hurts your bottom line",
-            ariaLabel: false,
           },{
-            href: "#",
+            href: "/digital-insights/technology-builds-market-leading-organizations/",
             label: "The role of technolgy in building market leaders",
-            ariaLabel: false,
           }]
         }}
         />
 
-        <Section textColor="text-black" bgColor="bg-sy-yellow">
+        <Section textColor="black" bgColor="yellow">
           <Grid>
             <h2 className="text-32 font-bold col-span-full">Bring clarity to decision-making</h2>
-
               {
                 [{
-                  icon: "",
+                  img: { src: "/img/icons/devices.svg", alt: "" },
                   text: "**Modernize your organization** towards more efficient service delivery and improved customer experience.",
                   actions: [{ label: "Service design", ariaLabel: null, href: "/services/service-design/" }]
                 },{
-                  icon: "",
+                  img: { src: "/img/icons/strategy.svg", alt: "" },
                   text: "**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
                   actions: [{ label: "Product strategy", ariaLabel: null, href: "/services/product-strategy/"}]
                 }].map((item, key) => (
                 <Card key={key}>
                   <Card.Content className="flex flex-col items-start h-full">
+                  { item.img ? <Image src={ item.img.src } alt={ item.img.alt } width="56" height="56" /> : null }
                     <ReactMarkdown className="text-20 leading-normal mb-4">{ item.text }</ReactMarkdown>
 
                     { item.actions.map( action => (
@@ -71,8 +78,7 @@ export default function Home() {
                         key={ action.href }
                         className="mt-auto mb-0 bg-sy-gold text-black"
                         href={ action.href }
-                        textSize="text-20"
-                        aria-label={ action.ariaLabel }
+                        textSize="18"
                       >
                         { action.label }
                       </LinkButton>
@@ -127,49 +133,50 @@ export default function Home() {
             {
               [
                 {
-                  icon: false,
+                  img: { src: "/img/icons/glasses.svg", alt: "" },
                   fact: "75% of people require accommodations for eyesight",
                   action: {
                     label:"Accommodate for different eyesight across your products and services",
-                    href:"#", ariaLabel: null,
+                    href:"/digital-insights/accomodating-vision-needs/"
                   }
                 },{
-                  icon: false,
+                  img: { src: "/img/icons/brain.svg", alt: "" },
                   fact: "40% of people have brains that work in neurodiverse ways",
                   action: {
                     label:"Improve products and services by planning for different ways of thinking",
-                    href:"#", ariaLabel: null,
+                    href:"/digital-insights/improving-products-services-neurodiversity/"
                   }
                 },{
-                  icon: false,
+                  img: { src: "/img/icons/diversity.svg", alt: "" },
                   fact: "Diversity of markets and communities continues to grow",
                   action: {
                     label:"Follow the trends that lead to increasing market diversity",
-                    href:"#", ariaLabel: null,
+                    href:"/digital-insights/growing-community-diversity/"
                   }
                 },{
-                  icon: false,
+                  img: { src: "/img/icons/fish.svg", alt: "" },
                   fact: "Individualism has overtaken conformance as a way of being",
                   action: {
                     label:"Explore how technology has accellerated humanity’s path to self-discovery",
-                    href:"#", ariaLabel: null,
+                    href:"/digital-insights/individualism-shapes-product-service/"
                   }
                 },
               ].map((item, key) => (
-                <Card key={key}>
+                <Card key={key} href={ item.action.href }>
                   <div className="bg-sy-sunshine p-4">
-                    { item.icon && <></> }
+                  { item.img ? <Image src={ item.img.src } alt={ item.img.alt } width="56" height="56" /> : null }
                     <p className="text-20 font-bold">{ item?.fact }</p>
                   </div>
-                  <a href={ item?.action?.href } aria-label={ item?.action?.ariaLabel } className="p-4 block">
+                  <div className="p-4 block">
                     { item?.action?.label }
-                  </a>
+                  </div>
                 </Card>
               ))
             }
 
-          <div className="mt-8 col-span-full">
-            <p className="text-24 font-bold max-w-[40rem]">Contact us today to more effectively deliver products and services that win diverse markets</p>
+          <div className="col-span-full max-w-readable space-y-4">
+            <p className="text-24 font-bold">Contact us today to more effectively deliver products and services that win diverse markets</p>
+            <LinkButton href="/contact-us/" bgColor="black" textColor="white">Get in touch</LinkButton>
           </div>
           </Grid>
         </Section>
@@ -228,23 +235,26 @@ export default function Home() {
         </Section>
 
         <Section bgColor="bg-sy-yellow" textColor="text-black">
-          <Flex>
-            <h2 className="text-40 font-bold mb-8">Client roster</h2>
 
-            <Grid maxW={ false } margin={ false } gridCols="grid-cols-2 md:grid-cols-4">
-              { [].map(( Client, key ) =>
-                <div className="bg-black bg-opacity-5 rounded-lg flex items-center justify-center p-4" key={ key }>
-                  { <Client width={ null } height={ null } className="w-full" /> }
-                </div>
+          <ClientCards cols="5" bgColor="white" title="Our client roster" items={[
+            "torontoPublicLibrary",
+            "theScore",
+            "aon",
+            "virginMobile",
+            "webFoundation",
+            "tourismToronto",
+            "ontario",
+            "rogers",
+            "microsoft",
+            "ratesDotCa",
+          ]} />
 
-              )}
-            </Grid>
-
-            <LinkArrow href="/work/">Additional clients and industries served</LinkArrow>
+          <Flex className="mt-8">
+          <LinkArrow href="/work/">Additional clients and industries served</LinkArrow>
           </Flex>
         </Section>
 
-        <Section bgColor="bg-sy-yellow" textColor="text-black" className="border-t border-black border-opacity-5">
+        {/* <Section bgColor="bg-sy-yellow" textColor="text-black" className="border-t border-black border-opacity-5">
           <Flex>
             <h2 className="text-32 font-bold mb-4">The client experience</h2>
             <Video data={{
@@ -262,7 +272,8 @@ export default function Home() {
             }} />
           </Flex>
         </Section>
-        <Section textColor="text-white" bgColor="bg-sy-earth">
+         */}
+        <Section textColor="white" bgColor="earth">
           <Grid gap="gap-4 gap-y-12 md:gap-x-16 md:gap-y-8" className="text-18">
           {/* <StackContent className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 md:gap-y-8 gap-4"> */}
 
@@ -313,44 +324,26 @@ export default function Home() {
         </Section> */}
 
         <Section bgColor="bg-sy-yellow" textColor="text-black">
-          <Flex>
-            <h2 className="text-32 font-bold mb-8">We’ve been featured by</h2>
 
-            {/**<ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {
-                [{
-                  name: "SXSW",
-                  src: <Sxsw/>
-                },{
-                  name: "FITC",
-                  src: <Fitc/>
-                },{
-                  name: "Digital Journal",
-                  src: <DigitalJournal/>
-                },{
-                  name: "UX Magazine",
-                  src: <UxMagazine/>
-                },{
-                  name: "CTV News Channel",
-                  src: <CtvNewsChannel />,
-                }].map((client, key) =>
-                  <li key={ key } className="border border-black border-opacity-5 rounded min-h-[6rem] flex items-center justify-center">
-                    { client.src }
-                  </li>
-                )
-              }
-            </ul>
-            */}
-          </Flex>
+        <PublicationCards cols="5" bgColor="white" title="We’ve been featured by" items={[
+            "sxsw",
+            "fitc",
+            "digitalJournal",
+            "uxMagazine",
+            "ctvNewsChannel",
+          ]} />
         </Section>
 
-        <CallToAction
-          actions={[ {
-            label: "Get in touch",
-            href: "#",
-            srLabel: null
-          }]}
-        >Let’s explore how delivering more inclusive products and services can help you win markets</CallToAction>
+      <Section bgColor="white" divide="true">
+        <Flex>
+          <div className="max-w-readable space-y-4">
+          <p className="text-24 font-bold">
+            Let’s explore how delivering more inclusive products and services can help you win markets
+          </p>
+          <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
+          </div>
+        </Flex>
+      </Section>
       </main>
     </Layout>
   )

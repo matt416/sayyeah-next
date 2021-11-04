@@ -4,7 +4,10 @@ import { traits } from "helpers/traits"
 const classes = traits({
   bgColor: {
     white: "bg-white",
-    yellow: "bg-sy-yellow"
+    yellow: "bg-sy-yellow",
+    black: "bg-black",
+    earth: "bg-sy-earth",
+
   },
   textColor: {
     black: "text-black",
@@ -17,12 +20,11 @@ const classes = traits({
 
 export default function Section( { theme, children, className, image, nodeType : Node = 'section', ...props }){
 
-    classes.defaults({
-      bgColor: "white",
-      textColor: "black",
-      divide: false,
-    })
-
+  classes.defaults({
+    bgColor: "white",
+    textColor: "black",
+    divide: false,
+  })
 
   const style = {
     backgroundImage: `url(${image})`,
