@@ -14,7 +14,7 @@ const PUBLICATIONS = {
   },
   digitalJournal: {
     name: "Digital Journal",
-    img:{ src:"/img/publications/digitalJournal.svg",  alt:"Digital Journal" }
+    img:{ src:"/img/publications/digitaljournal.svg",  alt:"Digital Journal" }
   },
   uxMagazine: {
     name: "UX Magazine",
