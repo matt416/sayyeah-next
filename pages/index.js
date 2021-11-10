@@ -47,10 +47,10 @@ export default function Home() {
           catchline: "As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
           actions: [{
             href: "/digital-insights/roi-inclusive-design/",
-            label: "Why designing for the average person hurts your bottom line",
+            label: "How designing for market diversity helps your bottom line",
           },{
             href: "/digital-insights/technology-builds-market-leading-organizations/",
-            label: "The role of technolgy in building market leaders",
+            label: "The role of technology in building market leading organizations",
           }]
         }}
         />
