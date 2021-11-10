@@ -10,7 +10,7 @@ export default function Hero({ actions, image, ...props}) {
     {/* <div className="grid DEFAULT_GRID_GAP DEFAULT_GRID_COLS DEFAULT_CONTENT content-center"> */}
       <div className="flex flex-col items-start">
 
-        <div className="max-w-[24rem] w-full space-y-6 ">
+        <div className="max-w-[32rem] w-full space-y-6 ">
           <h1 className="text-40 text-sy-yellow font-bold">
             { props.name ? <span className="sr-only">{ props.name }</span> : null }
             { props.title }
@@ -26,7 +26,7 @@ export default function Hero({ actions, image, ...props}) {
           <ul className="space-y-4">
             { actions?.map((action, key) =>
               <li key={ key } >
-                <LinkArrow href={ action.href }>
+                <LinkArrow key={ key } href={ action.href }>
                   { action.label }
                 </LinkArrow>
               </li>

@@ -17,7 +17,7 @@ export const RELATED_SERVICE_SUMMARIES = {
     title:"Research",
     body:"One constant throughout all of our digital transformation work is the need for effective research, analysis, synthesis, and actionable next steps for the organizations we work with. Let’s explore this core competency for delivering exceptional products and services.",
     action:{
-      href:"/approach/research/",
+      href:"/solutions/market-research/",
       label:"Learn more|about our research process",
     }
   },
@@ -81,7 +81,7 @@ export const RELATED_SERVICE_SUMMARIES = {
     title:"Inclusive design",
     body:"Inclusive design ensures your products and services are embraced by your market by welcoming diverse market segments to engage authentically with your organization. Learn how to design with intersectionality, usability, accessibility, and inclusion at the centre of your work.",
     action:{
-      href:"/approach/inclusive-design/",
+      href:"/solutions/inclusive-design/",
       label:"Learn more|about our inclusive design process",
     }
   },

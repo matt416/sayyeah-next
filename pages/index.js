@@ -18,7 +18,7 @@ import Grid from "ui/layout/Grid"
 import Flex from "ui/layout/Flex"
 import Section from "ui/layout/Section"
 import { NextSeo } from "next-seo"
-
+import Quote from 'ui/components/Quote'
 export default function Home() {
   return (
     <Layout>
@@ -219,10 +219,9 @@ export default function Home() {
               actions: [{ href: "#", label :"Inclusive design", ariaLabel: false }]
             }].map((item, key) => (
               <div key={ key }>
-                <p className="text-20 mb-4 inline-block">
-                  <LeftQuote width="12" className="ml-[-1.5rem] text-sy-mocha"/>{ item.text }<RightQuote width="12" className="text-sy-mocha" />
-                </p>
+                  <Quote>{ item.text }</Quote>
                 { item.actions.map((action, key) => <LinkArrow
+                  key={ key }
                   href={ action.href }
                   textSize="text-18"
                   textColor="text-sy-mocha"

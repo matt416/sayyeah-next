@@ -38,65 +38,73 @@ export default function Footer() {
             {
               [
                 {
-                  label: "Approach", href: "/approach/", srLabelSuffix: null, id: useId(),
+                  label: "Solutions", href: "/solutions/", id: useId(),
                   children: [
-                    { label: "What sets us apart", href: "/approach/what-sets-us-apart/", srLabelSuffix: null },
-                    { label: "Achieving digital excellence", href: "/approach/digital-excellence/", srLabelSuffix: null },
-                    { label: "Inclusive design", href: "/approach/inclusive-design/", srLabelSuffix: null },
-                    { label: "Service design", href: "/approach/service-design/", srLabelSuffix: null },
-                    { label: "Product strategy", href: "/approach/product-strategy/", srLabelSuffix: null },
+                    { label: "Service design", href: "/solutions/service-design/" },
+                    { label: "Product strategy", href: "/solutions/product-strategy/" },
+                    { label: "Market & user research", href: "/solutions/market-research/" },
+                    { label: "Inclusive design", href: "/solutions/inclusive-design/" },
+                    { label: "Inclusive website design", href: "/solutions/inclusive-website-design/" },
+                    { label: "The Inclusive Website Audit", href: "/essential-website-audit/" },
+                  ]
+                },
+                {
+                  label: "Approach", href: "/approach/",  id: useId(),
+                  children: [
+                    { label: "What sets us apart", href: "/approach/what-sets-us-apart/",  },
+                    { label: "Achieving digital excellence", href: "/approach/digital-excellence/",  },
+                    { label: "Inclusive design", href: "/approach/inclusive-design/",  },
+                    { label: "Service design", href: "/approach/service-design/",  },
+                    { label: "Product strategy", href: "/approach/product-strategy/",  },
                   ]
                 },{
-                  label: "Work", href: "/work/", srLabelSuffix: null, id: useId(),
+                  label: "Work", href: "/work/",  id: useId(),
                   children: [
-                    { label: "World Wide Web Foundation", href: "/case-study/world-wide-web-foundation/", srLabelSuffix: null },
-                    { label: "Pall", href: "/case-study/pall/", srLabelSuffix: null },
-                    { label: "Kanetix.ca", href: "/case-study/kanetix/", srLabelSuffix: null },
-                    { label: "Ontario Government", href: "/case-study/ontario/", srLabelSuffix: null },
-                    { label: "All case studies", href: "/case-studies/", srLabelSuffix: null },
-                    { label: "Sign up to our newsletter", href: "/digital-insights/newsletter/", srLabelSuffix: null },
+                    { label: "World Wide Web Foundation", href: "/case-study/world-wide-web-foundation/",  },
+                    { label: "Pall", href: "/case-study/pall/",  },
+                    { label: "Kanetix.ca", href: "/case-study/kanetix/",  },
+                    { label: "Ontario Government", href: "/case-study/ontario/",  },
+                    { label: "All case studies", href: "/case-studies/",  },
+                    { label: "Sign up to our newsletter", href: "/digital-insights/newsletter/",  },
                   ]
                 },{
-                  label: "Insights", href: "/digital-insights/", srLabelSuffix: null, id: useId(),
+                  label: "Insights", href: "/digital-insights/",  id: useId(),
                   children: [
-                    { label: "Articles", href: "/digital-insights/category/articles/", srLabelSuffix: null },
-                    { label: "Events", href: "/digital-insights/category/events/", srLabelSuffix: null },
-                    { label: "Resources", href: "/digital-insights/category/resources/", srLabelSuffix: null },
-                    { label: "Industry Experts", href: "/digital-insights/category/industry-experts/", srLabelSuffix: null },
-                    { label: "Press", href: "/digital-insights/category/press/", srLabelSuffix: null },
+                    { label: "Articles", href: "/digital-insights/category/articles/",  },
+                    { label: "Events", href: "/digital-insights/category/events/",  },
+                    { label: "Resources", href: "/digital-insights/category/resources/",  },
+                    { label: "Industry Experts", href: "/digital-insights/category/industry-experts/",  },
+                    { label: "Press", href: "/digital-insights/category/press/",  },
                   ]
-                },{
-                  label: "The Inclusive Website Audit", href: "/essential-website-audit/", srLabelSuffix: null, id: useId(),
+                },/**{
+                  label: "The Inclusive Website Audit", href: "/essential-website-audit/",  id: useId(),
                   children: [
-                    { label: "Essential Package, $499", href: "/essential-audit/", srLabelSuffix: null },
-                    { label: "Starter Package, $999", href: "/essential-website-audit/starter/", srLabelSuffix: null },
-                    { label: "Custom Package, $2999", href: "/essential-website-audit/custom/", srLabelSuffix: null },
-                    { label: "The comprehensive audit process", href: "/essential-website-audit/comprehensive-website-audit-process/", srLabelSuffix: null },
+                    { label: "Essential Package, $499", href: "/essential-audit/",  },
+                    { label: "Starter Package, $999", href: "/essential-website-audit/starter/",  },
+                    { label: "Custom Package, $2999", href: "/essential-website-audit/custom/",  },
+                    { label: "The comprehensive audit process", href: "/essential-website-audit/comprehensive-website-audit-process/",  },
                   ]
-                },{
-                  label: "Digital transformation glossary", href: "/glossary/", srLabelSuffix: null, id: useId(),
+                },*/{
+                  label: "Digital transformation glossary", href: "/glossary/",  id: useId(),
                   children: [
-                    { label: "Web accessibility", href: "/glossary/category/accessibility/", srLabelSuffix: null },
-                    { label: "Digital excellence", href: "/glossary/category/digital-excellence/", srLabelSuffix: null },
-                    { label: "Inclusive design", href: "/glossary/category/inclusive-design/", srLabelSuffix: null },
-                    { label: "Product strategy", href: "/glossary/category/product-strategy/", srLabelSuffix: null },
-                    { label: "Service design", href: "/glossary/category/service-design/", srLabelSuffix: null },
+                    { label: "Web accessibility", href: "/glossary/category/accessibility/",  },
+                    { label: "Digital excellence", href: "/glossary/category/digital-excellence/",  },
+                    { label: "Inclusive design", href: "/glossary/category/inclusive-design/",  },
+                    { label: "Product strategy", href: "/glossary/category/product-strategy/",  },
+                    { label: "Service design", href: "/glossary/category/service-design/",  },
 
                   ]
                 },{
-                  label: "About us", href: "/about-us/", srLabelSuffix: null, id: useId(),
+                  label: "About us", href: "/about-us/",  id: useId(),
                   children: [
-                    { label: "People", href: "/people/", srLabelSuffix: null },
-                    { label: "Supplier diversity", href: "/about-us/supplier-diversity/", srLabelSuffix: null },
-                    { label: "Contact us", href: "/contact-us/", srLabelSuffix: null },
+                    { label: "People", href: "/people/",  },
+                    { label: "Supplier diversity", href: "/about-us/supplier-diversity/",  },
+                    { label: "Contact us", href: "/contact-us/",  },
                   ]}].map((group) => (
                 <ul className="flex flex-col items-start space-y-2" key={ group.label }>{/** aria-labelledby={ group.id } */}
                   <li>
                     <a href={ group.href } className="font-bold mb-4 hover:underline" id={ group.id }>
                       { group.label }
-                      { group.srLabelSuffix
-                        ? <span className="sr-only"> { item.srLabelSuffix }</span>
-                        : null }
                     </a>
                   </li>
                   { group.children
@@ -104,9 +112,6 @@ export default function Footer() {
                         <li key={ key }>
                           <a className="hover:underline" key={ `${item.href}-${key}` } href={ item.href }>
                             { item.label }
-                            { item.srLabelSuffix
-                              ? <span className="sr-only"> { item.srLabelSuffix }</span>
-                              : null }
                           </a>
                         </li>
                       ))

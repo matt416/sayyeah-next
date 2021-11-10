@@ -90,8 +90,8 @@ export default function Solutions(){
                 body:"**Grow your market understanding** in order to uncover product and services gaps and opportunities.",
                 actions:[
                   {
-                    label:"User research",
-                    href:"/solutions/user-research/"
+                    label:"Market & user research",
+                    href:"/solutions/market-research/"
                   }
                 ]
               }
@@ -153,7 +153,7 @@ export default function Solutions(){
                 <p className="mb-2">If you’re asking...</p>
                 <ul className="space-y-8 flex-1 flex flex-col justify-around">
                   { item?.questions?.map((question, index) => (
-                    <Quote nodeType="li" key={ index } quoteColor="mocha">{ question }</Quote>
+                    <Quote nodeType="li" key={ index } quoteColor="bronze">{ question }</Quote>
                     ))}
                 </ul>
               </div>

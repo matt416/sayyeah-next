@@ -19,6 +19,7 @@ const quoteClasses = traits({
   quoteColor: {
     mocha: "text-sy-mocha",
     bronze: "text-sy-bronze",
+    gold: 'text-sy-gold',
   }
 })
 

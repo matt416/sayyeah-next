@@ -97,11 +97,6 @@ export default function InclusiveWebsiteDesign(){
               title:"Inclusive product or service validation and continuous improvement",
               body:"Throughout the planning and development process, we use ongoing user testing processes to improve the strategy, design, and experience, to ensure your products and services are serving the market in the most effective way.\n\n In the context of inclusive design, this means being intentional about who we are engaging with from the market. By continuing this process of speaking to and testing with diverse users, we can continue to validate choices that impact the full spectrum of the market.\n\n The series of user testing methodologies at our disposal allows us to effectively uncover the most practical insights at each stage of the development cycle. Whether we are facilitating workshops, conducting interviews, running a usability test, surveying, or analyzing data, our ability to sort and synthesize findings, alongside our decades of technology and human-centered design experience, de-risks and accelerates any product or service design effort. With an inclusive lens added to this mix, you’ll have access to the most extensive validation processes available for vetting your products and services."
             },
-            {
-              title: "Accessibility for all as standard practice",
-              body: "As part of our inclusive design objectives, we work to design and develop your products and services with accessibility guidelines in mind. Not only does this approach open up new market opportunities by ensuring your products and services are functionally accessible for users with disabilities or other accommodation needs, but this approach helps improve access for all.",
-              className: "bg-sy-sunshine p-4"
-            }
           ].map(item => (
             <div className={ item.className ? item.className : null }>
               { item.img ? <Image src={ item.img.src } alt={ item.img.alt } width="56" height="56" /> : null }
@@ -109,6 +104,13 @@ export default function InclusiveWebsiteDesign(){
               <ReactMarkdown className="space-y-4">{ item.body }</ReactMarkdown>
             </div>
           ))}
+
+
+          <div className="col-span-full max-w-readable space-y-4 bg-sy-sunshine p-4">
+            <h3 className="text-24 font-bold mb-3">Accessibility for all as standard practice</h3>
+            <p>As part of our inclusive design objectives, we work to design and develop your products and services with accessibility guidelines in mind. Not only does this approach open up new market opportunities by ensuring your products and services are functionally accessible for users with disabilities or other accommodation needs, but this approach helps improve access for all.</p>
+          </div>
+
           <div className="col-span-full max-w-readable space-y-4">
             <p className="text-24 font-bold">Let’s explore how this toolkit can help your organization multiply your product and service successes.</p>
             <LinkButton href="/contact-us/" bgColor="black" textColor="white">Get in touch</LinkButton>
