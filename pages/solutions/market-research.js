@@ -118,7 +118,7 @@ export default function InclusiveWebsiteDesign(){
 
           <div className="max-w-readable space-y-4">
             <p className="text-24 font-bold leading-tight">Find your path to an ideal and actionable future state today.</p>
-            <LinkButton href="/contact-us/">Get in touch</LinkButton>
+            <LinkButton href="/contact-us/" bgColor="gold" textColor="black" textSize="18">Get in touch</LinkButton>
           </div>
         </Flex>
       </Section>
@@ -151,7 +151,7 @@ export default function InclusiveWebsiteDesign(){
             )}
             <div className="col-span-full max-w-readable space-y-4">
               <p className="text-24 font-bold">Are you ready to bring exceptional research practices and outcomes to your organization?</p>
-              <LinkButton href="/contact-us/" bgColor="black" textColor="white">Get in touch</LinkButton>
+              <LinkButton href="/contact-us/" bgColor="gold" textColor="black" textSize="18">Get in touch</LinkButton>
             </div>
         </Grid>
       </Section>

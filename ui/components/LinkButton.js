@@ -7,6 +7,7 @@ const classes = traits({
     white: "bg-white",
     yellow: "bg-sy-yellow",
     black: "bg-black",
+    gold: "bg-sy-gold"
   },
   textSize: {
     16: "text-16",

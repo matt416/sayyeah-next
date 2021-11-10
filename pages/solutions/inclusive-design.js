@@ -113,7 +113,7 @@ export default function InclusiveWebsiteDesign(){
 
           <div className="col-span-full max-w-readable space-y-4">
             <p className="text-24 font-bold">Let’s explore how this toolkit can help your organization multiply your product and service successes.</p>
-            <LinkButton href="/contact-us/" bgColor="black" textColor="white">Get in touch</LinkButton>
+            <LinkButton href="/contact-us/" bgColor="gold" textColor="black" textSize="18">Get in touch</LinkButton>
           </div>
         </Grid>
       </Section>

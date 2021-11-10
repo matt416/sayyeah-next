@@ -151,7 +151,7 @@ export default function Solutions(){
               <h3 className="sr-only">{ item.title }</h3>
               <div className="flex flex-col">
                 <p className="mb-2">If you’re asking...</p>
-                <ul className="space-y-8 flex-1 flex flex-col justify-around">
+                <ul className="space-y-8 flex-1 flex flex-col">
                   { item?.questions?.map((question, index) => (
                     <Quote nodeType="li" key={ index } quoteColor="bronze">{ question }</Quote>
                     ))}

@@ -95,7 +95,7 @@ export default function InclusiveWebsiteDesign(){
             <p className="font-bold">These efforts will help increase traffic to your website, increase conversions across your website, and ensure that when you do work on new content, you can maximize that investment.</p>
 
             <p className="font-bold text-20">Are you ready to bring these content best practices to your website?</p>
-            <LinkButton href="/contact-us/" bgColor="bg-sy-gold" textColor="text-black">Get in touch</LinkButton>
+            <LinkButton href="/contact-us/" bgColor="gold" textColor="black" textSize="18">Get in touch</LinkButton>
           </div>
 
         </Flex>
@@ -118,7 +118,7 @@ export default function InclusiveWebsiteDesign(){
             </ol>
 
             <p className="font-bold text-20">Let’s talk through these steps together and help you improve the performance and outcomes of your website.</p>
-            <LinkButton href="/contact-us/" bgColor="bg-sy-gold" textColor="black">Get in touch</LinkButton>
+            <LinkButton href="/contact-us/" bgColor="gold" textColor="black" textSize="18">Get in touch</LinkButton>
 
           </div>
         </Flex>

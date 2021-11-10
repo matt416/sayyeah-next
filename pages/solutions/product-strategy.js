@@ -84,7 +84,7 @@ export default function InclusiveWebsiteDesign(){
           </div>
           <div className="max-w-readable text-20 space-y-4">
             <p className="font-bold text-20">Bring exceptional product strategy insights to your team today.</p>
-            <LinkButton href="/contact-us/" bgColor="black" textColor="white" textSize="18">Get in touch</LinkButton>
+            <LinkButton href="/contact-us/" bgColor="gold" textColor="black" textSize="18">Get in touch</LinkButton>
           </div>
         </Flex>
       </Section>
