@@ -51,11 +51,11 @@ export default function Footer() {
                 {
                   label: "Approach", href: "/approach/",  id: useId(),
                   children: [
+
                     { label: "What sets us apart", href: "/approach/what-sets-us-apart/",  },
                     { label: "Achieving digital excellence", href: "/approach/digital-excellence/",  },
-                    { label: "Inclusive design", href: "/approach/inclusive-design/",  },
-                    { label: "Service design", href: "/approach/service-design/",  },
-                    { label: "Product strategy", href: "/approach/product-strategy/",  },
+                    { label: "System strategy", href: "/approach/system-strategy/",  },
+                    { label: "User research", href: "/approach/user-research/",  },
                   ]
                 },{
                   label: "Work", href: "/work/",  id: useId(),
