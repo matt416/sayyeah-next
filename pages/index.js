@@ -219,7 +219,7 @@ export default function Home() {
               actions: [{ href: "/solutions/inclusive-design/", label :"Inclusive design" }]
             }].map((item, key) => (
               <div key={ key }>
-                  <Quote>{ item.text }</Quote>
+                  <Quote key={ key }>{ item.text }</Quote>
                 { item.actions.map((action, key) => <LinkArrow
                   key={ key }
                   href={ action.href }
