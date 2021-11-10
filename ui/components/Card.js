@@ -1,30 +1,24 @@
 import clsx from "clsx";
 import { traits } from "helpers/traits";
-import { useEffect, useRef, useState, forwardRef } from "react";
+import Link from "next/link"
 
-const TRAIT = traits({
-  default: "rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring",
-  bg: {
-    default: "bg-white",
+const classes = traits({
+  bgColor: {
+    white: "bg-white",
   }
 })
 
-const Card = forwardRef(({ bg, children, className }, ref) => {
+const Card = ({ href, children, className, ...props }) => {
 
-  // const ref = useRef()
-  // const [state, setState] = useState({})
-  // useEffect(() => {
-  //   // console.log(ref.current.getBoundingClientRect())
+  classes.defaults({
+    bgColor: 'white'
+  })
+  const classList = classes.apply(props, 'rounded-lg overflow-hidden', className )
 
-  //   // setState(ref.current.getBoundingClientRect())
-  // })
-//ref={ ref }
-  return (
-    <div data-type="card" className={ TRAIT.apply({ bg }, className )} ref={ ref }>
-      { children }
-    </div>
-  )
-})
+  return (href)
+    ? <Link href={ href }><a className={ classList }>{ children }</a></Link>
+    : <div className={ classList }>{ children }</div>;
+}
 
 const TRAIT_PHOTO = traits({
   default: "flex items-stretch relative",

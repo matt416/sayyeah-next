@@ -1,5 +1,5 @@
 import Checkout from "ui/components/Checkout"
-import Layout from "ui/Layout"
+import Layout from "ui/layout/Layout"
 import { NextSeo } from "next-seo"
 // import Header from "ui/components/Header"
 // export default function Meta(

@@ -1,15 +1,20 @@
-import { traits } from 'helpers/traits'
+import { splitClassesAndAttributes } from "helpers/tw"
+import clsx from "clsx"
 
-const TRAIT = traits({
-  default: "px-2.5 py-0.5 rounded-full",
-  color: {
-    default: "bg-yeah-yellow text-black",
-    black: "bg-black text-yeah-yellow"
-  }
-})
+const Badge = ({ children, className, href, ...props }) => {
 
-export default function Badge({ children, color, className }){
+  const [classes, attributes] = splitClassesAndAttributes(props, {
+    textSize: "text-16",
+    fontWeight: "font-normal",
+    textColor: "",
+    bgColor: "bg-sy-yellow"
+  })
 
-  return <span className={ TRAIT.apply({ color }, className) }>{ children }</span>
+  return <span
+      className={ clsx("px-3 pt-1.5 pb-1 rounded-full", classes, className) } { ...attributes }
+    >
+      { children }
+    </span>
 
 }
+export default Badge

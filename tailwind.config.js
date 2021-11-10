@@ -11,12 +11,12 @@ module.exports = {
       16: "1.0rem",
       17: "1.0625rem",
       18: "1.125rem",
-      20: ["1.25rem", { lineHeight: "1.3em" } ],
-      24: ["1.5rem", { lineHeight: "1.2em" } ],
-      28: ["1.75rem", { lineHeight: "1.2em" } ],
+      20: "1.25rem", //["1.25rem", { lineHeight: "1.3em" } ],
+      24: ["1.5rem", { lineHeight: "1.3em" } ],
+      28: "1.75rem",//["1.75rem", { lineHeight: "1.2em" } ],
       32: ["2.0rem", { lineHeight: "1.2em" } ],
       36: "2.25rem",
-      40: ["2.5rem", { lineHeight: "1.2em" } ],
+      40: ["2.5rem", { lineHeight: "1.2" } ],
       48: "3.0rem",
     },
     fontFamily: {
@@ -44,19 +44,24 @@ module.exports = {
         "blue-50-10\%": "rgba(214,230,254,0.1)",
         "yellow-50": "#FFF0A5",
         "yellow-50-10\%": "rgba(249,249,229,0.1)",
-        yeah: {
+        sy: {
           sunshine: "#FFE64A",
           yellow: "#FCD400",
           gold: "#EEBD0F",
           bronze: "#976A27",
-          tan: "#CB9340",
-          cola: "#301F01",
-          grey: "#EFEFEF"
+          earth: "#301F01",
+          grey: "#EFEFEF",
+          mocha: "#D6AA69",
         },
         black: "#0D0800",
       },
       maxWidth : {
-        "screen-xs": "28rem"
+        "screen-xs": "32rem",
+        // "screen-sm": "40rem",
+        // "screen-md": "48rem",
+        // "screen-lg": "64rem",
+        // "screen-xl": "80rem",
+        // "screen-2xl": "96rem"
       }
     },
   },

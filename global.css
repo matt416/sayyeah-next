@@ -9,6 +9,13 @@
   @screen md {
     --header-height: 168px; /** 104px + 16px + 48px */
   }
+
+  --read-comfortable: 32rem;
+
+}
+
+.max-w-readable {
+  @apply max-w-[var(--read-comfortable)];
 }
 
 #main-content {
@@ -29,8 +36,12 @@
 .DEFAULT_GRID_COLS {
   @apply grid-cols-1 md:grid-cols-2;
 }
-.DEFAULT_SECTION {
+.standard-section {
   @apply py-12 md:py-16 px-10 w-full;
+}
+
+.content\:grid-cols-2 {
+  @apply grid mx-auto grid-cols-1 md:grid-cols-2 gap-4 max-w-screen-xs md:max-w-screen-md;
 }
 
 
@@ -75,11 +86,11 @@
   outline:none !important;
 }
 
-@responsive {
+/* @responsive {
   .grid-cols-2\/1{
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   }
-}
+}  */
 
 .as\:h2 {
   @apply text-40 font-bold max-w-[40rem];
@@ -165,4 +176,9 @@ ol.list-counter {
 .custom\:bg-image-checkmark {
   background-image:url('/_public/checkmark.png');
   background-size:contain;
+}
+
+
+*[href=""], *[href="#"]{
+  outline:8px red solid;
 }
