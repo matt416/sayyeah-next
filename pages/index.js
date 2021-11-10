@@ -201,22 +201,22 @@ export default function Home() {
             { // Iterate Impactful Challenges
             [{
               text: "How do we deliver service more effectively by increasing online adoption?",
-              actions: [{ href: "#", label :"Service design", ariaLabel: false }]
+              actions: [{ href: "/solutions/service-design/", label :"Service design" }]
             },{
               text: "Can our products and services better serve our market?",
-              actions: [{ href: "#", label :"Market & user research", ariaLabel: false }]
+              actions: [{ href: "/solutions/market-research/", label :"Market & user research" }]
             },{
               text: "Are we making the best technology choices for our organization?",
-              actions: [{ href: "#", label :"Assessing your organization", ariaLabel: false }]
+              actions: [{ href: "/services/organizational-maturity-assessment/", label :"Assessing your organization" }]
             },{
               text: "Can we more effectively design and deliver digital products?",
-              actions: [{ href: "#", label :"Product strategy", ariaLabel: false }]
+              actions: [{ href: "/solutions/product-strategy/", label :"Product strategy" }]
             },{
               text: "Can we do a better job of using our website as a tool for driving engagement and retention?",
-              actions: [{ href: "#", label :"Inclusive website design", ariaLabel: false }]
+              actions: [{ href: "/solutions/inclusive-website-design/", label :"Inclusive website design" }]
             },{
               text: "Are there unintended ways we may be limiting access to our content, products, and services?",
-              actions: [{ href: "#", label :"Inclusive design", ariaLabel: false }]
+              actions: [{ href: "/solutions/inclusive-design/", label :"Inclusive design" }]
             }].map((item, key) => (
               <div key={ key }>
                   <Quote>{ item.text }</Quote>
@@ -289,7 +289,7 @@ export default function Home() {
               <p className="mb-4">
                 We’re committed to inclusive, anti-racist practices in our work, hiring processes, and collaborations. As part of this commitment, we’ve signed pledges like BlackNorth’s CEO pledge and The Contract for the Web, as well as creating our own call to action for design agency leaders.
                 </p>
-              <LinkButton bgColor="bg-sy-yellow" textColor="text-black" margin="mt-auto mb-0" href="#">
+              <LinkButton bgColor="bg-sy-yellow" textColor="text-black" margin="mt-auto mb-0" href="/digital-insights/call-to-action-design-agency-leaders/">
                 Our anti-racism call to action
               </LinkButton>
             </div>
@@ -301,7 +301,7 @@ export default function Home() {
               <p className="mb-4">
                 We intentionally seek out diverse and inclusive suppliers and service providers and continue to demand more of the suppliers and clients we work with.
               </p>
-              <LinkButton bgColor="bg-sy-yellow" textColor="text-black" margin="mt-auto mb-0" href="#">
+              <LinkButton bgColor="bg-sy-yellow" textColor="text-black" margin="mt-auto mb-0" href="/about-us/supplier-diversity/">
                 Our supplier diversity practices
               </LinkButton>
             </div>
