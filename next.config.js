@@ -41,10 +41,6 @@ module.exports = {
   async redirects(){
     return [
       {
-        source: '/solutions/inclusive-website-design/',
-        destination: '/services/inclusive-website-design/',
-        permanent: false,
-      },{
         source: '/essential',
         destination: '/essential-website-audit/',
         permanent: true,
