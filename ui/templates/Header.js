@@ -1,9 +1,16 @@
 import SkipBlock from 'ui/components/SkipBlock'
-import mainMenu from "data/en-ca/collections/mainmenu.json"
 import { MobileMenu, useMobileMenuStore } from './MobileMenu'
 import Link from "next/link"
 import SayYeahLogo from 'ui/svg/SayYeahLogo.svg.js'
 import AccessibleSvg from 'ui/svg/AccessibleSvg'
+
+
+const mainMenu = [
+  { "label": "Solutions", "href": "/solutions/" },
+  { "label": "Work", "href": "/work/" },
+  { "label": "Insights", "href": "/digital-insights/" },
+  { "label": "About", "href": "/about-us/" }
+]
 
 export function Navigation({ name, mode = "dark" }){
   return <nav aria-label={ name } className="sm:flex items-center hidden">
