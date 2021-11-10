@@ -92,7 +92,7 @@ export default function InclusiveWebsiteDesign(){
       <Section bgColor="yellow" divide="true">
         <RelatedServiceCards
           title="Product strategy services and resources"
-          items={ ["userExperienceDesign", "mobileAppDesign", "research", "marketDefinition" ,"inclusiveDesign", "continuousImprovement"] }
+          items={ ["userExperienceDesign", "mobileAppDesign", "userResearch", "marketDefinition" ,"inclusiveDesign", "continuousImprovement"] }
         />
       </Section>
       {/** accessibleDevelopmentGuide */}

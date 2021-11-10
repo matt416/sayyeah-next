@@ -9,16 +9,16 @@ export const RELATED_SERVICE_SUMMARIES = {
     title: "User research",
     body: "We use a variety of methodologies for user research. These methods can range from qualitative interviews and workshops, using quantitative surveying and analytics, observation, and usability testing. All to understand what’s working and where we can improve organizational processes and people, and better serve the market with more aligned products and services.",
     action: {
-      href: "/solutions/user-research/",
+      href: "/approach/user-research/",
       label: "Learn more|about user research"
     }
   },
-  research: {
-    title:"Research",
+  marketResearch: {
+    title:"Market & user research",
     body:"One constant throughout all of our digital transformation work is the need for effective research, analysis, synthesis, and actionable next steps for the organizations we work with. Let’s explore this core competency for delivering exceptional products and services.",
     action:{
       href:"/solutions/market-research/",
-      label:"Learn more|about our research process",
+      label:"Learn more|about our user and market research process",
     }
   },
   productStrategy:{
