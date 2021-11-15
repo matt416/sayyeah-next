@@ -104,7 +104,11 @@ module.exports = {
         source: '/social/',
         destination: '/contact-us/',
         permanent: true
-      },
+      },{
+        source: '/essential-website-audit/terms-and-conditions/',
+        destination: '/inclusive-website-audit/terms-and-conditions/',
+        permanent: false,
+      }
     ]
   },
 
