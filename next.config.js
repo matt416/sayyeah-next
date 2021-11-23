@@ -108,7 +108,28 @@ module.exports = {
         source: '/essential-website-audit/terms-and-conditions/',
         destination: '/inclusive-website-audit/terms-and-conditions/',
         permanent: false,
-      }
+      },{
+        source: '/essential-website-audit/starter/',
+        destination: '/inclusive-website-audit/starter/',
+        permanent: true,
+      },{
+        source: '/essential-website-audit/custom/',
+        destination: '/inclusive-website-audit/custom/',
+        permanent: true,
+      },{
+        source: '/essential-website-audit/comprehensive-website-audit-process/',
+        destination: '/inclusive-website-audit/inclusive-website-audit-process/',
+        permanent: true,
+      },{
+        source: '/essential-website-audit/checkout/?product=essential_audit_starter',
+        destination: '/inclusive-website-audit/checkout/?product=essential_audit_starter',
+        permanent: true,
+      },{
+        source: '/essential-website-audit/request-custom-quote/',
+        destination: '/inclusive-website-audit/request-custom-quote/',
+        permanent: true,
+      },
+
     ]
   },
 
@@ -123,11 +144,3 @@ module.exports = {
     } : []
   }
 }
-
-
-
-
-
-
-
-
