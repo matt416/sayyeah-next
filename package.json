@@ -8,6 +8,7 @@
     "icons": "svgo -f ./public/img/icons -o ./public/img/icons --config=svgo.config.js --pretty --indent=2"
   },
   "dependencies": {
+    "@notionhq/client": "^0.4.9",
     "camelcase": "^6.2.0",
     "clsx": "^1.1.1",
     "formik": "^2.2.9",
@@ -16,11 +17,13 @@
     "react": "^17.0.2",
     "react-aria": "^3.9.0",
     "react-dom": "^17.0.2",
+    "react-jsx-parser": "^1.28.4",
     "react-markdown": "^7.0.1",
     "react-player": "^2.9.0",
     "shopify-buy": "^2.12.0",
     "smoothscroll-polyfill": "^0.4.4",
     "tailwind-merge": "^0.7.0",
+    "uuid": "^8.3.2",
     "yup": "^0.32.9",
     "zustand": "^3.5.10"
   },
