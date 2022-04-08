@@ -15,7 +15,7 @@ import Grid from 'ui/layout/Grid'
 import Quote from 'ui/components/Quote'
 import ReactMarkdown from 'react-markdown'
 
-export default function InclusiveWebsiteDesign(){
+export default function InclusiveWebsiteDesign() {
 
   return <Layout>
     <NextSeo
@@ -34,12 +34,12 @@ export default function InclusiveWebsiteDesign(){
     />
     <main tabIndex="-1" id="main-content">
       <Hero {...{
-        image:{
-          "src":"/heroes/inclusive-design.png"
+        image: {
+          "src": "/heroes/inclusive-design.png"
         },
-        title:"Inclusive design",
-        catchline:"How to ensure products & services are embraced by your market."
-        }}
+        title: "Inclusive design",
+        catchline: "How to ensure products & services are embraced by your market."
+      }}
       />
 
       <Section bgColor="bg-sy-earth" textColor="white">
@@ -47,13 +47,13 @@ export default function InclusiveWebsiteDesign(){
           <h2 className="max-w-readable text-32 text-sy-yellow font-bold col-span-full">
             Inclusive design answers important market engagement questions
           </h2>
-          { [
-              "Are there unintended ways we may be limiting access to our content, products, or services?",
-              "How can we avoid making our users feel excluded by our products or services?",
-              "Can we make our products or services easier to use for everyone?",
-              "Can we grow our market share by delivering more inclusive products and services?"
-            ].map((item, key) =>
-            <Quote>{ item }</Quote>
+          {[
+            "Are there unintended ways we may be limiting access to our content, products, or services?",
+            "How can we avoid making our users feel excluded by our products or services?",
+            "Can we make our products or services easier to use for everyone?",
+            "Can we grow our market share by delivering more inclusive products and services?"
+          ].map((item, key) =>
+            <Quote>{item}</Quote>
           )}
           <div className="max-w-readable col-span-full text-20 text-sy-mocha space-y-4">
             <p className="font-bold text-20">We’re here to help you answer these and other questions that improve engagement with your market.</p>
@@ -79,29 +79,29 @@ export default function InclusiveWebsiteDesign(){
           {[
             {
               img: { src: "/img/icons/market-research.svg", alt: "" },
-              title:"Market and organizational research",
-              body:"Exploratory research includes interviews with users (to better understand their needs and goals when using your product or service), and interviews with stakeholders.\n\n Throughout this phase of a project, we ensure a diverse range of voices are heard. Part of this process is being intentional about engaging with the variety of community members who make up your market. Our existing relationships and community outreach efforts consider members of LGBTQ+, indigenous, and groups of people with different physical and cognitive abilities, alongside our practices of ensuring representation by gender, race, cultural, religious, and economic factors."
+              title: "Market and organizational research",
+              body: "Exploratory research includes interviews with users (to better understand their needs and goals when using your product or service), and interviews with stakeholders.\n\n Throughout this phase of a project, we ensure a diverse range of voices are heard. Part of this process is being intentional about engaging with the variety of community members who make up your market. Our existing relationships and community outreach efforts consider members of LGBTQ+, indigenous, and groups of people with different physical and cognitive abilities, alongside our practices of ensuring representation by gender, race, cultural, religious, and economic factors."
             },
             {
               img: { src: "/img/icons/strategic-planning.svg", alt: "" },
-              title:"Strategic planning",
-              body:"Based on research insights, we develop a roadmap for design, development, and production.\n\n  As part of an inclusive design process, we develop this strategy by mapping out user needs, contexts of use, and behaviours, rather than focusing on demographics or traditional marketing personas.\n\n When we consider the internal team, we look at individual work, digital maturity, team dynamics, and team makeup to understand where there may be process, resource, and capability gaps in order to develop a plan to overcome barriers of delivering rewarding inclusive experiences."
+              title: "Strategic planning",
+              body: "Based on research insights, we develop a roadmap for design, development, and production.\n\n  As part of an inclusive design process, we develop this strategy by mapping out user needs, contexts of use, and behaviours, rather than focusing on demographics or traditional marketing personas.\n\n When we consider the internal team, we look at individual work, digital maturity, team dynamics, and team makeup to understand where there may be process, resource, and capability gaps in order to develop a plan to overcome barriers of delivering rewarding inclusive experiences."
             },
             {
               img: { src: "/img/icons/gears.svg", alt: "" },
-              title:"Designing inclusively, from concept to delivery",
-              body:"Throughout the design process, we work through a series of inclusive design best practices to define experiences and outcomes that embrace users with a wide range of intersectional traits and behaviours, including considerations around identity, culture, and worldview.\n\n As a part of this approach, our inclusive design process includes co-designing and reviewing in-progress work and prototypes with diverse users. This way, your product or service can excel at delighting all your potential users by ensuring these perspectives and needs are baked into the service model and user experience.\n\n Better still, the inclusive design process reduces the total design, development, production, and support costs and risks when compared to a traditional product development process."
+              title: "Designing inclusively, from concept to delivery",
+              body: "Throughout the design process, we work through a series of inclusive design best practices to define experiences and outcomes that embrace users with a wide range of intersectional traits and behaviours, including considerations around identity, culture, and worldview.\n\n As a part of this approach, our inclusive design process includes co-designing and reviewing in-progress work and prototypes with diverse users. This way, your product or service can excel at delighting all your potential users by ensuring these perspectives and needs are baked into the service model and user experience.\n\n Better still, the inclusive design process reduces the total design, development, production, and support costs and risks when compared to a traditional product development process."
             },
             {
               img: { src: "/img/icons/bar-graph.svg", alt: "" },
-              title:"Inclusive product or service validation and continuous improvement",
-              body:"Throughout the planning and development process, we use ongoing user testing processes to improve the strategy, design, and experience, to ensure your products and services are serving the market in the most effective way.\n\n In the context of inclusive design, this means being intentional about who we are engaging with from the market. By continuing this process of speaking to and testing with diverse users, we can continue to validate choices that impact the full spectrum of the market.\n\n The series of user testing methodologies at our disposal allows us to effectively uncover the most practical insights at each stage of the development cycle. Whether we are facilitating workshops, conducting interviews, running a usability test, surveying, or analyzing data, our ability to sort and synthesize findings, alongside our decades of technology and human-centered design experience, de-risks and accelerates any product or service design effort. With an inclusive lens added to this mix, you’ll have access to the most extensive validation processes available for vetting your products and services."
+              title: "Inclusive product or service validation and continuous improvement",
+              body: "Throughout the planning and development process, we use ongoing user testing processes to improve the strategy, design, and experience, to ensure your products and services are serving the market in the most effective way.\n\n In the context of inclusive design, this means being intentional about who we are engaging with from the market. By continuing this process of speaking to and testing with diverse users, we can continue to validate choices that impact the full spectrum of the market.\n\n The series of user testing methodologies at our disposal allows us to effectively uncover the most practical insights at each stage of the development cycle. Whether we are facilitating workshops, conducting interviews, running a usability test, surveying, or analyzing data, our ability to sort and synthesize findings, alongside our decades of technology and human-centered design experience, de-risks and accelerates any product or service design effort. With an inclusive lens added to this mix, you’ll have access to the most extensive validation processes available for vetting your products and services."
             },
           ].map(item => (
-            <div className={ item.className ? item.className : null }>
-              { item.img ? <Image src={ item.img.src } alt={ item.img.alt } width="56" height="56" /> : null }
-              <h3 className="text-24 font-bold mb-3">{ item.title }</h3>
-              <ReactMarkdown className="space-y-4">{ item.body }</ReactMarkdown>
+            <div className={item.className ? item.className : null}>
+              {item.img ? <Image src={item.img.src} alt={item.img.alt} width="56" height="56" /> : null}
+              <h3 className="text-24 font-bold mb-3">{item.title}</h3>
+              <ReactMarkdown className="space-y-4">{item.body}</ReactMarkdown>
             </div>
           ))}
 
@@ -120,7 +120,7 @@ export default function InclusiveWebsiteDesign(){
 
       <Section bgColor="yellow" divide="true">
         <RelatedServiceCards
-          items={ ["userResearch", "systemStrategy", "inclusiveDesign", "digitalExcellence"] }
+          items={["userResearch", "systemStrategy", "inclusiveWebsiteDesign", "digitalExcellence"]}
         />
       </Section>
       {/** accessibleDevelopmentGuide */}
@@ -141,8 +141,8 @@ export default function InclusiveWebsiteDesign(){
       <Section bgColor="white" divide="true">
         <Flex>
           <div className="max-w-readable space-y-4">
-          <p className="text-24 font-bold">Let’s explore how delivering more inclusive products and services can help you win diverse markets.</p>
-          <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
+            <p className="text-24 font-bold">Let’s explore how delivering more inclusive products and services can help you win diverse markets.</p>
+            <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
           </div>
         </Flex>
       </Section>

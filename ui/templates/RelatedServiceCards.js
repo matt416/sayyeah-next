@@ -85,7 +85,14 @@ export const RELATED_SERVICE_SUMMARIES = {
       label: "Learn more|about our inclusive design process",
     }
   },
-  digitalExcellence: {
+  inclusiveWebsiteDesign: {
+    title: "Inclusive website design",
+    body: "Deliver a responsive, accessible, and delightful website that welcomes your entire market to engage with your content, products, and services.",
+    action: {
+      href: "https://sayyeah.com/solutions/inclusive-website-design/",
+      label: "Learn more|about inclusive website design",
+    }
+  }, digitalExcellence: {
     title: "Achieving digital excellence",
     body: "From communications to product to organizational efficiency, operating online involves significant depth of expertise. With digital channels and consumer touchpoints extending beyond online to in-person and at home, success in the connected age requires a breadth of expertise that defines your organization’s digital maturity and capabilities.",
     action: {
