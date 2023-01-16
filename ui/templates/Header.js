@@ -32,7 +32,7 @@ export default function Header({ mode = "dark", children, className, includeNav 
 return <>
     <header className={ `h-[0] relative px-10 z-40 ${className} ${ mode == "dark" ? "text-white bg-black" : "text-black bg-white"}` } style={ style }>
 
-    <SkipBlock target="#main-content" className="z-50" />
+    <SkipBlock target="#main-content" className="z-50"/>
 
     {/* <header className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}> */}
     {/* <header className="max-w-[60rem] mx-auto flex justify-between items-center"> */}
