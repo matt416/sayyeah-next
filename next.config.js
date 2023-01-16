@@ -124,14 +124,14 @@ module.exports = {
         source: '/essential-website-audit/checkout/',
         destination: '/inclusive-website-audit/checkout/',
         permanent: true,
-      }, {
-        source: '/improve-learning/ ',
-        destination: '/digital-insights/improved-online-learning/',
-        permanent: true,
       },
       {
         source: '/essential-website-audit/request-custom-quote/',
         destination: '/inclusive-website-audit/request-custom-quote/',
+        permanent: true,
+      }, {
+        source: '/improve-learning/ ',
+        destination: '/digital-insights/improved-online-learning/',
         permanent: true,
       },
 
