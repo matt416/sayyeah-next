@@ -6,7 +6,7 @@ import { traits } from "helpers/traits"
 const CLIENTS = {
   webFoundation: {
     name: "World Wide Web Foundation",
-    img:{ src:"/img/clients/worldwidewebfoundation.svg",  alt:"World Wide Web Foundation" }
+    img: { src: "/img/clients/worldwidewebfoundation.svg", alt: "World Wide Web Foundation" }
   },
   torontoPublicLibrary: {
     name: "Toronto Public Library",
@@ -46,27 +46,27 @@ const CLIENTS = {
   },
   kanetix: {
     name: "Kanetix",
-    img: { src: "/img/clients/kanetix.svg", alt: "Kanetix"}
+    img: { src: "/img/clients/kanetix.svg", alt: "Kanetix" }
   },
   cannect: {
     name: "Cannect",
-    img: { src: "/img/clients/cannect.svg", alt: "Cannect"}
+    img: { src: "/img/clients/cannect.svg", alt: "Cannect" }
   },
   wsib: {
     name: "WSIB Ontario",
-    img: { src: "/img/clients/wsib.svg", alt: "WSIB Ontario"}
+    img: { src: "/img/clients/wsib.svg", alt: "WSIB Ontario" }
   },
   virginGaming: {
     name: "Virgin Gaming",
-    img: { src: "/img/clients/virgingaming.svg", alt: "Virgin Gaming"}
+    img: { src: "/img/clients/virgingaming.svg", alt: "Virgin Gaming" }
   },
   tourismToronto: {
     name: "Tourism Toronto",
-    img: { src: "/img/clients/tourismtoronto.svg", alt: "Tourism Toronto"}
+    img: { src: "/img/clients/tourismtoronto.svg", alt: "Tourism Toronto" }
   },
   aon: {
     name: "AON",
-    img: { src: "/img/clients/aon.svg", alt: "AON"}
+    img: { src: "/img/clients/aon.svg", alt: "AON" }
   },
   virginMobile: {
     name: "Virgin Mobile",
@@ -93,6 +93,20 @@ const CLIENTS = {
   ratesDotCa: {
     name: "RATESDOTCA",
     img: { src: "/img/clients/ratesdotca.svg", alt: "RATESDOTCA" }
+  },
+  georgeBrown: {
+    name: "George Brown College",
+    img: { src: "/img/clients/georgebrown.svg", alt: "George Brown College" }
+
+  },
+  westernUniversity: {
+    name: "Western University",
+    img: { src: "/img/clients/westernuniversity.svg", alt: "Western University" }
+
+  },
+  lifeworks: {
+    name: "LifeWorks",
+    img: { src: "/img/clients/lifeworks.svg", alt: "LifeWorks" }
   }
 }
 
@@ -110,13 +124,13 @@ classes.defaults({
 export default function ClientCards({ items = [], title = "Select clients", ...props }) {
 
   return <Flex size="lg">
-    <h2 className="text-32 font-bold max-w-readable">{ title }</h2>
+    <h2 className="text-32 font-bold max-w-readable">{title}</h2>
 
     {/** Grid Items */}
-    <ul className={ classes.apply(props, 'grid gap-4 w-full') } role="list">
-      { getItemsFromList(items, CLIENTS).map(item => (
-        <li key={ `${camelCase(item.name)}-client-card` } className="border border-black border-opacity-5 rounded-md flex items-center justify-center p-4">
-          <img src={ item.img.src } role="img" alt={ item.img.alt ?  item.img.alt : item.name } width="200" height="100" />
+    <ul className={classes.apply(props, 'grid gap-4 w-full')} role="list">
+      {getItemsFromList(items, CLIENTS).map(item => (
+        <li key={`${camelCase(item.name)}-client-card`} className="border border-black border-opacity-5 rounded-md flex items-center justify-center p-4">
+          <img src={item.img.src} role="img" alt={item.img.alt ? item.img.alt : item.name} width="200" height="100" />
         </li>
       ))}
     </ul>

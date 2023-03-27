@@ -24,70 +24,70 @@ export default function Home() {
     <Layout>
       <main tabIndex="-1" id="main-content" className="stack-header-and-main-using-grid">
 
-      <NextSeo
-      title="Inclusive design, service design, and digital excellence from Say Yeah!"
-      description="We help organizations deliver inclusive products and services that increase access to diverse markets. Learn more about Say Yeah!"
-      openGraph={{
-        images: [
-          {
-            url: `${process.env.NEXT_PUBLIC_BASE_URL}/heroes/homepage.png`,
-            width: 1200,
-            height: 627,
-            alt: 'Inclusive design, service design, and digital excellence from Say Yeah!',
-          },
-        ],
-      }}
-    />
+        <NextSeo
+          title="Inclusive design, service design, and digital excellence from Say Yeah!"
+          description="We help organizations deliver inclusive products and services that increase access to diverse markets. Learn more about Say Yeah!"
+          openGraph={{
+            images: [
+              {
+                url: `${process.env.NEXT_PUBLIC_BASE_URL}/heroes/homepage.png`,
+                width: 1200,
+                height: 627,
+                alt: 'Inclusive design, service design, and digital excellence from Say Yeah!',
+              },
+            ],
+          }}
+        />
 
 
         <Hero {...{
           image: { src: "/heroes/homepage.png" },
           name: "Say Yeah",
-          title: "Deliver products and services that win diverse markets",
-          catchline: "As markets continue to evolve, leading organizations must adapt to shifting consumer expectations.",
+          title: "Tech + Education",
+          catchline: "eLearning can lead to improved learning outcomes for all. Level up your online learning programs with our full-service support.",
           actions: [{
-            href: "/digital-insights/roi-inclusive-design/",
-            label: "How designing for market diversity helps your bottom line",
-          },{
-            href: "/digital-insights/technology-builds-market-leading-organizations/",
-            label: "The role of technology in building market leading organizations",
+            href: "/digital-insights/improved-online-learning/",
+            label: "How to deliver eLearning experiences that engage all learners",
+          }, {
+            href: "/digital-insights/deliver-accessible-online-courses/",
+            label: "Delivering accessible online courses",
           }]
         }}
         />
 
-        <Section textColor="black" bgColor="yellow">
+        {/* <Section textColor="black" bgColor="yellow">
           <Grid>
             <h2 className="text-32 font-bold col-span-full">Bring clarity to decision-making</h2>
-              {
-                [{
-                  img: { src: "/img/icons/devices.svg", alt: "" },
-                  text: "**Modernize your organization** towards more efficient service delivery and improved customer experience.",
-                  actions: [{ label: "Service design", href: "/solutions/service-design/" }]
-                },{
-                  img: { src: "/img/icons/strategy.svg", alt: "" },
-                  text: "**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
-                  actions: [{ label: "Product strategy", href: "/solutions/product-strategy/"}]
-                }].map((item, key) => (
+            {
+              [{
+                img: { src: "/img/icons/devices.svg", alt: "" },
+                text: "**Modernize your organization** towards more efficient service delivery and improved customer experience.",
+                actions: [{ label: "Service design", href: "/solutions/service-design/" }]
+              }, {
+                img: { src: "/img/icons/strategy.svg", alt: "" },
+                text: "**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
+                actions: [{ label: "Product strategy", href: "/solutions/product-strategy/" }]
+              }].map((item, key) => (
                 <Card key={key}>
                   <Card.Content className="flex flex-col items-start h-full">
-                  { item.img ? <Image src={ item.img.src } alt={ item.img.alt } width="56" height="56" /> : null }
-                    <ReactMarkdown className="text-20 leading-normal mb-4">{ item.text }</ReactMarkdown>
+                    {item.img ? <Image src={item.img.src} alt={item.img.alt} width="56" height="56" /> : null}
+                    <ReactMarkdown className="text-20 leading-normal mb-4">{item.text}</ReactMarkdown>
 
-                    { item.actions.map( action => (
+                    {item.actions.map(action => (
                       <LinkButton
-                        key={ action.href }
+                        key={action.href}
                         className="mt-auto mb-0 bg-sy-gold text-black"
-                        href={ action.href }
+                        href={action.href}
                         textSize="18"
                       >
-                        { action.label }
+                        {action.label}
                       </LinkButton>
-                    ) ) }
+                    ))}
                   </Card.Content>
                 </Card>
               ))}
-            </Grid>
-        </Section>
+          </Grid>
+        </Section> */}
 
 
         {/* <Section textColor="text-yellow" bgColor="bg-sy-earth">
@@ -127,7 +127,7 @@ export default function Home() {
         <Section bgColor="bg-sy-yellow" className="border-t border-black border-opacity-5">
           <Grid>
             <h2 className="text-28 font-bold max-w-[40rem] col-span-full">
-              Evolving markets create new opportunities
+              Improving the experience and  learning outcomes for all people
             </h2>
 
             {
@@ -136,48 +136,49 @@ export default function Home() {
                   img: { src: "/img/icons/glasses.svg", alt: "" },
                   fact: "75% of people require accommodations for eyesight",
                   action: {
-                    label:"Accommodate for different eyesight across your products and services",
-                    href:"/digital-insights/accomodating-vision-needs/"
+                    label: "Accommodate for different eyesight across your products and services",
+                    href: "/digital-insights/accomodating-vision-needs/"
                   }
-                },{
+                }, {
                   img: { src: "/img/icons/brain.svg", alt: "" },
                   fact: "40% of people have brains that work in neurodiverse ways",
                   action: {
-                    label:"Improve products and services by planning for different ways of thinking",
-                    href:"/digital-insights/improving-products-services-neurodiversity/"
-                  }
-                },{
-                  img: { src: "/img/icons/diversity.svg", alt: "" },
-                  fact: "Diversity of markets and communities continues to grow",
-                  action: {
-                    label:"Follow the trends that lead to increasing market diversity",
-                    href:"/digital-insights/growing-community-diversity/"
-                  }
-                },{
-                  img: { src: "/img/icons/fish.svg", alt: "" },
-                  fact: "Individualism has overtaken conformance as a way of being",
-                  action: {
-                    label:"Explore how technology has accellerated humanity’s path to self-discovery",
-                    href:"/digital-insights/individualism-shapes-product-service/"
+                    label: "Improve products and services by planning for different ways of thinking",
+                    href: "/digital-insights/improving-products-services-neurodiversity/"
                   }
                 },
+                // {
+                //   img: { src: "/img/icons/diversity.svg", alt: "" },
+                //   fact: "Diversity of markets and communities continues to grow",
+                //   action: {
+                //     label: "Follow the trends that lead to increasing market diversity",
+                //     href: "/digital-insights/growing-community-diversity/"
+                //   }
+                // }, {
+                //   img: { src: "/img/icons/fish.svg", alt: "" },
+                //   fact: "Individualism has overtaken conformance as a way of being",
+                //   action: {
+                //     label: "Explore how technology has accellerated humanity’s path to self-discovery",
+                //     href: "/digital-insights/individualism-shapes-product-service/"
+                //   }
+                // },
               ].map((item, key) => (
-                <Card key={key} href={ item.action.href }>
+                <Card key={key} href={item.action.href}>
                   <div className="bg-sy-sunshine p-4">
-                  { item.img ? <Image src={ item.img.src } alt={ item.img.alt } width="56" height="56" /> : null }
-                    <p className="text-20 font-bold">{ item?.fact }</p>
+                    {item.img ? <Image src={item.img.src} alt={item.img.alt} width="56" height="56" /> : null}
+                    <p className="text-20 font-bold">{item?.fact}</p>
                   </div>
                   <div className="p-4 block">
-                    { item?.action?.label }
+                    {item?.action?.label}
                   </div>
                 </Card>
               ))
             }
 
-          <div className="col-span-full max-w-readable space-y-4">
-            <p className="text-24 font-bold">Contact us today to more effectively deliver products and services that win diverse markets</p>
-            <LinkButton href="/contact-us/" bgColor="black" textColor="white">Get in touch</LinkButton>
-          </div>
+            <div className="col-span-full max-w-readable space-y-4">
+              <p className="text-24 font-bold">Contact us today to bring enhanced learner variability to your courses.</p>
+              <LinkButton href="/contact-us/" bgColor="black" textColor="white">Get in touch</LinkButton>
+            </div>
           </Grid>
         </Section>
 
@@ -192,64 +193,64 @@ export default function Home() {
         </Section>
 
         {/** Impactful Challenges */}
-        <Section bgColor="bg-sy-earth" textColor="text-white">
+        {/* <Section bgColor="bg-sy-earth" textColor="text-white">
           <Grid gap="gap-12">
             <h2 className="text-32 font-bold text-sy-yellow col-span-full">
               Solve your most impactful organizational challenges
             </h2>
 
             { // Iterate Impactful Challenges
-            [{
-              text: "How do we deliver service more effectively by increasing online adoption?",
-              actions: [{ href: "/solutions/service-design/", label :"Service design" }]
-            },{
-              text: "Can our products and services better serve our market?",
-              actions: [{ href: "/solutions/market-research/", label :"Market & user research" }]
-            },{
-              text: "Are we making the best technology choices for our organization?",
-              actions: [{ href: "/services/organizational-maturity-assessment/", label :"Assessing your organization" }]
-            },{
-              text: "Can we more effectively design and deliver digital products?",
-              actions: [{ href: "/solutions/product-strategy/", label :"Product strategy" }]
-            },{
-              text: "Can we do a better job of using our website as a tool for driving engagement and retention?",
-              actions: [{ href: "/solutions/inclusive-website-design/", label :"Inclusive website design" }]
-            },{
-              text: "Are there unintended ways we may be limiting access to our content, products, and services?",
-              actions: [{ href: "/solutions/inclusive-design/", label :"Inclusive design" }]
-            }].map((item, key) => (
-              <div key={ key }>
-                  <Quote key={ key }>{ item.text }</Quote>
-                { item.actions.map((action, key) => <LinkArrow
-                  key={ key }
-                  href={ action.href }
-                  textSize="text-18"
-                  textColor="text-sy-mocha"
-                >
-                  <a key={ key }>{ action.label }</a>
-                </LinkArrow> )}
-              </div>
-            ))}
+              [{
+                text: "How do we deliver service more effectively by increasing online adoption?",
+                actions: [{ href: "/solutions/service-design/", label: "Service design" }]
+              }, {
+                text: "Can our products and services better serve our market?",
+                actions: [{ href: "/solutions/market-research/", label: "Market & user research" }]
+              }, {
+                text: "Are we making the best technology choices for our organization?",
+                actions: [{ href: "/services/organizational-maturity-assessment/", label: "Assessing your organization" }]
+              }, {
+                text: "Can we more effectively design and deliver digital products?",
+                actions: [{ href: "/solutions/product-strategy/", label: "Product strategy" }]
+              }, {
+                text: "Can we do a better job of using our website as a tool for driving engagement and retention?",
+                actions: [{ href: "/solutions/inclusive-website-design/", label: "Inclusive website design" }]
+              }, {
+                text: "Are there unintended ways we may be limiting access to our content, products, and services?",
+                actions: [{ href: "/solutions/inclusive-design/", label: "Inclusive design" }]
+              }].map((item, key) => (
+                <div key={key}>
+                  <Quote key={key}>{item.text}</Quote>
+                  {item.actions.map((action, key) => <LinkArrow
+                    key={key}
+                    href={action.href}
+                    textSize="text-18"
+                    textColor="text-sy-mocha"
+                  >
+                    <a key={key}>{action.label}</a>
+                  </LinkArrow>)}
+                </div>
+              ))}
           </Grid>
-        </Section>
+        </Section> */}
 
         <Section bgColor="bg-sy-yellow" textColor="text-black">
 
           <ClientCards cols="5" bgColor="white" title="Our client roster" items={[
+            "westernUniversity",
+            "georgeBrown",
+            "lifeworks",
             "torontoPublicLibrary",
             "theScore",
             "aon",
-            "virginMobile",
             "webFoundation",
             "tourismToronto",
             "ontario",
             "rogers",
-            "microsoft",
-            "ratesDotCa",
           ]} />
 
           <Flex className="mt-8">
-          <LinkArrow href="/work/">Additional clients and industries served</LinkArrow>
+            <LinkArrow href="/work/">Additional clients and industries served</LinkArrow>
           </Flex>
         </Section>
 
@@ -274,7 +275,7 @@ export default function Home() {
          */}
         <Section textColor="white" bgColor="earth">
           <Grid gap="gap-4 gap-y-12 md:gap-x-16 md:gap-y-8" className="text-18">
-          {/* <StackContent className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 md:gap-y-8 gap-4"> */}
+            {/* <StackContent className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 md:gap-y-8 gap-4"> */}
 
             <div className="col-span-full">
               <h2 className="text-32 font-bold text-sy-yellow max-w-[40rem]">
@@ -288,7 +289,7 @@ export default function Home() {
               </h3>
               <p className="mb-4">
                 We’re committed to inclusive, anti-racist practices in our work, hiring processes, and collaborations. As part of this commitment, we’ve signed pledges like BlackNorth’s CEO pledge and The Contract for the Web, as well as creating our own call to action for design agency leaders.
-                </p>
+              </p>
               <LinkButton bgColor="bg-sy-yellow" textColor="text-black" margin="mt-auto mb-0" href="/digital-insights/call-to-action-design-agency-leaders/">
                 Our anti-racism call to action
               </LinkButton>
@@ -324,7 +325,7 @@ export default function Home() {
 
         <Section bgColor="bg-sy-yellow" textColor="text-black">
 
-        <PublicationCards cols="5" bgColor="white" title="We’ve been featured by" items={[
+          <PublicationCards cols="5" bgColor="white" title="We’ve been featured by" items={[
             "sxsw",
             "fitc",
             "digitalJournal",
@@ -333,16 +334,16 @@ export default function Home() {
           ]} />
         </Section>
 
-      <Section bgColor="white" divide="true">
-        <Flex>
-          <div className="max-w-readable space-y-4">
-          <p className="text-24 font-bold">
-            Let’s explore how delivering more inclusive products and services can help you win markets
-          </p>
-          <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
-          </div>
-        </Flex>
-      </Section>
+        <Section bgColor="white" divide="true">
+          <Flex>
+            <div className="max-w-readable space-y-4">
+              <p className="text-24 font-bold">
+                Get in touch for a complimentary consultation on your objectives and how you can take a more inclusive path to improved learning outcomes.
+              </p>
+              <LinkButton href="/contact-us/" bgColor="yellow" textColor="black" textSize="18">Get in touch</LinkButton>
+            </div>
+          </Flex>
+        </Section>
       </main>
     </Layout>
   )
