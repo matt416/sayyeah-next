@@ -107,7 +107,15 @@ const CLIENTS = {
   lifeworks: {
     name: "LifeWorks",
     img: { src: "/img/clients/lifeworks.svg", alt: "LifeWorks" }
-  }
+  },
+  insuranceInstitute: {
+    name: "Insurance Institute",
+    img: { src: "/img/clients/insurance-institute.svg", alt: "Insurance Institute" }
+  },
+  canadaCouncilForTheArts: {
+    name: "Canada Council for the Arts",
+    img: { src: "/img/clients/canadacouncilforthearts.svg", alt: "Canada Council for the Arts" }
+  },
 }
 
 const classes = traits({

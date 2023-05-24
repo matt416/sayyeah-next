@@ -138,11 +138,13 @@ export default function InclusiveWebsiteDesign() {
       <Section bgColor="white">
         <ClientCards bgColor="white" title="Select eLearning clients" items={[
           "webFoundation",
-          "ontario",
-          "lifeworks",
-          "georgeBrown",
-          "wsib",
           "westernUniversity",
+          "georgeBrown",
+          "ontario",
+          "insuranceInstitute",
+          "canadaCouncilForTheArts",
+          "lifeworks",
+          "wsib",
         ]} />
       </Section>
       {/** Call to action */}
