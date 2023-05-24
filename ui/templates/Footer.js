@@ -40,6 +40,8 @@ export default function Footer() {
                 {
                   label: "Solutions", href: "/solutions/", id: useId(),
                   children: [
+                    { label: "eLearning services", href: "/solutions/elearning-services/" },
+
                     { label: "Service design", href: "/solutions/service-design/" },
                     { label: "Product strategy", href: "/solutions/product-strategy/" },
                     { label: "Market & user research", href: "/solutions/market-research/" },
@@ -92,6 +94,7 @@ export default function Footer() {
                     { label: "Inclusive design", href: "/glossary/category/inclusive-design/",  },
                     { label: "Product strategy", href: "/glossary/category/product-strategy/",  },
                     { label: "Service design", href: "/glossary/category/service-design/",  },
+                    { label: "eLearning", href: "/glossary/category/online-education/",  },
 
                   ]
                 },{
