@@ -49,8 +49,8 @@ export default function Home() {
             href: "/digital-insights/improved-online-learning/",
             label: "How to deliver eLearning experiences that engage all learners",
           }, {
-            href: "/digital-insights/deliver-accessible-online-courses/",
-            label: "Delivering accessible online courses",
+            href: "/solutions/elearning-services/",
+            label: "eLearning Services",
           }]
         }}
         />
