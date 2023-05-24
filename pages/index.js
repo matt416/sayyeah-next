@@ -50,7 +50,7 @@ export default function Home() {
             label: "How to deliver eLearning experiences that engage all learners",
           }, {
             href: "/solutions/elearning-services/",
-            label: "eLearning Services",
+            label: "Explore eLearning Services",
           }]
         }}
         />
