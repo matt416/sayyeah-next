@@ -32,36 +32,18 @@ export default function Solutions(){
         />
       <Hero {...{
         name: "Solutions",
-        title: "Achieve impactful objectives",
-        catchline: `Evolving organizations require thoughtful solutions that help them better serve diverse markets.\n\n Let’s take a look at the most common client challenges we can help you solve.`,
+        title: "Deliver market-leading tech + education experiences",
+        catchline: `Leading organizations require thoughtful digital solutions that better serve increasingly diverse markets.\n\n Let’s take a look at the most common client challenges we can help you solve.`,
         image: { src: "/heroes/solutions.png" },
 
       }} />
 
       <Section className="bg-sy-yellow text-black flex-col space-y-24">
         <Flex>
-          <h2 className="text-32 font-bold w-full max-w-readable">
-            We offer a suite of solutions that help you achieve your most impactful objectives
-          </h2>
+
 
           { [
-            {
-              title:"Service Design",
-              questions:[
-                "How do we deliver service more effectively by increasing online adoption?",
-                "Are we making the best technology choices for our organization?"
-              ],
-              answer:{
-                img:{ src: "/img/icons/strategy.svg", alt: "" },
-                body:"**Modernize your organization** towards more efficient service delivery and improved customer experience.",
-                actions:[
-                  {
-                    label:"Service Design",
-                    href:"/solutions/service-design/"
-                  }
-                ]
-              }
-            },
+
             {
               title:"Product Strategy",
               questions:[
@@ -70,7 +52,7 @@ export default function Solutions(){
               ],
               answer:{
                 img:{ src: "/img/icons/devices.svg", alt: "" },
-                body:"**Define, deliver, and maintain digital products** that reduce costs and increase adoption.",
+                body:"**Define, design, and deliver digital products** that reduce costs and increase adoption.",
                 actions:[
                   {
                     label:"Product strategy",
@@ -79,23 +61,25 @@ export default function Solutions(){
                 ]
               }
             },
+
             {
-              title:"User Research",
+              title:"eLearning Services",
               questions:[
-                "Do we understand how our market’s behaviour and decision-making journey impacts us?",
-                "How do we better align our products and services to the needs of our target market?"
+                "How do we transform learning material into more effective online courses?",
+                "Can we deliver a course and interactions that are accessible to all learners?"
               ],
               answer:{
-                img:{ src: "/img/icons/market.svg", alt: "" },
-                body:"**Grow your market understanding** in order to uncover product and services gaps and opportunities.",
+                img:{ src: "/img/icons/elearning.svg", alt: "" },
+                body:"**Combine education and technology best practices** to deliver improved learning outcomes for all.",
                 actions:[
                   {
-                    label:"Market & user research",
-                    href:"/solutions/market-research/"
+                    label:"eLearning services",
+                    href:"/solutions/elearning-services/"
                   }
                 ]
               }
             },
+
             {
               title:"Inclusive Design",
               questions:[
@@ -109,23 +93,6 @@ export default function Solutions(){
                   {
                     label:"Inclusive design",
                     href:"/solutions/inclusive-design/"
-                  }
-                ]
-              }
-            },
-            {
-              title:"Inclusive Website Design",
-              questions:[
-                "Can we do a better job of using our website as a tool for driving engagement and retention?",
-                "Does our website follow standards that improve usability, accessibility, and inclusivity?"
-              ],
-              answer:{
-                img:{ src: "/img/icons/website.svg", alt: "" },
-                body:"**Deliver a responsive, accessible, and delightful website** that grow content access, engagement, and transactions.",
-                actions:[
-                  {
-                    label:"Inclusive website design",
-                    href:"/solutions/inclusive-website-design/"
                   }
                 ]
               }

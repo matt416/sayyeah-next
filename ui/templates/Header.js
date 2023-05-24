@@ -30,13 +30,15 @@ export default function Header({ mode = "dark", children, className, includeNav 
   const toggleMobileMenu = useMobileMenuStore(state => state.toggle)
 
 return <>
-    <header className={ `h-[0] relative px-10 z-40 ${className} ${ mode == "dark" ? "text-white bg-black" : "text-black bg-white"}` } style={ style }>
+    <header className={ `h-[0] relative  z-40 ${className} ${ mode == "dark" ? "text-white bg-black" : "text-black bg-white"}` } style={ style }>
 
     <SkipBlock target="#main-content" className="z-50"/>
 
     {/* <header className={`h-[0] px-6 z-50 relative ${ mode == 'dark' ? 'text-white' : 'text-black'}`}> */}
     {/* <header className="max-w-[60rem] mx-auto flex justify-between items-center"> */}
     {/* <div className="bg-black text-white w-full px-4"> */}
+    <div className="px-10 bg-gradient-to-b from-black to-black/0">
+
     <div className="max-w-screen-xs sm:max-w-screen-md mx-auto px-4 pt-4 flex items-start justify-between pb-12">
 
     <span className="md:hidden">
@@ -59,6 +61,8 @@ return <>
         </div>
       </>}
     </div>
+    </div>
+
 
     { includeNav && <MobileMenu>
         <ul className="flex flex-col text-lg p-2">
