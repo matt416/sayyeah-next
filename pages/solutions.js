@@ -43,7 +43,23 @@ export default function Solutions(){
 
 
           { [
-
+{
+  title:"eLearning Services",
+  questions:[
+    "How do we transform learning material into more effective online courses?",
+    "Can we deliver a course and interactions that are accessible to all learners?"
+  ],
+  answer:{
+    img:{ src: "/img/icons/elearning.svg", alt: "" },
+    body:"**Combine education and technology best practices** to deliver improved learning outcomes for all.",
+    actions:[
+      {
+        label:"eLearning and training services",
+        href:"/solutions/elearning-services/"
+      }
+    ]
+  }
+},
             {
               title:"Product Strategy",
               questions:[
@@ -62,23 +78,7 @@ export default function Solutions(){
               }
             },
 
-            {
-              title:"eLearning Services",
-              questions:[
-                "How do we transform learning material into more effective online courses?",
-                "Can we deliver a course and interactions that are accessible to all learners?"
-              ],
-              answer:{
-                img:{ src: "/img/icons/elearning.svg", alt: "" },
-                body:"**Combine education and technology best practices** to deliver improved learning outcomes for all.",
-                actions:[
-                  {
-                    label:"eLearning services",
-                    href:"/solutions/elearning-services/"
-                  }
-                ]
-              }
-            },
+
 
             {
               title:"Inclusive Design",

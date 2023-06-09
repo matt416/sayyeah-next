@@ -19,7 +19,7 @@ export default function InclusiveWebsiteDesign() {
 
   return <Layout>
     <NextSeo
-      title="eLearning services"
+      title="eLearning and training services"
       description=""
       openGraph={{
         images: [
@@ -37,8 +37,8 @@ export default function InclusiveWebsiteDesign() {
         image: {
           "src": "/heroes/elearning.png"
         },
-        title: "eLearning services",
-        catchline: "A full-service solution to delivering engaging, effective, and accessible online courses."
+        title: "eLearning and training services",
+        catchline: "A full-service solution to delivering engaging, effective, and accessible online and hybrid courses."
       }}
       />
 
