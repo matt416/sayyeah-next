@@ -44,13 +44,13 @@ export default function Home() {
           image: { src: "/heroes/homepage.png" },
           name: "Say Yeah",
           title: "Tech + Education",
-          catchline: "eLearning can lead to improved learning outcomes for all. Level up your online learning programs with our full-service support.",
+          catchline: `Turn training into your competitive advantage.\n\neLearning can lead to improved learning outcomes for all. Level up your online learning programs with our full-service support.`,
           actions: [{
             href: "/digital-insights/improved-online-learning/",
             label: "How to deliver eLearning experiences that engage all learners",
           }, {
             href: "/solutions/elearning-services/",
-            label: "Explore eLearning Services",
+            label: "Explore eLearning and training services",
           }]
         }}
         />
@@ -127,7 +127,7 @@ export default function Home() {
         <Section bgColor="bg-sy-yellow" className="border-t border-black border-opacity-5">
           <Grid>
             <h2 className="text-28 font-bold max-w-[40rem] col-span-full">
-              Improving the experience and  learning outcomes for all people
+            Improve user experience and learning outcomes for all people
             </h2>
 
             {
@@ -176,7 +176,7 @@ export default function Home() {
             }
 
             <div className="col-span-full max-w-readable space-y-4">
-              <p className="text-24 font-bold">Contact us today to bring enhanced learner variability to your courses.</p>
+              <p className="text-24 font-bold">Contact us today to improve your technology and education experiences and outcomes.</p>
               <LinkButton href="/contact-us/" bgColor="black" textColor="white">Get in touch</LinkButton>
             </div>
           </Grid>

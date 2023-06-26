@@ -6,7 +6,7 @@ const classes = traits({ ...flexClasses,
     2: "grid-cols-1 sm:grid-cols-2",
   },
   gap: {
-    12: "gap-4 sm:gap-8"
+    12: "gap-4 sm:gap-12"
   }
 })
 

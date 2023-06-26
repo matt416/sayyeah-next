@@ -32,7 +32,7 @@ export default function Solutions(){
         />
       <Hero {...{
         name: "Solutions",
-        title: "Deliver market-leading tech + education experiences",
+        title: "Delive transformational tech + education experiences",
         catchline: `Leading organizations require thoughtful digital solutions that better serve increasingly diverse markets.\n\n Let’s take a look at the most common client challenges we can help you solve.`,
         image: { src: "/heroes/solutions.png" },
 
@@ -88,7 +88,7 @@ export default function Solutions(){
               ],
               answer:{
                 img:{ src: "/img/icons/inclusive.svg", alt: "" },
-                body:"**Open up access to markets** with a more usable, accessible, and inclusive products and services.",
+                body:"**Open up access to markets** with more usable, accessible, and inclusive products and services.",
                 actions:[
                   {
                     label:"Inclusive design",

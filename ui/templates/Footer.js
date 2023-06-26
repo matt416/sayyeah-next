@@ -40,14 +40,10 @@ export default function Footer() {
                 {
                   label: "Solutions", href: "/solutions/", id: useId(),
                   children: [
-                    { label: "eLearning services", href: "/solutions/elearning-services/" },
+                    { label: "eLearning and training services", href: "/solutions/elearning-services/" },
 
-                    { label: "Service design", href: "/solutions/service-design/" },
                     { label: "Product strategy", href: "/solutions/product-strategy/" },
-                    { label: "Market & user research", href: "/solutions/market-research/" },
                     { label: "Inclusive design", href: "/solutions/inclusive-design/" },
-                    { label: "Inclusive website design", href: "/solutions/inclusive-website-design/" },
-                    { label: "The Inclusive Website Audit", href: "/essential-website-audit/" },
                   ]
                 },
                 {
@@ -67,16 +63,18 @@ export default function Footer() {
                     { label: "Kanetix.ca", href: "/case-study/kanetix/",  },
                     { label: "Ontario Government", href: "/case-study/ontario/",  },
                     { label: "All case studies", href: "/case-studies/",  },
-                    { label: "Sign up to our newsletter", href: "/digital-insights/newsletter/",  },
                   ]
                 },{
                   label: "Insights", href: "/digital-insights/",  id: useId(),
                   children: [
+                    { label: "Featured", href: "/digital-insights/category/features/",  },
                     { label: "Articles", href: "/digital-insights/category/articles/",  },
                     { label: "Events", href: "/digital-insights/category/events/",  },
                     { label: "Resources", href: "/digital-insights/category/resources/",  },
                     { label: "Industry Experts", href: "/digital-insights/category/industry-experts/",  },
                     { label: "Press", href: "/digital-insights/category/press/",  },
+                    { label: "Sign up to our newsletter", href: "/digital-insights/newsletter/",  },
+
                   ]
                 },/**{
                   label: "The Inclusive Website Audit", href: "/essential-website-audit/",  id: useId(),
@@ -89,12 +87,12 @@ export default function Footer() {
                 },*/{
                   label: "Digital transformation glossary", href: "/glossary/",  id: useId(),
                   children: [
-                    { label: "Web accessibility", href: "/glossary/category/accessibility/",  },
                     { label: "Digital excellence", href: "/glossary/category/digital-excellence/",  },
+                    { label: "eLearning", href: "/glossary/category/online-education/",  },
                     { label: "Inclusive design", href: "/glossary/category/inclusive-design/",  },
                     { label: "Product strategy", href: "/glossary/category/product-strategy/",  },
                     { label: "Service design", href: "/glossary/category/service-design/",  },
-                    { label: "eLearning", href: "/glossary/category/online-education/",  },
+                    { label: "Web accessibility", href: "/glossary/category/accessibility/",  },
 
                   ]
                 },{
