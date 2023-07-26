@@ -41,6 +41,11 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: "/case-study/george-brown-college",
+        destination: "/case-study/gbc-udl",
+        permanent: true,
+      },
+      {
         source: '/essential',
         destination: '/essential-website-audit/',
         permanent: true,
