@@ -58,9 +58,9 @@ export default function Footer() {
                 },{
                   label: "Work", href: "/work/",  id: useId(),
                   children: [
+                    { label: "George Brown College", href: "/case-study/gbc-udl/",  },
                     { label: "World Wide Web Foundation", href: "/case-study/world-wide-web-foundation/",  },
                     { label: "Pall", href: "/case-study/pall/",  },
-                    { label: "Kanetix.ca", href: "/case-study/kanetix/",  },
                     { label: "Ontario Government", href: "/case-study/ontario/",  },
                     { label: "All case studies", href: "/case-studies/",  },
                   ]
