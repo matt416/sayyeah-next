@@ -41,6 +41,19 @@ module.exports = {
   async redirects() {
     return [
       {
+        source:"/",
+        destination:"/solutions/elearning-services/",
+        permanent: true,
+        has: [
+          {
+            type: 'header',
+            key: 'host',
+            value: 'sayyeah.courses',
+          },
+        ],
+      },
+
+      {
         source: "/case-study/george-brown-college",
         destination: "/case-study/gbc-udl",
         permanent: true,
