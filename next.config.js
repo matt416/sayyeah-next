@@ -47,7 +47,7 @@ module.exports = {
         has: [
           {
             type: 'header',
-            key: 'host',
+            key: 'Host',
             value: 'sayyeah.courses',
           },
         ],
