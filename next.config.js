@@ -46,7 +46,7 @@ module.exports = {
         permanent: true,
         has: [
           {
-            key: 'host',
+            type: 'host',
             value: 'sayyeah.courses',
           },
         ],
