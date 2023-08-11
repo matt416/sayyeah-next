@@ -7,6 +7,9 @@
     "svg": "svgo -f ./public/img/clients -o ./public/img/clients --config=svgo.config.js --pretty --indent=2",
     "icons": "svgo -f ./public/img/icons -o ./public/img/icons --config=svgo.config.js --pretty --indent=2"
   },
+  "engines": {
+    "node": ">=16.0.0 <17.0.0"
+  },
   "dependencies": {
     "camelcase": "^6.2.0",
     "clsx": "^1.1.1",
