@@ -46,8 +46,7 @@ module.exports = {
         permanent: true,
         has: [
           {
-            type: 'header',
-            key: 'Host',
+            key: 'host',
             value: 'sayyeah.courses',
           },
         ],
