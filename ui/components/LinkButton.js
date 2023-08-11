@@ -27,13 +27,14 @@ const LinkButton = ({ children, className, href, ...props }) => {
     bgColor: "black",
   })
 
-  return <Link href={ href }><a className={ classes.apply(props,
+  return <Link href={ href } className={ classes.apply(props,
     'inline-flex font-bold items-center justify-center rounded-md',
     "min-h-2.5rem pt-1.5 pb-1 px-3",
     className
   ) }>
     <AccessibleLabel>{ children }</AccessibleLabel>
-  </a></Link>
+
+  </Link>
 
 }
 export default LinkButton

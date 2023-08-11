@@ -21,5 +21,5 @@ export default function InlineSvg({ id, children, href, width, height, viewBox, 
     { children }
   </svg> )
 
-  return href ? <Link href={ href }><a aria-labelledby={ svgID }>{ _svg }</a></Link> : _svg
+  return href ? <Link href={ href } aria-labelledby={ svgID }>{ _svg }</Link> : _svg
 }

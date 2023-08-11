@@ -7,29 +7,26 @@
     "svg": "svgo -f ./public/img/clients -o ./public/img/clients --config=svgo.config.js --pretty --indent=2",
     "icons": "svgo -f ./public/img/icons -o ./public/img/icons --config=svgo.config.js --pretty --indent=2"
   },
-  "engines": {
-    "node": "18.x"
-  },
   "dependencies": {
-    "camelcase": "^6.2.0",
-    "clsx": "^1.1.1",
+    "camelcase": "^8.0.0",
+    "clsx": "^2.0.0",
     "formik": "^2.2.9",
-    "next": "^12.0.0",
-    "next-seo": "^4.28.1",
-    "react": "^17.0.2",
+    "next": "^13.4.13",
+    "next-seo": "^6.1.0",
+    "react": "^18.2.0",
     "react-aria": "^3.9.0",
-    "react-dom": "^17.0.2",
-    "react-markdown": "^7.0.1",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7",
     "react-player": "^2.9.0",
     "shopify-buy": "^2.12.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "tailwind-merge": "^0.7.0",
-    "yup": "^0.32.9",
-    "zustand": "^3.5.10"
+    "tailwind-merge": "^1.14.0",
+    "yup": "^1.2.0",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^3.3.3"
   }
 }

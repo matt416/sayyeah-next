@@ -11,12 +11,12 @@ const LinkArrow = ({ children, className, href, ...props }) => {
     textColor: false,
   })
 
-  return <Link href={ href }><a { ...attributes } className={ clsx(
+  return <Link href={ href } { ...attributes } className={ clsx(
     classes,
     className
   ) }>
     <AccessibleLabel>{ children }</AccessibleLabel><Arrow/>
-  </a></Link>
+  </Link>
 
 }
 export default LinkArrow

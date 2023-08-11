@@ -16,7 +16,7 @@ const Card = ({ href, children, className, ...props }) => {
   const classList = classes.apply(props, 'rounded-lg overflow-hidden', className )
 
   return (href)
-    ? <Link href={ href }><a className={ classList }>{ children }</a></Link>
+    ? <Link href={ href } className={ classList }>{ children }</Link>
     : <div className={ classList }>{ children }</div>;
 }
 
