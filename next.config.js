@@ -41,17 +41,16 @@ module.exports = {
   async redirects() {
     return [
       {
-        source:"/",
-        destination:"/solutions/elearning-services/",
-        permanent: true,
+        source: '/',
         has: [
           {
             type: 'host',
             value: 'sayyeah.courses',
           },
         ],
+        permanent: false,
+        destination:"/solutions/elearning-services/",
       },
-
       {
         source: "/case-study/george-brown-college",
         destination: "/case-study/gbc-udl",
