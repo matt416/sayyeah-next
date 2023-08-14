@@ -38,7 +38,7 @@ export default function Solutions(){
 
       }} />
 
-      <Section className="bg-sy-yellow text-black flex-col space-y-24">
+      <Section bgColor="yellow" textColor="black" className="flex-col space-y-24">
         <Flex>
 
 
@@ -138,7 +138,9 @@ export default function Solutions(){
                     { item?.answer?.actions.map( action => (
                       <LinkButton
                         key={ action.href }
-                        className="bg-sy-gold text-black mt-auto mb-0"
+                        bgColor="gold"
+                        textColor="black"
+                        className="mt-auto mb-0"
                         href={ action.href }
                       >
                         { action.label }
