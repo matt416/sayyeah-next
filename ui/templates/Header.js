@@ -29,6 +29,14 @@ export function Navigation({ name, mode = "dark" }) {
             </Link>
           </li>
         ))}
+        <li>
+          <Link
+            href="/contact-us/"
+            className="bg-sy-yellow px-3 pb-2 pt-2.5 text-black rounded-md "
+          >
+            Schedule a call
+          </Link>
+        </li>
       </ul>
     </nav>
   );
