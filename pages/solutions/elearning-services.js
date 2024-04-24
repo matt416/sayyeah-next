@@ -240,20 +240,14 @@ export default function InclusiveWebsiteDesign() {
                 Discover how you can turn training into your competitive
                 advantage.
               </p>
-              {/* <LinkButton href="/contact-us/" bgColor="gold" textColor="black" textSize="18">Get in touch</LinkButton> */}
-
-              <iframe
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1rA7HeUZT-7mAuq0Be21K2nxB62BiRKDH__Gfax5wsxJLx1xn6Cb4rqeVw-HIGN2Jryziy6u94?gv=true"
-                style={{
-                  border: 0,
-                  backgroundColor: "white",
-                  borderRadius: "8px",
-                  padding: "1rem",
-                }}
-                width="100%"
-                height="700"
-                frameborder="0"
-              ></iframe>
+              <LinkButton
+                href="/contact-us/"
+                bgColor="gold"
+                textColor="black"
+                textSize="18"
+              >
+                Get in touch
+              </LinkButton>
             </div>
           </Flex>
         </Section>
@@ -305,14 +299,18 @@ export default function InclusiveWebsiteDesign() {
                 practices in education can benefit your course delivery and
                 engagement.
               </p>
-              <LinkButton
-                href="/contact-us/"
-                bgColor="yellow"
-                textColor="black"
-                textSize="18"
-              >
-                Get in touch
-              </LinkButton>
+              <iframe
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1rA7HeUZT-7mAuq0Be21K2nxB62BiRKDH__Gfax5wsxJLx1xn6Cb4rqeVw-HIGN2Jryziy6u94?gv=true"
+                style={{
+                  border: 0,
+                  backgroundColor: "white",
+                  borderRadius: "8px",
+                  padding: "1rem",
+                }}
+                width="100%"
+                height="700"
+                frameborder="0"
+              ></iframe>
             </div>
           </Flex>
         </Section>
