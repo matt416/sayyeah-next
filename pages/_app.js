@@ -5,6 +5,18 @@ import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
+  function GAScript() {
+    if (typeof window == "undefined") {
+      return;
+    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "AW-983796085");
+  }
+
   const defaultCanonical = `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`;
   return (
     <>
@@ -53,12 +65,7 @@ function MyApp({ Component, pageProps }) {
               async
               src="https://www.googletagmanager.com/gtag/js?id=AW-983796085"
             ></script>{" "}
-            <script>
-              {" "}
-              window.dataLayer = window.dataLayer || []; function gtag()
-              {dataLayer.push(arguments)} gtag('js', new Date()); gtag('config',
-              'AW-983796085');{" "}
-            </script>
+            <script>{GAScript()}</script>
           </>
         ) : null}
       </Head>
