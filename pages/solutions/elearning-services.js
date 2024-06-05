@@ -300,13 +300,8 @@ export default function InclusiveWebsiteDesign() {
                 engagement.
               </p>
               <iframe
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1rA7HeUZT-7mAuq0Be21K2nxB62BiRKDH__Gfax5wsxJLx1xn6Cb4rqeVw-HIGN2Jryziy6u94?gv=true"
-                style={{
-                  border: 0,
-                  backgroundColor: "white",
-                  borderRadius: "8px",
-                  padding: "1rem",
-                }}
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YsjiokqYOIzyjjE59-WvrLzAvhQn5OCiWKB28X5zkh3smQcX5TaENK9SFWbQbF25cnMDYHTCY?gv=true"
+                style="border: 0"
                 width="100%"
                 height="700"
                 frameborder="0"
