@@ -301,7 +301,12 @@ export default function InclusiveWebsiteDesign() {
               </p>
               <iframe
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YsjiokqYOIzyjjE59-WvrLzAvhQn5OCiWKB28X5zkh3smQcX5TaENK9SFWbQbF25cnMDYHTCY?gv=true"
-                style="border: 0"
+                style={{
+                  border: 0,
+                  backgroundColor: "white",
+                  borderRadius: "8px",
+                  padding: "1rem",
+                }}
                 width="100%"
                 height="700"
                 frameborder="0"
